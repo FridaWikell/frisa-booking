@@ -19,8 +19,12 @@ from django.urls import path, include
 from booking import views as booking_views
 from about import views as about_views
 
+
+# Blank path last
 urlpatterns = [
     path('about/', about_views.about, name='about'),
-    path("booking/", include("booking.urls"), name="booking-urls"),
     path('admin/', admin.site.urls),
+    path("booking/", include("booking.urls"), name="booking-urls"),
+    path("summernote/", include("django_summernote.urls")),
+
 ]

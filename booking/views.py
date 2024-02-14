@@ -4,5 +4,5 @@ from .models import Course
 
 # Create your views here.
 class BookingList(generic.ListView):
-    model = Course
+    queryset = Course.objects.all()
     template_name = "booking/booking.html"
