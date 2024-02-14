@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
+from .models import Course
 
 # Create your views here.
-def booking(request):
-    return HttpResponse("Frisa's place")
+class BookingList(generic.ListView):
+    model = Course
+    template_name = "booking/booking.html"

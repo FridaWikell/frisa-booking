@@ -21,6 +21,6 @@ from about import views as about_views
 
 urlpatterns = [
     path('about/', about_views.about, name='about'),
-    path('booking/', booking_views.booking, name='booking'),
+    path("booking/", include("booking.urls"), name="booking-urls"),
     path('admin/', admin.site.urls),
 ]
