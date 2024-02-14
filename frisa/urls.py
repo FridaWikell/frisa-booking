@@ -16,8 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from booking import views as booking_views
+from django.http import HttpResponse
+from django.template import loader
 from about import views as about_views
+
+
+# Visa startsidan
+def homepage_view(request):
+    template = loader.get_template('base.html')
+    return HttpResponse(template.render({}, request))
 
 
 # Blank path last
@@ -25,4 +32,5 @@ urlpatterns = [
     path('about/', about_views.about, name='about'),
     path('admin/', admin.site.urls),
     path("booking/", include("booking.urls"), name="booking-urls"),
+    path('', homepage_view, name='home'),
 ]
