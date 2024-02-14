@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!$ljxo0#nn8as%w@dt%ri2+a+515xb$suo%xq6c(pao*fb4&t-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-fridawikell-frisabookin-1z0vled9q65.ws-eu108.gitpod.io']
 
