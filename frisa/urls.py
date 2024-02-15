@@ -29,7 +29,7 @@ def homepage_view(request):
 
 # Blank path last
 urlpatterns = [
-    path('about/', about_views.about, name='about'),
+    path('about/', include(('about.urls')), name='about-urls'),
     path('admin/', admin.site.urls),
     path("booking/", include("booking.urls"), name="booking-urls"),
     path('', homepage_view, name='home'),
