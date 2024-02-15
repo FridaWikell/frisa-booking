@@ -6,10 +6,16 @@ main {
     flex: 1 0 auto;
 }
 
+/* Navbar */
 .container-fluid {
     padding: 8px 30px 5px 30px;
 }
 
 .logo-img {
     width: 90px;
+}
+
+/* Footer */
+.fa-brands {
+    color: #000000;
 }
