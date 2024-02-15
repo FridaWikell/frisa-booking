@@ -14,11 +14,9 @@
 <body>
     <nav class="navbar navbar-expand-md bg-body-tertiary">
         <div class="container-fluid">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="{% static 'img/logo.webp' %}" alt="Frisa logo" width="60" height="24">
-                </a>
-            </div>
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'img/frisa-logo.png' %}" alt="Frisa logo" width="60" height="24">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -38,5 +36,16 @@
         </div>
     </nav>
 
+    <!-- Footer -->
+    <footer class="d-flex flex-wrap justify-content-between py-3 my-4 border-top px-3 px-md-5">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-3 text-body-secondary">© 2023 Company, Inc</span>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a class="text-body-secondary" href="#">Fac</a></li>
+          <li class="ms-3"><a class="text-body-secondary" href="#">Ins</a></li>
+          <li class="ms-3"><a class="text-body-secondary" href="#">Pin</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
