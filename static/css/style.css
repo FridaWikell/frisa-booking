@@ -1,3 +1,5 @@
+
+
 body {
     min-height: 100vh;
   }
@@ -11,8 +13,17 @@ main {
     padding: 8px 30px 5px 30px;
 }
 
+
+
+/* Images */
+
 .logo-img {
     width: 90px;
+}
+
+.profile-img {
+    width: 80%;
+    border-radius: 200px;
 }
 
 /* Footer */
