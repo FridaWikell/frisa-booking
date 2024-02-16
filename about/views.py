@@ -11,8 +11,6 @@ def about(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
 
-
-
         if form.is_valid():
             first_name = form.cleaned_data['first_name']
             last_name = form.cleaned_data['last_name']
@@ -33,6 +31,6 @@ def about(request):
     else:
         form = ContactForm()
 
-    return render(request, 'about/contact.html', {
+    return render(request, 'about/about.html', {
         'form': form
     })
