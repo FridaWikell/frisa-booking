@@ -5,6 +5,29 @@
     <div class="container-xl">
         <div class="row">
             <p>Bookings</p>
+
+            <h1>Courses</h1>
+
+            {{ course }}
+            <ul>
+                {% for course in courses %}
+                <li>
+                    <strong>{{ course.name }}</strong> - {{ course.description }}
+                </li>
+                {% endfor %}
+            </ul>
+
+            <h1>Course Sessions</h1>
+            <ul>
+                {% for session in sessions %}
+                <li>
+                    <strong>{{ session.course.name }}</strong> - {{ session.start_time }} to {{ session.end_time }}
+                    (Spots available: {{ session.spots_available }})
+                </li>
+                {% endfor %}
+            </ul>
+
+
         </div>
     </div>
 {% endblock content %}
