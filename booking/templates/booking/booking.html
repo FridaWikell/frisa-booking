@@ -29,5 +29,20 @@
 
 
         </div>
+        <div>  
+            {% if sessions %}
+                <h2>Select a Session</h2>
+                {% for session in sessions %}
+                    <form action="{% url 'list_courses' %}" method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="selected_session" value="{{ session.id }}">
+                        <input type="hidden" name="selected_course" value="{{ selected_course_id }}">
+                        <button type="submit" class="session-slot">
+                            {{ session.course.name }} {{ session.start_time }} to {{ session.end_time }} - Spots: {{ session.spots_available }}
+                        </button>
+                    </form>
+                {% endfor %}
+            {% endif %}
+        </div>
     </div>
 {% endblock content %}

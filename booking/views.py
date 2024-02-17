@@ -1,7 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
 from django.contrib.auth.decorators import login_required
 from .models import Course, CourseSession
+from .forms import CourseSelectionForm
+from django.contrib import messages
 
 from .forms import BookingForm
 """
@@ -19,6 +21,37 @@ def list_courses(request):
         'courses': courses,
         'sessions': sessions})
 
+
+
+def book_session(request):
+    selected_course_id = None
+    sessions = None
+    if 'course' in request.POST:
+        selected_course_id = request.POST.get('course')
+        sessions = CourseSession.objects.filter(course_id=selected_course_id)
+    elif 'selected_session' in request.POST:
+        # This block assumes that a session ID is posted to book a session.
+        session_id = request.POST.get('selected_session')
+        session = CourseSession.objects.get(id=session_id)
+
+        if session.spots_available > 0:
+            session.spots_available -= 1
+            session.save()
+
+            Booking.objects.create(user=request.user, course_session=session)
+
+            messages.success(request, "You have successfully booked a session. Thank you!")
+            return HttpResponseRedirect(reverse('booking_confirmation'))  # Redirect to a confirmation page or similar
+
+        else:
+            messages.error(request, "Sorry, there are no spots available for this session.")
+
+    form = CourseSelectionForm(request.POST or None)
+    return render(request, 'booking/booking.html', {
+        'form': form,
+        'sessions': sessions,
+        'selected_course_id': selected_course_id,
+    })
 
 """
 def list_course_sessions(request):
