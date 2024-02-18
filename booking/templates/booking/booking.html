@@ -33,7 +33,7 @@
             {% if sessions %}
                 <h2>Select a Session</h2>
                 {% for session in sessions %}
-                    <form action="{% url 'list_courses' %}" method="post">
+                    <form method="post">
                         {% csrf_token %}
                         <input type="hidden" name="selected_session" value="{{ session.id }}">
                         <input type="hidden" name="selected_course" value="{{ selected_course_id }}">

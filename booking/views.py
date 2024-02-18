@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
 from django.contrib.auth.decorators import login_required
-from .models import Course, CourseSession
+from .models import Course, CourseSession, Booking
 from .forms import CourseSelectionForm
 from django.contrib import messages
 
@@ -22,7 +22,7 @@ def list_courses(request):
         'sessions': sessions})
 
 
-
+@login_required
 def book_session(request):
     selected_course_id = None
     sessions = None
@@ -46,7 +46,7 @@ def book_session(request):
         else:
             messages.error(request, "Sorry, there are no spots available for this session.")
 
-    form = CourseSelectionForm(request.POST or None)
+    booking_form = CourseSelectionForm(request.POST or None)
     return render(request, 'booking/booking.html', {
         'form': form,
         'sessions': sessions,
