@@ -29,9 +29,9 @@ def homepage_view(request):
 
 # Blank path last
 urlpatterns = [
-    path('about/', include(('about.urls')), name='about-urls'),
+    path('about/', include('about.urls')),
     path('accounts/', include('allauth.urls')),
     path('admin/', admin.site.urls),
-    path("booking/", include("booking.urls"), name="booking-urls"),
+    path('booking/', include('booking.urls')),
     path('', homepage_view, name='home'),
 ]

@@ -6,5 +6,5 @@ urlpatterns = [
 ]"""
 
 urlpatterns = [
-    path('', views.list_courses, name="list_courses")
+    path('', views.list_courses, name="booking")
 ]

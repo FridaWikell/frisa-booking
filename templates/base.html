@@ -1,5 +1,9 @@
 {% load static %}
 
+{% url 'home' as home_url %}
+{% url 'about' as about_url %}
+{% url 'booking' as booking_url %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,13 +28,13 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mb-2 mb-lg-0 ms-auto nav-underline">
                     <li class="nav-item menu-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link {% if request.path == home_url %}active" aria-current="page{% endif %}" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link {% if request.path == about_url %}active" aria-current="page{% endif %}" href="{% url 'about' %}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Booking</a>
+                        <a class="nav-link {% if request.path == booking_url %}active" aria-current="page{% endif %}" href="{% url 'booking' %}">Booking</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Sign in / Sign up</a>
