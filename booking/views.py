@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db import transaction
 from django.http import JsonResponse
+from django.utils import timezone
 
 from .models import Course, CourseSession, Booking
 from .forms import CourseSelectionForm
@@ -20,7 +21,7 @@ class BookingList(generic.ListView):
 
 def list_courses(request):
     courses = Course.objects.all()  
-    sessions = CourseSession.objects.all()  
+    sessions = CourseSession.objects.filter(start_time__gte=timezone.now()).order_by('start_time')  
     return render(request, 'booking/booking.html', {
         'courses': courses,
         'sessions': sessions})
