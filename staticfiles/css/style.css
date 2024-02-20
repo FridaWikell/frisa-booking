@@ -26,6 +26,13 @@ main {
     border-radius: 200px;
 }
 
+
+/* Booking page */
+.more {
+    display: none;
+}
+
+
 /* Footer */
 .fa-brands {
     color: #000000;
