@@ -1,17 +1,16 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    let sessionId = null;
-    const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value; // CSRF token
+    let currentSessionId = null;
 
     document.querySelectorAll('.book-session-btn').forEach(button => {
         button.addEventListener('click', function() {
-            sessionId = this.getAttribute('data-session-id'); // Get session ID when button is clicked
+            currentSessionId = this.getAttribute('data-session-id'); // Get session ID when button is clicked
         });
     });
 
     document.getElementById('confirmBooking').addEventListener('click', function() {
-        let bookingFot = document.getElementById('bookingForm')
-        console.log(bookingFot)
-        document.getElementById('bookingForm').submit();
+        if (currentSessionId) {
+            document.getElementById(`bookingForm-${currentSessionId}`).submit(); // Submit the form corresponding to the current session
+        }
 
         /* const formData = new FormData();
         formData.append('session_id', sessionId); // Append the session_id or any other data you need to send
