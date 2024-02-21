@@ -1,5 +1,5 @@
 from django import forms
-from .models import Booking
+from .models import Booking, CourseSession
 from .models import Course
 
 

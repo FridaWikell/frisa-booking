@@ -48,15 +48,30 @@ def my_bookings(request):
 @login_required
 def edit_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id, user=request.user)
+    sessions = CourseSession.objects.filter(spots_available__gt=0).exclude(id=booking.course_session.id).order_by('start_time')
+
     if request.method == 'POST':
-        form = BookingForm(request.POST, instance=booking)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Booking updated successfully!')
-            return redirect('my_bookings')
-    else:
-        form = BookingForm(instance=booking)
-    return render(request, 'booking/edit_booking.html', {'form': form})
+        new_session_id = request.POST.get('session_id')
+        new_session = get_object_or_404(CourseSession, id=new_session_id)
+
+        with transaction.atomic():
+            # Update spots for the old session
+            booking.course_session.spots_available += 1
+            booking.course_session.save()
+
+            # Update spots for the new session
+            new_session.spots_available -= 1
+            new_session.save()
+
+            # Update the booking to the new session
+            booking.course_session = new_session
+            booking.save()
+
+        messages.success(request, 'Booking updated successfully!')
+        return redirect('my_bookings')
+    
+    return render(request, 'booking/edit_booking.html', {'booking': booking, 'sessions': sessions})
+
 
 
 @login_required

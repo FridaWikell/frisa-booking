@@ -18,7 +18,7 @@
             <li>
                 Course Session: {{ booking.course_session.course.name }} - Booking Date: {{ booking.booking_date }}
                 <!-- Edit Button -->
-                <a href="{% url 'edit_booking' booking.id %}" class="btn btn-primary">Edit</a>
+                <a href="{% url 'edit_booking' booking.id %}" class="btn btn-secondary">Edit</a>
                
                     <!-- Inline Form for Deletion -->
                 <form action="{% url 'delete_booking' booking.id %}" method="post" onsubmit="return confirmDelete();">
