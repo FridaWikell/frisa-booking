@@ -39,3 +39,10 @@ def book_session(request, session_id):
 
 def success_page(request):
     return render(request, 'booking/success_page.html')
+
+@login_required
+def my_bookings(request):
+    bookings = Booking.objects.filter(user=request.user).select_related('course_session')
+    return render(request, 'booking/my_bookings.html', {
+        'bookings': bookings})
+
