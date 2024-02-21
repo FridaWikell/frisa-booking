@@ -3,16 +3,19 @@
 
 {% block content %}
 <div class="container-xl px-4 md-px-5">
-    {% if messages %}
+    {% if messages %} 
         {% for message in messages %}
-            <div class="alert alert-{{ message.tags }}">
-                {{ message }}
-            </div>
+            {% if 'edit_booking' in message.tags %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endif %}
         {% endfor %}
     {% endif %}
 
     <div class="row">
         <h2>{{ user }}'s booked workshops</h2>
+        {% if bookings %}
             {% for booking in bookings %}
             <div class="col-sm-4 my-3">
                 <h4>{{ booking.course_session.course.name }}</h4> 
@@ -32,5 +35,13 @@
                 </div>
             </div>
             {% endfor %}
+        {% else %}
+            <div>
+                <h5>Oopsie daisy!</h5>
+                <p>It seems like you haven't booked any workshops yet.</p>
+                <p>May I present the wonderful booking page?</p>
+                <a href="{% url 'booking' %}" class="btn btn-secondary me-2">Take me there!</a>
+            </div>
+        {% endif %}
 </div>
 {% endblock %}
