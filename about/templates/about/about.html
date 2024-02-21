@@ -40,17 +40,19 @@
         </div>
     
     <div class="row">
-        <h2>Any questions?</h2>
-        <p>I love questions! If you have any questions, don't hesitate to contact me. 
-            Do you want to book a course for a larger group? No problem, just send me 
-            a message and we will work it out!</p>
-        <form method="post" action=".">
-            {% csrf_token %}
+        <div id="contact-form">
+            <h2>Any questions?</h2>
+            <p>I love questions! If you have any questions, don't hesitate to contact me. 
+                Do you want to book a course for a larger group? No problem, just send me 
+                a message and we will work it out!</p>
+            <form method="post" action=".">
+                {% csrf_token %}
 
-            {{ form.as_p }}
-        
-            <button>Submit</button>
-        </form>
+                {{ form.as_p }}
+            
+                <button>Submit</button>
+            </form>
+        </div>
     </div>
 
 </div>

@@ -69,15 +69,23 @@
     </main>
 
     <!-- Footer -->
-    <footer class="d-flex flex-wrap justify-content-between py-3 my-4 border-top px-3 px-md-5">
-        <div class="col-md-4 d-flex align-items-center">
-          <span class="mb-3 text-body-secondary">© Frida Wikell {% now "Y" %}</span>
+    <footer class="py-3 my-4 border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center">
+                    <!-- Social Icons List, centered on small, right on md+ -->
+                    <ul class="nav list-unstyled d-flex mb-3 mb-md-0 order-md-2">
+                        <li class="ms-3"><a href="{% url 'about' %}#contact-form"><i class="fa-regular fa-pen-to-square fa-lg"></i></a></li>
+                        <li class="ms-3"><a href="https://www.facebook.com/frida7svensson" target="_blank"><i class="fa-brands fa-facebook-f fa-lg"></i></a></li>
+                        <li class="ms-3"><a href="https://www.instagram.com/fridawikell/" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
+                        <li class="ms-3"><a href="https://www.pinterest.se/frida7svensson/" target="_blank"><i class="fa-brands fa-pinterest-p fa-lg"></i></a></li>
+                    </ul>
+                    
+                    <!-- Frida Wikell Text, centered on small, left on md+ -->
+                    <span class="order-md-1">© Frida Wikell {% now "Y" %}</span>
+                </div>
+            </div>
         </div>
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com/frida7svensson" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-          <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/fridawikell/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-          <li class="ms-3"><a class="text-body-secondary" href="https://www.pinterest.se/frida7svensson/" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a></li>
-        </ul>
     </footer>
 
     <!-- Script -->
