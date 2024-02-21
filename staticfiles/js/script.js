@@ -31,3 +31,20 @@ document.querySelectorAll('.read-more').forEach(item => {
         }
     });
 });
+
+/* Delete confirmation */
+document.querySelectorAll('.delete-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const bookingId = this.getAttribute('data-booking-id');
+        const confirmDelete = confirm('Are you sure you want to delete this booking?');
+        if (confirmDelete) {
+            // Perform the delete action
+            fetch(`/booking/delete/${bookingId}/`, { method: 'POST' })
+                .then(response => {
+                    if (response.ok) {
+                        window.location.reload(); // Reload the page to update the list
+                    }
+                });
+        }
+    });
+});

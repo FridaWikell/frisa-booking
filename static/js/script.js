@@ -31,3 +31,8 @@ document.querySelectorAll('.read-more').forEach(item => {
         }
     });
 });
+
+
+function confirmDelete() {
+    return confirm('Are you sure you want to cancel this booking?');
+}

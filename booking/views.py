@@ -7,10 +7,8 @@ from django.http import JsonResponse
 from django.utils import timezone
 
 from .models import Course, CourseSession, Booking
-from .forms import CourseSelectionForm
+from .forms import CourseSelectionForm, BookingForm
 
-
-from .forms import BookingForm
 """
 # Create your views here.
 class BookingList(generic.ListView):
@@ -46,3 +44,28 @@ def my_bookings(request):
     return render(request, 'booking/my_bookings.html', {
         'bookings': bookings})
 
+
+@login_required
+def edit_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id, user=request.user)
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Booking updated successfully!')
+            return redirect('my_bookings')
+    else:
+        form = BookingForm(instance=booking)
+    return render(request, 'booking/edit_booking.html', {'form': form})
+
+
+@login_required
+def delete_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id, user=request.user)
+    if request.method == 'POST':
+        course_session = booking.course_session
+        course_session.spots_available += 1
+        course_session.save()
+        booking.delete()
+        messages.success(request, 'Booking cancelled successfully!')
+        return redirect('my_bookings')
