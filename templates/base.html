@@ -6,6 +6,7 @@
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
+{% url 'my_bookings' as my_bookings_url %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +24,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{% url 'home' %}">
                 <img src="{% static 'img/frisa-logo.png' %}" class="logo-img" alt="Frisa logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,7 +43,7 @@
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-regular fa-user"></i> {{ user }}</a>
+                        <a class="nav-link {% if request.path == my_bookings_url %}active" aria-current="page{% endif %}" href="{% url 'my_bookings' %}"><i class="fa-regular fa-user"></i> {{ user }}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
