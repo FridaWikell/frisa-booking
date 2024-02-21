@@ -2,52 +2,50 @@
 {% load static %}
 
 {% block content %}
-<div class="container-xl">
-    <div class="row mx-5">
-        <h2>Courses</h2>
-        {{ course }}
-        {% for course in courses %}
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">{{ course.name }}</h5>
-                <p class="card-text">{{ course.description|safe }}</p>
-                <button class="read-more">Read more</button>
-            </div>
-            </div>
-        {% endfor %}
-    </div>           
-
-    <div class="row justify-content-center mx-5">
-        {% for session in sessions %}
-        <div class="col-6 col-md-3 col-lg-2">
-            <!-- Button trigger modal -->
-            <form method="post" action="{% url 'book_session' session.id %}" id="bookingForm-{{ session.id }}">
-                {% csrf_token %}
-                <button type="button" class="btn btn-primary book-session-btn session-slot {% if session.spots_available == 0 %}disabled{% endif %}" 
-                {% if session.spots_available != 0 %} 
-                data-session-id="{{ session.id }}" data-bs-toggle="modal" data-bs-target="#confirmationModal"
-                {% endif %}> {{ session.course.name }} <br> {{ session.start_time|date:"j F Y" }} <br>
-                {{ session.start_time|time:"H.i" }} - {{ session.end_time|time:"H.i" }} <br> Available spots: {{ session.spots_available }}</button>
-            </form>
+<div class="row mx-5">
+    <h2>Courses</h2>
+    {{ course }}
+    {% for course in courses %}
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ course.name }}</h5>
+            <p class="card-text">{{ course.description|safe }}</p>
+            <button class="read-more">Read more</button>
         </div>
-        {% endfor %}
+        </div>
+    {% endfor %}
+</div>           
 
-        <!-- Confirmation Modal -->
-        <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="confirmationModalLabel">Confirm Booking</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Are you sure you want to book this session?</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary" id="confirmBooking">Confirm</button>
-                    </div>
+<div class="row justify-content-center mx-5">
+    {% for session in sessions %}
+    <div class="col-6 col-md-3 col-lg-2">
+        <!-- Button trigger modal -->
+        <form method="post" action="{% url 'book_session' session.id %}" id="bookingForm-{{ session.id }}">
+            {% csrf_token %}
+            <button type="button" class="btn btn-primary book-session-btn session-slot {% if session.spots_available == 0 %}disabled{% endif %}" 
+            {% if session.spots_available != 0 %} 
+            data-session-id="{{ session.id }}" data-bs-toggle="modal" data-bs-target="#confirmationModal"
+            {% endif %}> {{ session.course.name }} <br> {{ session.start_time|date:"j F Y" }} <br>
+            {{ session.start_time|time:"H.i" }} - {{ session.end_time|time:"H.i" }} <br> Available spots: {{ session.spots_available }}</button>
+        </form>
+    </div>
+    {% endfor %}
+
+    <!-- Confirmation Modal -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">Confirm Booking</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to book this session?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="confirmBooking">Confirm</button>
                 </div>
             </div>
         </div>

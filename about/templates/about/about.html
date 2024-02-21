@@ -2,59 +2,55 @@
 {% load static %}
 
 {% block content %}
-    <div class="container-xl">
-        <div class="row">
-            <div class="col-md-4 text-center">
-                <img src="{% static 'img/frisa-profile.webp' %}" alt="Headshot of Frida, owner of Frisa" class="profile-img">
-            </div>
-            <div class="col-md-8">
-                <h2>Who am I?</h2>
-                <p>
-                    I&#146m a creative soul with a deep passion for giving new life to the old,
-                    the forgotten, and the once-loved. My journey into the world of
-                    upcycling began as a simple hobby, but it quickly blossomed
-                    into a full-blown love affair with transforming everyday objects 
-                    into unique treasures.
-                </p>
-                <p>
-                    From the warm glow of repurposed lamps to 
-                    the nostalgic charm of cassette tapes turned into art, I find joy 
-                    in every challenge that upcycling brings. There&#146s something magical
-                    about reimagining the use of an old telephone or integrating colorful 
-                    Lego pieces into innovative designs. Each project is a thrilling 
-                    adventure, a puzzle waiting to be solved.
-                </p>
-                <p>
-                    My approach is simple: look beyond the surface, see the potential, 
-                    and create something new and extraordinary. It&#146s not just 
-                    about saving objects from ending up in a landfill; it&#146s about 
-                    celebrating their history and crafting a future where they continue 
-                    to bring joy and beauty into our lives.
-                </p>
-                <p>
-                    Join me on this journey of 
-                    creativity and sustainability, where the old becomes new again, and 
-                    every creation tells a story of transformation and hope.
-                </p>
-            </div>
-        </div>
-    
-    <div class="row">
-        <div id="contact-form">
-            <h2>Any questions?</h2>
-            <p>I love questions! If you have any questions, don't hesitate to contact me. 
-                Do you want to book a course for a larger group? No problem, just send me 
-                a message and we will work it out!</p>
-            <form method="post" action=".">
-                {% csrf_token %}
-
-                {{ form.as_p }}
-            
-                <button>Submit</button>
-            </form>
-        </div>
+<div class="row">
+    <div class="col-md-4 text-center">
+        <img src="{% static 'img/frisa-profile.webp' %}" alt="Headshot of Frida, owner of Frisa" class="profile-img">
     </div>
-
+    <div class="col-md-8">
+        <h2>Who am I?</h2>
+        <p>
+            I&#146m a creative soul with a deep passion for giving new life to the old,
+            the forgotten, and the once-loved. My journey into the world of
+            upcycling began as a simple hobby, but it quickly blossomed
+            into a full-blown love affair with transforming everyday objects 
+            into unique treasures.
+        </p>
+        <p>
+            From the warm glow of repurposed lamps to 
+            the nostalgic charm of cassette tapes turned into art, I find joy 
+            in every challenge that upcycling brings. There&#146s something magical
+            about reimagining the use of an old telephone or integrating colorful 
+            Lego pieces into innovative designs. Each project is a thrilling 
+            adventure, a puzzle waiting to be solved.
+        </p>
+        <p>
+            My approach is simple: look beyond the surface, see the potential, 
+            and create something new and extraordinary. It&#146s not just 
+            about saving objects from ending up in a landfill; it&#146s about 
+            celebrating their history and crafting a future where they continue 
+            to bring joy and beauty into our lives.
+        </p>
+        <p>
+            Join me on this journey of 
+            creativity and sustainability, where the old becomes new again, and 
+            every creation tells a story of transformation and hope.
+        </p>
+    </div>
 </div>
-    
+
+<div class="row">
+    <div id="contact-form">
+        <h2>Any questions?</h2>
+        <p>I love questions! If you have any questions, don't hesitate to contact me. 
+            Do you want to book a course for a larger group? No problem, just send me 
+            a message and we will work it out!</p>
+        <form method="post" action=".">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+        
+            <button>Submit</button>
+        </form>
+    </div>
+</div>    
 {% endblock content %}

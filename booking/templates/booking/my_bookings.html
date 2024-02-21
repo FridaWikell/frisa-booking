@@ -2,46 +2,44 @@
 {% load static %}
 
 {% block content %}
-<div class="container-xl px-4 md-px-5">
-    {% if messages %} 
-        {% for message in messages %}
-            {% if 'edit_booking' in message.tags %}
-                <div class="alert alert-{{ message.tags }}">
-                    {{ message }}
-                </div>
-            {% endif %}
-        {% endfor %}
-    {% endif %}
-
-    <div class="row">
-        <h2>{{ user }}'s booked workshops</h2>
-        {% if bookings %}
-            {% for booking in bookings %}
-            <div class="col-sm-4 my-3">
-                <h4>{{ booking.course_session.course.name }}</h4> 
-                <h5>Date:</h5>
-                <p>{{ booking.course_session.start_time|date:"j F Y" }}</p>
-                <h5>Time:</h5>
-                <p>{{ booking.course_session.start_time|time:"H.i" }} - {{ booking.course_session.end_time|time:"H.i" }}</p>
-                <!-- Edit Button -->
-                <div class="d-flex align-items-center">
-                    <a href="{% url 'edit_booking' booking.id %}" class="btn btn-secondary me-2">Edit</a>
-                    <!-- Inline Form for Deletion -->
-                    <form action="{% url 'delete_booking' booking.id %}" method="post" onsubmit="return confirmDelete();">
-                        {% csrf_token %}
-                        <input type="hidden" name="booking_id" value="{{ booking.id }}">
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                    </form>
-                </div>
-            </div>
-            {% endfor %}
-        {% else %}
-            <div>
-                <h5>Oopsie daisy!</h5>
-                <p>It seems like you haven't booked any workshops yet.</p>
-                <p>May I present the wonderful booking page?</p>
-                <a href="{% url 'booking' %}" class="btn btn-secondary me-2">Take me there!</a>
+{% if messages %} 
+    {% for message in messages %}
+        {% if 'edit_booking' in message.tags %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
             </div>
         {% endif %}
-</div>
+    {% endfor %}
+{% endif %}
+
+<div class="row">
+    <h2>{{ user }}'s booked workshops</h2>
+    {% if bookings %}
+        {% for booking in bookings %}
+        <div class="col-sm-4 my-3">
+            <h4>{{ booking.course_session.course.name }}</h4> 
+            <h5>Date:</h5>
+            <p>{{ booking.course_session.start_time|date:"j F Y" }}</p>
+            <h5>Time:</h5>
+            <p>{{ booking.course_session.start_time|time:"H.i" }} - {{ booking.course_session.end_time|time:"H.i" }}</p>
+            <!-- Edit Button -->
+            <div class="d-flex align-items-center">
+                <a href="{% url 'edit_booking' booking.id %}" class="btn btn-secondary me-2">Edit</a>
+                <!-- Inline Form for Deletion -->
+                <form action="{% url 'delete_booking' booking.id %}" method="post" onsubmit="return confirmDelete();">
+                    {% csrf_token %}
+                    <input type="hidden" name="booking_id" value="{{ booking.id }}">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <div>
+            <h5>Oopsie daisy!</h5>
+            <p>It seems like you haven't booked any workshops yet.</p>
+            <p>May I present the wonderful booking page?</p>
+            <a href="{% url 'booking' %}" class="btn btn-secondary me-2">Take me there!</a>
+        </div>
+    {% endif %}
 {% endblock %}

@@ -2,21 +2,19 @@
 {% load static %}
 
 {% block content %}
-<div class="container-xl">
-    <div class="jumbotron thanks-jumbo">
-        <h2>Thank you for your booking!</h2>
-        <p>We're thrilled to confirm your booking and can't wait 
-            to welcome you. Your spot has been reserved, and we're 
-            all set to provide you with an exceptional experience. 
-            If you have any questions or need further assistance 
-            before your session, please don't hesitate to reach 
-            out to us.</p>
-            <hr class="my-4">
-        <div class="d-flex flex-wrap justify-content-center">
-            <a href="{% url 'home' %}" class="btn btn-primary me-2 mb-1">Home page</a>
-            <a href="{% url 'my_bookings' %}" class="btn btn-primary me-2 mb-1">View my bookings</a>
-            <a href="{% url 'booking' %}" class="btn btn-success me-2 mb-1">Book another workshop</a>
-        </div>
+<div class="jumbotron thanks-jumbo">
+    <h2>Thank you for your booking!</h2>
+    <p>We're thrilled to confirm your booking and can't wait 
+        to welcome you. Your spot has been reserved, and we're 
+        all set to provide you with an exceptional experience. 
+        If you have any questions or need further assistance 
+        before your session, please don't hesitate to reach 
+        out to us.</p>
+        <hr class="my-4">
+    <div class="d-flex flex-wrap justify-content-center">
+        <a href="{% url 'home' %}" class="btn btn-primary me-2 mb-1">Home page</a>
+        <a href="{% url 'my_bookings' %}" class="btn btn-primary me-2 mb-1">View my bookings</a>
+        <a href="{% url 'booking' %}" class="btn btn-success me-2 mb-1">Book another workshop</a>
     </div>
 </div>
 {% endblock %}
