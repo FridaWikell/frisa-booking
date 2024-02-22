@@ -42,4 +42,8 @@
             <a href="{% url 'booking' %}" class="btn btn-secondary me-2">Take me there!</a>
         </div>
     {% endif %}
-{% endblock %}
+{% endblock content %}
+
+{% block script %}
+<script src="{% static 'js/delete_booking.js' %}"></script>
+{% endblock script %}
