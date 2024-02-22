@@ -1,12 +1,19 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<div class="row mx-5">
+<div class="row mx-3 md-mx-5">
     <h2>Courses</h2>
     {{ course }}
     {% for course in courses %}
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+    <div class="card col-md-4">
+        {% if course.name == "Pearler beads" %}
+        <img src="{% static 'img/christmas.webp' %}" class="card-img-top" alt="{{ course.name }}">
+        {% elif course.name == "Transforming treasures" %}
+        <img src="{% static 'img/phone.webp' %}" class="card-img-top" alt="{{ course.name }}">
+        {% elif course.name == "Our ultimate crafting experience" %}
+        <img src="{% static 'img/lamp.webp' %}" class="card-img-top" alt="{{ course.name }}">
+        {% endif %}
         <div class="card-body">
             <h5 class="card-title">{{ course.name }}</h5>
             <p class="card-text">{{ course.description|safe }}</p>

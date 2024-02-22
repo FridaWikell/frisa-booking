@@ -32,6 +32,11 @@ main {
     display: none;
 }
 
+.card-img-top {
+    margin-top: 12px;
+    border-radius: 10%;
+}
+
 
 /* Footer */
 .fa-brands, 
