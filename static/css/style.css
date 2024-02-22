@@ -5,8 +5,15 @@ body {
   }
 
 main {
+    background-color: #cacaca;
     flex: 1 0 auto;
 }
+
+.dark-back {
+    background-color: #353535;
+    color: #cacaca;
+}
+
 
 /* Navbar */
 .container-fluid {
@@ -34,6 +41,11 @@ main {
 /* Booking page */
 .more {
     display: none;
+}
+
+.card {
+    background-color: #353535;
+    color: #cacaca;
 }
 
 

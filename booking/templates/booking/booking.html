@@ -3,8 +3,7 @@
 
 {% block content %}
 <div class="row mx-3 md-mx-5">
-    <h2>Courses</h2>
-    {{ course }}
+    <h2 class="mt-3">Our courses</h2>
     {% for course in courses %}
     <div class="card col-md-4">
         {% if course.name == "Pearler beads" %}
@@ -58,3 +57,7 @@
     </div>
 </div>
 {% endblock content %}
+
+{% block script %}
+<script src="{% static 'js/booking.js' %}"></script>
+{% endblock script %}
