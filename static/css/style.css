@@ -16,25 +16,24 @@ main {
 
 
 /* Images */
-
 .logo-img {
     width: 90px;
 }
 
 .profile-img {
     width: 80%;
-    border-radius: 200px;
+    border-radius: 50%;
+}
+
+.card-img-top {
+    margin-top: 12px;
+    border-radius: 10%;
 }
 
 
 /* Booking page */
 .more {
     display: none;
-}
-
-.card-img-top {
-    margin-top: 12px;
-    border-radius: 10%;
 }
 
 
