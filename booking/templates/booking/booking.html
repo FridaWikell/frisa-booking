@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% load static %}
 
 {% block content %}
 <div class="row mx-5">
@@ -25,7 +24,7 @@
             {% csrf_token %}
             <button type="button" class="btn btn-primary book-session-btn session-slot {% if session.spots_available == 0 %}disabled{% endif %}" 
             {% if session.spots_available != 0 %} 
-            data-session-id="{{ session.id }}" data-bs-toggle="modal" data-bs-target="#confirmationModal"
+            data-session-id="{{ session.id }}" data-bs-toggle="modal" data-bs-target="#confirmationBookingModal"
             {% endif %}> {{ session.course.name }} <br> {{ session.start_time|date:"j F Y" }} <br>
             {{ session.start_time|time:"H.i" }} - {{ session.end_time|time:"H.i" }} <br> Available spots: {{ session.spots_available }}</button>
         </form>
@@ -33,11 +32,11 @@
     {% endfor %}
 
     <!-- Confirmation Modal -->
-    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+    <div class="modal fade" id="confirmationBookingModal" tabindex="-1" aria-labelledby="confirmationBookingModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="confirmationModalLabel">Confirm Booking</h5>
+                    <h5 class="modal-title" id="confirmationBookingModalLabel">Confirm Booking</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">

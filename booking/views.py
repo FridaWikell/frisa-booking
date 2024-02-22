@@ -67,13 +67,11 @@ def edit_booking(request, booking_id):
             booking.course_session = new_session
             booking.save()
 
-        messages.success(request, 'Booking updated successfully!')
         return redirect('my_bookings')
-    
+
     return render(request, 'booking/edit_booking.html', {
         'booking': booking, 
         'sessions': sessions})
-
 
 
 @login_required
