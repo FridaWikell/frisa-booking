@@ -5,8 +5,15 @@ body {
   }
 
 main {
+    background-color: #cacaca;
     flex: 1 0 auto;
 }
+
+.dark-back {
+    background-color: #353535;
+    color: #cacaca;
+}
+
 
 /* Navbar */
 .container-fluid {
@@ -16,20 +23,29 @@ main {
 
 
 /* Images */
-
 .logo-img {
     width: 90px;
 }
 
 .profile-img {
     width: 80%;
-    border-radius: 200px;
+    border-radius: 50%;
+}
+
+.card-img-top {
+    margin-top: 12px;
+    border-radius: 10%;
 }
 
 
 /* Booking page */
 .more {
     display: none;
+}
+
+.card {
+    background-color: #353535;
+    color: #cacaca;
 }
 
 

@@ -9,16 +9,15 @@ main {
     flex: 1 0 auto;
 }
 
-.dark-back {
-    background-color: #353535;
-    color: #cacaca;
+
+
+
+.nav-bar {
+    background-color: #b6b4b4;
+    border-bottom: 1px solid #3f3f3f;
 }
 
 
-/* Navbar */
-.container-fluid {
-    padding: 8px 30px 5px 30px;
-}
 
 
 
@@ -53,4 +52,9 @@ main {
 .fa-brands, 
 .fa-regular {
     color: #000000;
+}
+
+footer {
+    background-color: #b6b4b4;
+    border-top: 1px solid #3f3f3f;
 }

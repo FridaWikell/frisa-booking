@@ -19,46 +19,47 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-md bg-body-tertiary dark-back">
-        <div class="container-xl">
-            <a class="navbar-brand" href="{% url 'home' %}">
-                <img src="{% static 'img/frisa-logo.png' %}" class="logo-img" alt="Frisa logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto nav-underline">
-                    <li class="nav-item menu-item">
-                        <a class="nav-link {% if request.path == home_url %}active" aria-current="page{% endif %}" href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == about_url %}active" aria-current="page{% endif %}" href="{% url 'about' %}">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == booking_url %}active" aria-current="page{% endif %}" href="{% url 'booking' %}">Booking</a>
-                    </li>
-                    {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link {% if '_booking' in request.path %}active" aria-current="page{% endif %}" href="{% url 'my_bookings' %}"><i class="fa-regular fa-user"></i> {{ user }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
-                    </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == signup_url %}active" aria-current="page{% endif %}" href="{% url 'account_signup' %}">Sign up</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == login_url %}active" aria-current="page{% endif %}" href="{% url 'account_login' %}">Login</a>
-                    </li>
-                    {% endif %}
-                </ul>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-md nav-bar py-2 px-2">
+            <div class="container-xl">
+                <a class="navbar-brand" href="{% url 'home' %}">
+                    <img src="{% static 'img/frisa-logo.png' %}" class="logo-img" alt="Frisa logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mb-2 mb-lg-0 ms-auto nav-underline">
+                        <li class="nav-item menu-item">
+                            <a class="nav-link {% if request.path == home_url %}active" aria-current="page{% endif %}" href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == about_url %}active" aria-current="page{% endif %}" href="{% url 'about' %}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == booking_url %}active" aria-current="page{% endif %}" href="{% url 'booking' %}">Booking</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link {% if '_booking' in request.path %}active" aria-current="page{% endif %}" href="{% url 'my_bookings' %}"><i class="fa-regular fa-user"></i> {{ user }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == signup_url %}active" aria-current="page{% endif %}" href="{% url 'account_signup' %}">Sign up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == login_url %}active" aria-current="page{% endif %}" href="{% url 'account_login' %}">Login</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Main content -->
     <main>
@@ -70,7 +71,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-3 my-4 border-top">
+    <footer class="py-4">
         <div class="container">
             <div class="row">
                 <div class="col-12 d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center">
