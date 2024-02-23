@@ -65,7 +65,7 @@ main {
     display: none;
 }
 
-.card, .booking-btn, .about-text, .my-bookings {
+.card, .booking-btn, .about-text, .my-bookings, .take-me-btn {
     background-color: #353535;
     color: #cacaca;
 }
@@ -107,6 +107,10 @@ main {
 
 .stick-to-bottom {
     margin-top: auto;
+}
+
+.take-me-btn:hover {
+    background-color: #6d6d6d;
 }
 
 /* Footer */

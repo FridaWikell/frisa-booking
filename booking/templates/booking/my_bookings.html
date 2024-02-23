@@ -38,11 +38,11 @@
         </div>
         {% endfor %}
     {% else %}
-        <div>
+        <div class="col-sm-4 my-3 mx-3 px-3 py-4 text-center">
             <h5>Oopsie daisy!</h5>
             <p>It seems like you haven't booked any workshops yet.</p>
             <p>May I present the wonderful booking page?</p>
-            <a href="{% url 'booking' %}" class="btn btn-secondary me-2">Take me there!</a>
+            <a href="{% url 'booking' %}" class="btn take-me-btn me-2">Take me there!</a>
         </div>
     {% endif %}
 </div>
