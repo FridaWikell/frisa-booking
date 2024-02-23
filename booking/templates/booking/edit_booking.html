@@ -5,21 +5,23 @@
 <div class="row justify-content-center">
     <hr class="col-8 mt-2 mt-md-3">
 </div>
-<div class="row justify-content-center mx-3">
+<div class="row mx-3">
     <h2 class="my-4 text-center">Please select another workshop</h2>
-    <form method="post" action="" id="sessionForm">
-        {% csrf_token %}
-        <input type="hidden" name="session_id" id="selectedSessionId" value="">
-        <div class="col-10 col-sm-6 col-lg-3 mb-2 mb-sm-3 session-buttons">
-            {% for session in sessions %}
-            <button type="button" class="btn book-session-btn session-slot booking-btn py-3" data-session-id="{{ session.id }}">
+    {% for session in sessions %}
+    <div class="col-10 col-sm-6 col-lg-3 mb-2 mb-sm-3">
+        <form method="post" action="" id="sessionForm">
+            {% csrf_token %}
+            <input type="hidden" name="session_id" id="selectedSessionId" value="">         
+            <button type="button" class="btn session-btn booking-btn py-3" data-session-id="{{ session.id }}">
                 <h6>{{ session.course.name }}</h6> {{ session.start_time|date:"j F Y" }} <br> 
                 {{ session.start_time|time:"H.i" }} - {{ session.end_time|time:"H.i" }} <br> Available spots: {{ session.spots_available }}
             </button>
-            {% endfor %}
-        </div>
-    </form>
-  </div>
+        </form>
+    </div>
+    {% endfor %}
+</div>
+<div class="row justify-content-center">
+    <hr class="col-8 mt-2 mt-md-3">
 </div>
 
 <!-- Confirmation Modal -->
@@ -27,11 +29,11 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="confirmationModalLabel">Confirm Session Change</h5>
+                <h5 class="modal-title" id="confirmationModalLabel">Confirm Workshop Change</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-            Are you sure you want to change your session?
+            Are you sure you want to change your workshop
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn cancel-btn" data-bs-dismiss="modal">Cancel</button>
