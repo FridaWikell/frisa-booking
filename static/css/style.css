@@ -65,7 +65,7 @@ main {
     display: none;
 }
 
-.card, .booking-btn, .about-text {
+.card, .booking-btn, .about-text, .my-bookings {
     background-color: #353535;
     color: #cacaca;
 }
@@ -97,12 +97,32 @@ main {
     color: #ffffff;
 }
 
+/* My bookings */
+.my-bookings {
+    display: flex;
+    flex-direction: column; 
+    border-radius: 5%;
+    min-height: 238px;
+}
+
+.stick-to-bottom {
+    margin-top: auto; /* Pushes the div to the bottom */
+}
+
 /* Footer */
 .fa-brands, 
 .fa-regular {
     color: #000000;
 }
 
+.delete-btn {
+    background-color: #9e3e3e;
+    color: #ffffff;
+}
+
+.delete-btn:hover {
+    background-color: #8a3636;
+}
 
 /* Media query */
 
