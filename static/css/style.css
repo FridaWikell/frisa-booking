@@ -106,7 +106,7 @@ main {
 }
 
 .stick-to-bottom {
-    margin-top: auto; /* Pushes the div to the bottom */
+    margin-top: auto;
 }
 
 /* Footer */

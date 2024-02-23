@@ -21,12 +21,12 @@
 <div class="row col-10 justify-content-center mx-auto">
     {% if bookings %}
         {% for booking in bookings %}
-        <div class="col-sm-4 my-3 px-3 py-4 my-bookings">
+        <div class="col-sm-4 my-3 mx-3 px-3 py-4 text-center my-bookings">
             <h5 class="pb-3">{{ booking.course_session.course.name }}</h5> 
             <p>{{ booking.course_session.start_time|date:"j F Y" }}</p>
             <p>{{ booking.course_session.start_time|time:"H.i" }} - {{ booking.course_session.end_time|time:"H.i" }}</p>
             <!-- Edit Button -->
-            <div class="d-flex align-items-center stick-to-bottom">
+            <div class="d-flex justify-content-center stick-to-bottom">
                 <a href="{% url 'edit_booking' booking.id %}" class="btn btn-secondary me-2">Edit</a>
                 <!-- Inline Form for Deletion -->
                 <form action="{% url 'delete_booking' booking.id %}" method="post" onsubmit="return confirmDelete();">
