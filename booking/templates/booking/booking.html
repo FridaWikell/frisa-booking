@@ -2,10 +2,16 @@
 {% load static %}
 
 {% block content %}
-<div class="row mx-3 md-mx-5">
-    <h2 class="mt-3">Our courses</h2>
+<div class="row mx-3 md-mx-5 justify-content-center">
+    <h2 class="mt-3 text-center">What do we do?</h2>
+    <h5 class="mb-3 mb-md-4 text-center">Come and join us!</h5>
+</div> 
+<div class="row justify-content-center">
+    <hr class="col-8 mb-3 mb-md-4">
+</div>
+<div class="row mx-3 md-mx-5 justify-content-center">
     {% for course in courses %}
-    <div class="card col-md-4">
+    <div class="card mx-sm-1 mx-md-2 mx-lg-3 mb-3 col-sm-5 col-md-5">
         {% if course.name == "Pearler beads" %}
         <img src="{% static 'img/christmas.webp' %}" class="card-img-top" alt="{{ course.name }}">
         {% elif course.name == "Transforming treasures" %}
@@ -16,26 +22,34 @@
         <div class="card-body">
             <h5 class="card-title">{{ course.name }}</h5>
             <p class="card-text">{{ course.description|safe }}</p>
-            <button class="read-more">Read more</button>
+            <button class="read-more">Read more &#62;&#62;</button>
         </div>
-        </div>
+    </div>
     {% endfor %}
-</div>           
+</div>    
 
-<div class="row justify-content-center mx-5">
+<div class="row justify-content-center">
+    <hr class="col-8 mt-2 mt-md-3">
+</div>
+<div class="row justify-content-center mx-3">
+    <h2 class="my-4 text-center">Upcoming workshops</h2>
     {% for session in sessions %}
-    <div class="col-6 col-md-3 col-lg-2">
+    <div class="col-10 col-sm-6 col-lg-3 mb-2 mb-sm-3">
         <!-- Button trigger modal -->
         <form method="post" action="{% url 'book_session' session.id %}" id="bookingForm-{{ session.id }}">
             {% csrf_token %}
-            <button type="button" class="btn btn-primary book-session-btn session-slot {% if session.spots_available == 0 %}disabled{% endif %}" 
+            <button type="button" class="btn book-session-btn session-slot booking-btn py-3 {% if session.spots_available == 0 %}disabled{% endif %}" 
             {% if session.spots_available != 0 %} 
             data-session-id="{{ session.id }}" data-bs-toggle="modal" data-bs-target="#confirmationBookingModal"
-            {% endif %}> {{ session.course.name }} <br> {{ session.start_time|date:"j F Y" }} <br>
+            {% endif %}> <h6>{{ session.course.name }}</h6> {{ session.start_time|date:"j F Y" }} <br>
             {{ session.start_time|time:"H.i" }} - {{ session.end_time|time:"H.i" }} <br> Available spots: {{ session.spots_available }}</button>
         </form>
     </div>
     {% endfor %}
+</div>
+<div class="row justify-content-center">
+    <hr class="col-8 mt-2 mt-md-3">
+</div>
 
     <!-- Confirmation Modal -->
     <div class="modal fade" id="confirmationBookingModal" tabindex="-1" aria-labelledby="confirmationBookingModalLabel" aria-hidden="true">
@@ -55,7 +69,7 @@
             </div>
         </div>
     </div>
-</div>
+
 {% endblock content %}
 
 {% block script %}

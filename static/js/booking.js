@@ -28,11 +28,11 @@ document.querySelectorAll('.read-more').forEach(item => {
 
         if (dots.style.display === "none") {
             dots.style.display = "inline";
-            btnText.innerHTML = "Read more";
+            btnText.innerHTML = "Read more &#62;&#62;";
             moreText.style.display = "none";
         } else {
             dots.style.display = "none";
-            btnText.innerHTML = "Read less";
+            btnText.innerHTML = "&#60;&#60; Read less";
             moreText.style.display = "inline";
         }
     });

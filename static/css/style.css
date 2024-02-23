@@ -1,22 +1,22 @@
+/* Fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dosis:wght@200..800&display=swap');
 
+/* General styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Comfortaa', sans-serif;
+}
 
 body {
     min-height: 100vh;
+    background-color: #cacaca;
+    color: #353535;
+    font-family: 'Dosis', sans-serif;
   }
 
 main {
     background-color: #cacaca;
     flex: 1 0 auto;
 }
-
-
-
-
-.nav-bar {
-    background-color: #b6b4b4;
-    border-bottom: 1px solid #3f3f3f;
-}
-
 
 
 
@@ -42,9 +42,26 @@ main {
     display: none;
 }
 
-.card {
+.card, .booking-btn {
     background-color: #353535;
     color: #cacaca;
+}
+
+
+.read-more {
+    background-color: #353535;
+    color: #cacaca;
+    font-weight: 600;
+    border: none;
+}
+
+.booking-btn {
+    width: 100%;
+    min-height: 153px;
+}
+
+.booking-btn:hover {
+    background-color: #a0a0a0;
 }
 
 
@@ -54,7 +71,12 @@ main {
     color: #000000;
 }
 
-footer {
-    background-color: #b6b4b4;
-    border-top: 1px solid #3f3f3f;
-}
+
+/* Media query */
+
+
+@media (min-width: 1024px) {
+    .card {
+        width: 30%;
+    }
+  }
