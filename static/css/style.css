@@ -19,8 +19,6 @@ main {
 }
 
 
-
-
 /* Images */
 .logo-img {
     width: 90px;
@@ -37,12 +35,34 @@ main {
 }
 
 
+/* About page */
+.custom-form input[type="text"],
+.custom-form input[type="email"],
+.custom-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 5px; 
+}
+
+.submit-btn {
+    background-color: #cacaca;
+    color: #353535;
+    font-weight: 500;
+}
+
+.submit-btn:hover {
+    background-color: #6d6d6d;
+}
+
 /* Booking page */
 .more {
     display: none;
 }
 
-.card, .booking-btn {
+.card, .booking-btn, .about-text {
     background-color: #353535;
     color: #cacaca;
 }
@@ -82,7 +102,6 @@ main {
 
 
 /* Media query */
-
 
 @media (min-width: 1024px) {
     .card {

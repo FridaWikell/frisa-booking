@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block content %}
-<div class="row">
+<div class="row justify-content-center">
     <div class="col-md-4 text-center">
-        <img src="{% static 'img/frisa-profile.webp' %}" alt="Headshot of Frida, owner of Frisa" class="profile-img">
+        <img src="{% static 'img/frisa-profile.webp' %}" alt="Headshot of Frida, owner of Frisa" class="profile-img my-3">
     </div>
-    <div class="col-md-8">
+    <div class="col-10 col-md-8 px-3 pt-3">
         <h2>Who am I?</h2>
         <p>
             I&#146m a creative soul with a deep passion for giving new life to the old,
@@ -37,20 +37,26 @@
         </p>
     </div>
 </div>
-
-<div class="row">
-    <div id="contact-form">
+<div class="row justify-content-center">
+    <hr class="col-8 my-4">
+</div>
+<div class="row justify-content-center about-text py-5">
+    <div class="col-10 col-md-8 col-lg-6" id="contact-form">
         <h2>Any questions?</h2>
         <p>I love questions! If you have any questions, don't hesitate to contact me. 
             Do you want to book a course for a larger group? No problem, just send me 
             a message and we will work it out!</p>
-        <form method="post" action=".">
+        <form method="post" action="." class="custom-form">
             {% csrf_token %}
 
             {{ form.as_p }}
-        
-            <button>Submit</button>
+            <div class="text-end">
+                <button class="btn submit-btn">Submit</button>
+            </div>
         </form>
     </div>
-</div>    
+</div>
+<div class="row justify-content-center">
+    <hr class="col-8 my-4">
+</div>
 {% endblock content %}
