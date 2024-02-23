@@ -64,6 +64,15 @@ main {
     background-color: #a0a0a0;
 }
 
+.cancel-btn {
+    background-color: #411919;
+    color: #ffffff;    
+}
+
+.confirm-btn {
+    background-color: #193a18;
+    color: #ffffff;
+}
 
 /* Footer */
 .fa-brands, 
