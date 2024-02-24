@@ -5,7 +5,7 @@
 <div class="row justify-content-center">
     <hr class="col-8 mt-2 mt-md-3">
 </div>
-<div class="row mx-3">
+<div class="row mx-3 justify-content-center">
     <h2 class="my-4 text-center">Please select another workshop</h2>
     {% for session in sessions %}
     <div class="col-10 col-sm-6 col-lg-3 mb-2 mb-sm-3">
@@ -29,11 +29,13 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="confirmationModalLabel">Confirm Workshop Change</h5>
+                <h5 class="modal-title" id="confirmationModalLabel">Confirm workshop change</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-            Are you sure you want to change your workshop
+                Fantastic! It looks like you've discovered another workshop that suits your schedule better. 
+                That's great news! Simply click on the "Confirm" button, and we'll take care of the rest. 
+                We're excited to have everything arranged for you and can't wait to see you there!
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn cancel-btn" data-bs-dismiss="modal">Cancel</button>

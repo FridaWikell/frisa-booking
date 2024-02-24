@@ -3,6 +3,7 @@ from django.views import generic
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db import transaction
+from django.db.models import Q
 from django.http import JsonResponse
 from django.utils import timezone
 
@@ -48,7 +49,11 @@ def my_bookings(request):
 @login_required
 def edit_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id, user=request.user)
-    sessions = CourseSession.objects.filter(spots_available__gt=0).exclude(id=booking.course_session.id).order_by('start_time')
+    # Get IDs of sessions already booked by the user excluding the current booking
+    user_session_ids = Booking.objects.filter(user=request.user).exclude(id=booking_id).values_list('course_session_id', flat=True)
+    
+    # Exclude sessions that are already booked by the user and the current session being edited
+    sessions = CourseSession.objects.filter(spots_available__gt=0).exclude(Q(id=booking.course_session.id) | Q(id__in=user_session_ids)).order_by('start_time')
 
     if request.method == 'POST':
         new_session_id = request.POST.get('session_id')
