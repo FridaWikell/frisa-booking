@@ -6,16 +6,8 @@ from django.db import transaction
 from django.db.models import Q
 from django.http import JsonResponse
 from django.utils import timezone
-
 from .models import Course, CourseSession, Booking
 from .forms import CourseSelectionForm, BookingForm
-
-"""
-# Create your views here.
-class BookingList(generic.ListView):
-    queryset = Course.objects.all()
-    template_name = "booking/booking.html"
-"""
     
 
 def list_courses(request):
@@ -52,6 +44,7 @@ def book_session(request, session_id):
 
 def success_page(request):
     return render(request, 'booking/success_page.html')
+
 
 @login_required
 def my_bookings(request):
