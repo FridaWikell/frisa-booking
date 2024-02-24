@@ -1,5 +1,7 @@
-/* Global variables */
+/* Variables */
 let currentSessionId = null;
+let modalElement = document.getElementById('bookingNotificationModal');
+let alreadyBooked = modalElement.getAttribute('data-already-booked') === 'true';
 
 
 /* Add event listener to store id used for book session */
@@ -19,12 +21,13 @@ document.getElementById('confirmBooking').addEventListener('click', function() {
 
 
 /* Trigger the already booked modal */
-if (window.alreadyBooked === true) {
-    var bookingNotificationModal = new bootstrap.Modal(document.getElementById('bookingNotificationModal'), {
+if (alreadyBooked) {
+    // Logic to show the modal
+    let bookingNotificationModal = new bootstrap.Modal(modalElement, {
         keyboard: true
     });
     bookingNotificationModal.show();
-};
+}
 
 
 /* Redirect the user back to the booking page when they have tried 
