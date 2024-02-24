@@ -23,7 +23,7 @@ from about import views as about_views
 
 # Visa startsidan
 def homepage_view(request):
-    template = loader.get_template('base.html')
+    template = loader.get_template('index.html')
     return HttpResponse(template.render({}, request))
 
 

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div id="carouselExample" class="carousel slide start-carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'img/bb8-perler-beads.webp' %}" class="d-block w-100" alt="BB8 perler beads">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/coffee-filter-lego.webp' %}" class="d-block w-100" alt="Coffee filter holder in LEGO"">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/cookie-stand-vinyl.webp' %}" class="d-block w-100" alt="Cookie stand of vinyl records">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/flower-pot-cassette.webp' %}" class="d-block w-100" alt="Flower pot made of cassette tapes">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/flower.webp' %}" class="d-block w-100" alt="Flower">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/headphones-stand.webp' %}" class="d-block w-100" alt="Headphone stand made of VHS videocassettes">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/mario-perler-beads.webp' %}" class="d-block w-100" alt="Super Mario perler beads">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/r2d2-perler-beads.webp' %}" class="d-block w-100" alt="R2D2 perler beads">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/remote-stand-cassette.webp' %}" class="d-block w-100" alt="Remote stand made by cassette tapes">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/star-perler-beads.webp' %}" class="d-block w-100" alt="Star perler beads">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/toilet-paper-iron.webp' %}" class="d-block w-100" alt="Toilet paper holder made of an old iron">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/yoshi-perler-beads.webp' %}" class="d-block w-100" alt="Yoshi perler beads">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/yoshi-train-perler-beads.webp' %}" class="d-block w-100" alt="Super Mario and Yoshis in perler beads">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+{% endblock content %}
