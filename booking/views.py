@@ -25,15 +25,29 @@ def list_courses(request):
         'courses': courses,
         'sessions': sessions})
 
+
 @login_required
 def book_session(request, session_id):
+    courses = Course.objects.all()  
+    sessions = CourseSession.objects.filter(start_time__gte=timezone.now()).order_by('start_time')
+    session = get_object_or_404(CourseSession, id=session_id)
+    already_booked = False
+
     if request.method == 'POST':
-        session = get_object_or_404(CourseSession, id=session_id)
-        with transaction.atomic():
-            session.spots_available -= 1
-            session.save()
-            Booking.objects.create(user=request.user, course_session=session)
-        return redirect('success_page')
+        if Booking.objects.filter(user=request.user, course_session=session).exists():
+            already_booked = True
+        else:
+            with transaction.atomic():
+                session.spots_available -= 1
+                session.save()
+                Booking.objects.create(user=request.user, course_session=session)
+            return redirect('success_page')
+
+    return render(request, 'booking/booking.html', {
+                'courses': courses,
+                'sessions': sessions,
+                'already_booked': already_booked
+    })
 
 
 def success_page(request):

@@ -1,3 +1,4 @@
+/* Global variables */
 let currentSessionId = null;
 
 
@@ -8,6 +9,7 @@ document.querySelectorAll('.book-session-btn').forEach(button => {
     });
 });
 
+
 /* Submits the form in the pop up modal when making a new booking */
 document.getElementById('confirmBooking').addEventListener('click', function() {
     if (currentSessionId) {
@@ -15,6 +17,23 @@ document.getElementById('confirmBooking').addEventListener('click', function() {
     }
 });
 
+
+/* Trigger the already booked modal */
+if (window.alreadyBooked === true) {
+    var bookingNotificationModal = new bootstrap.Modal(document.getElementById('bookingNotificationModal'), {
+        keyboard: true
+    });
+    bookingNotificationModal.show();
+};
+
+
+/* Redirect the user back to the booking page when they have tried 
+to book a workshop they already have an active booking */
+var closeButton = document.querySelector('#close-booking');
+closeButton.addEventListener('click', function() {
+    var bookingUrl = this.getAttribute('data-booking-url');
+    window.location.href = bookingUrl;
+});
 
 
 /* Expands the course description */

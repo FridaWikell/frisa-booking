@@ -51,6 +51,24 @@
     <hr class="col-8 mt-2 mt-md-3">
 </div>
 
+<!-- Bootstrap Modal for Booking Notification -->
+<div class="modal fade" id="bookingNotificationModal" tabindex="-1" aria-labelledby="bookingNotificationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="bookingNotificationModalLabel">Booking notice</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                You're a step ahead of yourself! You already have a booking for this workshop. Please choose a different one."
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn take-me-btn" id="close-booking" data-bs-dismiss="modal" data-booking-url="{% url 'booking' %}">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Confirmation Modal -->
 <div class="modal fade" id="confirmationBookingModal" tabindex="-1" aria-labelledby="confirmationBookingModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -73,5 +91,8 @@
 {% endblock content %}
 
 {% block script %}
+<script>
+    window.alreadyBooked = "{{ already_booked|lower }}" === "true";
+</script>
 <script src="{% static 'js/booking.js' %}"></script>
 {% endblock script %}
