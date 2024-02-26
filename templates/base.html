@@ -6,6 +6,7 @@
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
+{% url 'success_page' as success_url %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,7 +45,7 @@
                                 <a class="nav-link {% if request.path == about_url %}active" aria-current="page{% endif %}" href="{% url 'about' %}">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {% if request.path == booking_url %}active" aria-current="page{% endif %}" href="{% url 'booking' %}">Booking</a>
+                                <a class="nav-link {% if request.path == booking_url or request.path == success_url %}active" aria-current="page{% endif %}" href="{% url 'booking' %}">Booking</a>
                             </li>
                             {% if user.is_authenticated %}
                             <li class="nav-item">
