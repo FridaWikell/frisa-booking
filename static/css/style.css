@@ -26,8 +26,22 @@ a {
 }
 
 /* Images */
-.logo-img {
-    width: 90px;
+
+.hero-img {
+    background: url('../img/hero-image.webp') center center/cover;
+    min-height: 900px;
+}
+
+.small-img {
+    padding-top: 12px;
+}
+
+.first-img {
+    padding-right: 6px;
+}
+
+.second-img {
+    padding-left: 6px;
 }
 
 .start-carousel {
@@ -110,6 +124,15 @@ a {
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; 
 }
 
+
+/* Index page */
+.start-div {
+    height: fit-content;
+}
+
+.half-height {
+    height: 50%;
+}
 
 /* About page */
 .custom-form input[type="text"],
