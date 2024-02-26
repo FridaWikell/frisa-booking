@@ -58,7 +58,8 @@ INSTALLED_APPS = [
 SITE_ID = 1
 
 # Se om du kan ta bort denna och länken i base-html redirect till föregående sida. 
-LOGIN_REDIRECT_URL = '/booking'
+# LOGIN_REDIRECT_URL = '/booking'
+LOGIN_REDIRECT_URL = '/'
 
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
