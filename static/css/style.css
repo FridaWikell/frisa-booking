@@ -32,18 +32,6 @@ a {
     min-height: 900px;
 }
 
-.small-img {
-    padding-top: 12px;
-}
-
-.first-img {
-    padding-right: 6px;
-}
-
-.second-img {
-    padding-left: 6px;
-}
-
 .start-carousel {
     max-width: 600px;
 }
@@ -75,8 +63,18 @@ a {
     color: #ffffff;    
 }
 
+.cancel-btn:hover {
+    background-color: #6d2f2f;
+    color: #ffffff;
+}
+
 .confirm-btn {
     background-color: #193a18;
+    color: #ffffff;
+}
+
+.confirm-btn:hover {
+    background-color: #2b6429;
     color: #ffffff;
 }
 
