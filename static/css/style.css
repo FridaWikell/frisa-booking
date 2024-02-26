@@ -126,12 +126,9 @@ a {
 
 
 /* Index page */
-.start-div {
-    height: fit-content;
-}
-
-.half-height {
-    height: 50%;
+.fa-chevron-left,
+.fa-chevron-right {
+    color: #000000;
 }
 
 /* About page */
