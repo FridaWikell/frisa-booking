@@ -94,5 +94,4 @@ def delete_booking(request, booking_id):
         course_session.spots_available += 1
         course_session.save()
         booking.delete()
-        messages.success(request, 'Booking cancelled successfully!')
-        return redirect('my_bookings')
+    return redirect('my_bookings')

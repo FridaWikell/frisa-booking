@@ -37,12 +37,8 @@
             <!-- Edit Button -->
             <div class="d-flex justify-content-center stick-to-bottom">
                 <a href="{% url 'edit_booking' booking.id %}" class="btn btn-secondary me-2">Edit</a>
-                <!-- Inline Form for Deletion -->
-                <form action="{% url 'delete_booking' booking.id %}" method="post" onsubmit="return confirmDelete();">
-                    {% csrf_token %}
-                    <input type="hidden" name="booking_id" value="{{ booking.id }}">
-                    <button type="submit" class="btn delete-btn">Cancel</button>
-                </form>
+                <!-- Cancel Button triggers the modal -->
+                <button type="button" class="btn delete-btn delete-booking" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal" data-booking-id="{{ booking.id }}">Cancel</button>
             </div>
         </div>
         {% endfor %}
@@ -58,6 +54,31 @@
 <div class="row justify-content-center">
     <hr class="col-8 mt-4">
 </div>
+
+<!-- Deletion Confirmation Modal -->
+<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteConfirmationModalLabel">Confirm Booking Cancellation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to cancel this booking? This action cannot be undone (unless you can travel in time).
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <!-- The form now exists in the modal footer -->
+                <form action="" method="POST" id="deleteForm">
+                    {% csrf_token %}
+                    <input type="hidden" name="booking_id" value="" id="hiddenBookingId">
+                    <button type="submit" class="btn delete-btn">Confirm</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock content %}
 
 {% block script %}
