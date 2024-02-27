@@ -18,17 +18,18 @@
 <div class="row justify-content-center">
     <hr class="col-8 mt-2 mt-md-3">
 </div>
+
 <div class="row col-10 col-md-6 justify-content-center mx-auto">
-    <p>
-        We're thrilled to announce that we've successfully gathered all 
-        the workshops you've booked with us. Every session has been 
-        carefully organized and is awaiting your participation. 
-        This personalized collection is designed to ensure you 
-        have a seamless and enriching experience.
-    </p>
-</div>
-<div class="row col-10 justify-content-center mx-auto">
     {% if bookings %}
+        <p>
+            We're thrilled to announce that we've successfully gathered all 
+            the workshops you've booked with us. Every session has been 
+            carefully organized and is awaiting your participation. 
+            This personalized collection is designed to ensure you 
+            have a seamless and enriching experience.
+        </p>
+    </div>
+    <div class="row col-10 justify-content-center mx-auto">
         {% for booking in bookings %}
         <div class="col-sm-4 my-3 mx-3 px-3 py-4 text-center my-bookings">
             <h5 class="pb-3">{{ booking.course_session.course.name }}</h5> 
