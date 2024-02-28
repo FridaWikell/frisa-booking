@@ -2,8 +2,18 @@ from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template.loader import render_to_string
+from django.contrib import messages
 
 from .forms import ContactForm
+
+response = """
+<h2>Whoa, That Was Fast!</h2>
+<p>\U0001F680 Your question just zoomed through the internet and 
+landed in our inbox with a superhero landing! We're currently 
+assembling a team of highly trained squirrels to craft the perfect response. 
+We aim to get back to you within 48 hours, assuming the squirrels don&#146t 
+get distracted by any shiny objects... \U0001F43F \U00002728</p>
+"""
 
 # Create your views here.
 # Ändra detta till about.html?
@@ -25,8 +35,14 @@ def about(request):
             })
 
             send_mail('The contact form subject', 'This is the message', 'noreply@codewithsten.com', ['frida.wikell@gmail.com'], html_message=html)
-
-            return redirect('about')
+            
+            if request.headers.get('HX-Request'):
+                # Return a simple HttpResponse with a success message
+                return HttpResponse(response)
+        else:
+            if request.headers.get('HX-Request'):
+                # For invalid form with htmx request, return only the form fragment
+                return render(request, 'about/_contact_form.html', {'form': form})
 
     else:
         form = ContactForm()
