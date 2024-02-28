@@ -3,13 +3,9 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template.loader import render_to_string
 from django.contrib import messages
-
 from .forms import ContactForm
 
 
-
-# Create your views here.
-# Ändra detta till about.html?
 def about(request):
     response = """
     <h2>Whoa, that was fast!</h2>
@@ -39,11 +35,9 @@ def about(request):
             send_mail('New message from contact form', 'Message', 'frisa.craft@gmail.com', ['frisa.craft@gmail.com'], html_message=html)
             
             if request.headers.get('HX-Request'):
-                # Return a simple HttpResponse with a success message
                 return HttpResponse(response)
         else:
             if request.headers.get('HX-Request'):
-                # For invalid form with htmx request, return only the form fragment
                 return render(request, 'about/_contact_form.html', {'form': form})
 
     else:

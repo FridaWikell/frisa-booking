@@ -56,10 +56,7 @@ def my_bookings(request):
 @login_required
 def edit_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id, user=request.user)
-    # Get IDs of sessions already booked by the user excluding the current booking
     user_session_ids = Booking.objects.filter(user=request.user).exclude(id=booking_id).values_list('course_session_id', flat=True)
-    
-    # Exclude sessions that are already booked by the user and the current session being edited
     sessions = CourseSession.objects.filter(spots_available__gt=0).exclude(Q(id=booking.course_session.id) | Q(id__in=user_session_ids)).order_by('start_time')
 
     if request.method == 'POST':
@@ -67,15 +64,10 @@ def edit_booking(request, booking_id):
         new_session = get_object_or_404(CourseSession, id=new_session_id)
 
         with transaction.atomic():
-            # Update spots for the old session
             booking.course_session.spots_available += 1
             booking.course_session.save()
-
-            # Update spots for the new session
             new_session.spots_available -= 1
             new_session.save()
-
-            # Update the booking to the new session
             booking.course_session = new_session
             booking.save()
 
