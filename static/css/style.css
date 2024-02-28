@@ -39,6 +39,7 @@ a {
 .profile-img {
     width: 80%;
     border-radius: 50%;
+    max-width: 350px;
 }
 
 .card-img-top {
