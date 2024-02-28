@@ -7,12 +7,12 @@ from django.contrib import messages
 from .forms import ContactForm
 
 response = """
-<h2>Whoa, That Was Fast!</h2>
-<p>\U0001F680 Your question just zoomed through the internet and 
+<h2>Whoa, that was fast!</h2>
+<p>&#128640; Your question just zoomed through the internet and 
 landed in our inbox with a superhero landing! We're currently 
 assembling a team of highly trained squirrels to craft the perfect response. 
 We aim to get back to you within 48 hours, assuming the squirrels don&#146t 
-get distracted by any shiny objects... \U0001F43F \U00002728</p>
+get distracted by any shiny objects...</p>
 """
 
 # Create your views here.
