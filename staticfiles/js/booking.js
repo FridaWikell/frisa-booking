@@ -1,4 +1,7 @@
+/* Variables */
 let currentSessionId = null;
+let modalElement = document.getElementById('bookingNotificationModal');
+let alreadyBooked = modalElement.getAttribute('data-already-booked') === 'true';
 
 
 /* Add event listener to store id used for book session */
@@ -8,6 +11,7 @@ document.querySelectorAll('.book-session-btn').forEach(button => {
     });
 });
 
+
 /* Submits the form in the pop up modal when making a new booking */
 document.getElementById('confirmBooking').addEventListener('click', function() {
     if (currentSessionId) {
@@ -15,6 +19,24 @@ document.getElementById('confirmBooking').addEventListener('click', function() {
     }
 });
 
+
+/* Trigger the already booked modal */
+if (alreadyBooked) {
+    // Logic to show the modal
+    let bookingNotificationModal = new bootstrap.Modal(modalElement, {
+        keyboard: true
+    });
+    bookingNotificationModal.show();
+}
+
+
+/* Redirect the user back to the booking page when they have tried 
+to book a workshop they already have an active booking */
+var closeButton = document.querySelector('#close-booking');
+closeButton.addEventListener('click', function() {
+    var bookingUrl = this.getAttribute('data-booking-url');
+    window.location.href = bookingUrl;
+});
 
 
 /* Expands the course description */
@@ -28,11 +50,11 @@ document.querySelectorAll('.read-more').forEach(item => {
 
         if (dots.style.display === "none") {
             dots.style.display = "inline";
-            btnText.innerHTML = "Read more";
+            btnText.innerHTML = "Read more &#62;&#62;";
             moreText.style.display = "none";
         } else {
             dots.style.display = "none";
-            btnText.innerHTML = "Read less";
+            btnText.innerHTML = "&#60;&#60; Read less";
             moreText.style.display = "inline";
         }
     });
