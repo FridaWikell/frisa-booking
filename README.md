@@ -70,7 +70,11 @@ Three different models were used in the website.
 
 #### Navigation bar
 
+![Navigation bar as a not logged in user](doc/navbar-not-logged-in.webp)
+
 #### Navigation bar (as a logged in user)
+
+![Navigation bar as a logged in user](doc/navbar-logged-in.webp)
 
 ### Index page
 
