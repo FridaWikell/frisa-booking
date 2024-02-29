@@ -53,6 +53,14 @@ All the images are chosen to inspire the website users. The images should give a
 
 ### Entity Relationship Diagram - ERD
 
+Three different models were used in the website.
+
+![ERD of Booking Model](doc/erd-booking.webp)
+
+![ERD of Course Model](doc/erd-course.webp)
+
+![ERD of CourseSession Model](doc/erd-coursesession.webp)
+
 ## Features
 
 ### Feature title - e.g. Navigation
