@@ -1,13 +1,9 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from django.views import generic
 from django.contrib.auth.decorators import login_required
-from django.contrib import messages
 from django.db import transaction
 from django.db.models import Q
-from django.http import JsonResponse
+from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
 from .models import Course, CourseSession, Booking
-from .forms import CourseSelectionForm, BookingForm
     
 
 def list_courses(request):
