@@ -23,8 +23,11 @@ The color scheme is set to feel modern and harmonize with the hero image. Any br
 The typography were chosen to have a modern touch. They were chosen to feel easygoing and fun, but at the same time easy to read. The text was designed to incorporate some spacing, ensuring it doesn't appear as a dense block of text upon opening a page. The written communication across the website adopts a playful tone to foster a friendly atmosphere. Emojis was added to make the tone more playful and friendly.  
 
 ### Imagery
+All the images are chosen to inspire the website users. The images should give a warm feeling with the help of the content and a warm tone in them. The images have been designed with a playful and dynamic excerpt to encourage user engagement and increase sign-ups for the workshop. The objects on the images are things that has been made by the leader of the workshops. In other words, they are objects that you can do at the workshops!
+
 ### Wireframes
-### Figma/Full color mockup if produced
+
+### Entity Relationship Diagram - ERD
 
 ## Features
 
