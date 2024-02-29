@@ -63,11 +63,70 @@ Three different models were used in the website.
 
 ## Features
 
-### Feature title - e.g. Navigation
+### Header
+
+#### Navigation bar
+
+#### Navigation bar (as a logged in user)
+
+### Index page
+
+#### Hero image
+
+#### Welcome text
+
+#### Carousel
+
+### About page
+
+#### Profile image
+
+#### About text
+
+#### Contact form
+
+### Booking page
+
+#### Workshop presentation
+
+#### Workshop booking
+
+#### Confirm booking modal
+
+### Success page
+
+#### Confirmation text
+
+#### Navigation buttons
+
+### My bookings page
+
+#### No bookings - text
+
+#### No bookings - button
+
+#### Active bookings - text
+
+#### Active bookings - booked workshops
+
+#### Confirm cancellation modal
+
+### Edit booking page
+
+#### Availible workshops
+
+#### Confirm workshop change modal
+
+### Sign up page
+
+### Sign in page
+
+### Sign out page
+
+
 Screenshot of implemented feature
 Description of the value this feature has for the users
 
-Repeat for each feature
 
 ## Features to be Added
 Describe some additional features you could potentially add to the project that would increase user value - could be things linked to technologies not yet covered by the course but would be a benefit to the user for example, the ability to save an article, or add an article to the site, leave a review.
