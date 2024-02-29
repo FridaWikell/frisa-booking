@@ -39,6 +39,9 @@ All the images are chosen to inspire the website users. The images should give a
 #### My bookings page
 ![Wireframe of my bookings page](doc/wireframe-my-bookings.webp)
 
+#### Success page
+![Wireframe of success page](doc/wireframe-success.webp)
+
 #### Edit booking page
 ![Wireframe of edit booking page](doc/wireframe-edit-booking.webp)
 
