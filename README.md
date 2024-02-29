@@ -27,11 +27,29 @@ All the images are chosen to inspire the website users. The images should give a
 
 ### Wireframes
 
-#### Home page
-![]
+#### Index page
+![Wireframe of index page](doc/wireframe-index.webp)
 
 #### About page
 ![Wireframe of about page](doc/wireframe-about.webp)
+
+#### Booking page
+![Wireframe of booking page](doc/wireframe-booking.webp)
+
+#### My bookings page
+![Wireframe of my bookings page](doc/wireframe-my-bookings.webp)
+
+#### Edit booking page
+![Wireframe of edit booking page](doc/wireframe-edit-booking.webp)
+
+#### Sign up page
+![Wireframe of sign up page](doc/wireframe-sign-up.webp)
+
+#### Sign in page
+![Wireframe of sign in page](doc/wireframe-sign-in.webp)
+
+#### Sign out page
+![Wireframe of sign out page](doc/wireframe-sign-out.webp)
 
 ### Entity Relationship Diagram - ERD
 
