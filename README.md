@@ -3,9 +3,10 @@
 ![image of site](link to image) - use an image from AmIResponsive that shows the site on multiple devices
 
 ## Introduction
-What is the project about, why did you make it
+The project is to build a website where you as a user can book a workshop to upcycle old things. If the user doesn't visit the website with the goal to book a workshop right away, the website should work as an inspiration.
 
 ## Table of Contents
+[[_TOC_]]
 
 ## User Experience
 ### User Stories
@@ -13,8 +14,14 @@ What is the project about, why did you make it
 - Site Owner Goals
 
 ## Design
-### Colour Scheme
+The design is set to be modern but easy to read. It should draw the attention to the images which will enhance the chance to get the users to get inspired. The design should feel welcoming and like you're visiting a friends place. 
+
+### Color Scheme
+The color scheme is set to feel modern and harmonize with the hero image. Any bright colors in the scheme were avoided due to not draw any attention from the images at the website. The colors are reused on all pages to make every page feel familiar and to enhance the feeling that the website is an unity. 
+
 ### Typography
+The typography were chosen to have a modern touch. They were chosen to feel easygoing and fun, but at the same time easy to read. The text was designed to incorporate some spacing, ensuring it doesn't appear as a dense block of text upon opening a page. The written communication across the website adopts a playful tone to foster a friendly atmosphere. Emojis was added to make the tone more playful and friendly.  
+
 ### Imagery
 ### Wireframes
 ### Figma/Full color mockup if produced
