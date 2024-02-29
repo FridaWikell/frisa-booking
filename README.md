@@ -27,6 +27,12 @@ All the images are chosen to inspire the website users. The images should give a
 
 ### Wireframes
 
+#### Home page
+![]
+
+#### About page
+![Wireframe of about page](doc/wireframe-about.webp)
+
 ### Entity Relationship Diagram - ERD
 
 ## Features
