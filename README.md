@@ -238,6 +238,9 @@ Several features can be added in the future.
 - Be able to select how many spots you want to book at each workshop.
 - Include an online shop were you could buy some upcycled things made by the owner.
 - Implement a review section where the users who has been at the workshops can leave reviews.
+- Sign in with Social media account or Google credentials.
+- Captcha verification when the user is signing up with email address.
+- Guidance when a user sign in for the first time.
 
 ## Testing
 
@@ -276,6 +279,7 @@ Detail what technologies you used. So what code languages, what frameworks, libr
 
 Detail how to clone the repository, how to fork the repository - how to run the site locally and how to deploy it.
 
+Link to deployed website: <https://frisa-booking-e7f1e4a00ea9.herokuapp.com/>
 
 ## Credits
 
