@@ -231,8 +231,13 @@ The sign out page allows the user to sign out to ensure no one else can edit the
 To the left, the developers name is to tell the world who the brain behind the website is. To the right, four symbols represent what they link to. The first, the pen, links the user to the Contact form at the about page. The second, Facebook icon, links the user to the owners Facebook page in a new tab. The third, Instagram icon, links the user to the owners Instagram page in a new tab. The fourth, Pinterest icon, links the user to the owners Pinterest 
 
 ## Features to be Added
-Describe some additional features you could potentially add to the project that would increase user value - could be things linked to technologies not yet covered by the course but would be a benefit to the user for example, the ability to save an article, or add an article to the site, leave a review.
 
+Several features can be added in the future.
+
+- Select if you as a user want to have notification some days before it is time for the workshop.
+- Be able to select how many spots you want to book at each workshop.
+- Include an online shop were you could buy some upcycled things made by the owner.
+- Implement a review section where the users who has been at the workshops can leave reviews.
 
 ## Testing
 
