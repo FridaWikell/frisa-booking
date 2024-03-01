@@ -52,7 +52,7 @@ a {
     background-color: #353535;
     color: #cacaca;
     width: 100%;
-    min-height: 153px;
+    min-height: 164px;
 }
 
 .booking-btn:hover {
@@ -165,7 +165,6 @@ a {
     color: #cacaca;
 }
 
-
 .read-more {
     background-color: #353535;
     color: #cacaca;
@@ -173,7 +172,11 @@ a {
     border: none;
 }
 
-
+.session-course-name {
+    font-weight: 200;
+    font-family: 'Comfortaa', sans-serif;
+    margin-bottom: 10px;
+}
 
 /* My bookings */
 .my-bookings {
