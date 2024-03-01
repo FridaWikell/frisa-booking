@@ -72,33 +72,79 @@ Three different models were used in the website.
 
 ![Navigation bar as a not logged in user](doc/navbar-not-logged-in.webp)
 
+The navigation bar makes it easy for the user to navigate at the site. It takes the user directly to the home page, about page, booking page, sign in page and sign up page. This helps the user to get a overview of the website.
+
 #### Navigation bar (as a logged in user)
 
 ![Navigation bar as a logged in user](doc/navbar-logged-in.webp)
+
+The navigation bar for a logged in user is almost the same as the not logged in user. The main difference is that the sign in and sign up links are replaced with the users username and sign out links. The users username is linking to the page where the user can see their bookings. 
 
 ### Index page
 
 #### Hero image
 
+![Hero image at index page](doc/hero-image.webp)
+
+The hero image is an eyecatching image selected to get the user to feel "wow, I want to do that aswell". It's selected to get the user to feel the inspiration flow. The warm tones in the images are there to get a warm and welcoming feeling.
+
 #### Welcome text
 
+![Welcome text at index page](doc/welcome-text.webp)
+
+At the hero image, the welcome text is presented. The text has a darker background which makes it easier for the user to read. The text is there to welcome the user and present a short description of what they can expect of the website. After the text, a button which links to the booking page, is present. It has a lighter color which makes it pop from the background. This presents and directs the user to the main purpose of the website.
+
 #### Carousel
+
+![Carousel of images](doc/carousel.webp)
+
+At the bottom of the index page, a carousel with images are located. This carousel is there to present several more objects that can me done at the workshops. Their goal is to inspire users and increase their interest in registering for the workshops.
 
 ### About page
 
 #### Profile image
 
+![Profile image at the about page](doc/profile-img.webp)
+
+The profile image presents the founder and owner of Frisa. To show who it is makes the user to feel closer and get a more friendly feeling when they may fill out the contact form or sign up to a workshop. 
+
 #### About text
 
+![A text about the owner and founder of Frisa](doc/about-text.webp)
+
+The text is a compliment to the profile image to present the founder and owner of Frisa. It will help to enhance the friendly feeling. This will also help the user to know what to expect from the webpage.
+
 #### Contact form
+
+![The contact form at the about page](doc/contact-form.webp)
+
+The contact form is a channel for the user to get in contact if they have any questions. The text on top of the contact form encourage the user to reach out to the site owner.
 
 ### Booking page
 
 #### Workshop presentation
 
+![The three different workshops are presented](doc/workshop-presentation.webp)
+
+The three different workshops are presented with a informative text. Each presentation has a read more button so the user can read more if they are interested. The read more button is also there to avoid that the user is met by a wall of text when they are visiting the booking page.
+
 #### Workshop booking
 
+![The booking section where the user can select which session they are interested in](doc/workshop-booking.webp)
+
+The booking section of the page presents the availible workshop sessions. Each session is presented with the name of the workshop, date, time and how many availible spots that are left. Each session is represented as a button where the user can click on the button to book the section.
+
 #### Confirm booking modal
+
+![Confirmation modal after a booking button in pressed](doc/confirm-booking.webp)
+
+A confirmation modal is triggered when the user has pressed a booking button. The confirmation modal gives the opportunity to the user to confirm the booking or cancel the confirmation modal without making any booking. The confirm button is green and cancel button is red to enhance the meaning of the buttons.
+
+#### Double booked modal
+
+![Modal to show that the user already has a booking at the chosen workshop](doc/double-booked.webp)
+
+A double booking modal is triggered when the user tries to book a workshop session that they already has a booking at. This is to avoid that the user books the workshop session several times.
 
 ### Success page
 
