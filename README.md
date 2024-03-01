@@ -150,19 +150,47 @@ A double booking modal is triggered when the user tries to book a workshop sessi
 
 #### Confirmation text
 
+![Confirmation text after a successful booking](doc/confirmation-text.webp)
+
+After a successful booking, a text that confirms the booking appears. This is to confirm that everything went just fine with the booking. The text is also supposed to give the user a fun welcome to the upcoming workshop.
+
 #### Navigation buttons
+
+![Three navigation buttons; "View my bookings", "Home" and "Book another workshop"](doc/navigation-buttons.webp)
+
+Under the confirmation text, three navigation buttons are visible; "View my bookings", "Home" and "Book another workshop". On smaller devices, only "View my bookings" and "Book another workshop" are visible. These buttons are there to make the user to stay at the website after a successful booking.
 
 ### My bookings page
 
 #### No bookings - text
 
+![The text on my booking page explains there is no bookings](doc/no-bookings.webp)
+
+When the user doesn't have any active bookings, a text informs the user about it. The text informs the user where they can find the booking page.
+
 #### No bookings - button
+
+![Button to direct the user to the booking page](doc/take-me-there.webp)
+
+When the user click on the button, they get directed to the booking page. This to have the user to make a booking.
 
 #### Active bookings - text
 
+![Text to notice the user that they have at least one active booking](doc/my-bookings-text.webp)
+
+When the user have at least one booking, the user gets a text that informs that all their booked sessions are presented below. The text is also supposed to get the user to have a small giggle and get excited for upcoming workshops.
+
 #### Active bookings - booked workshops
 
+![The users bookings are presented](doc/my-bookings-workshops.webp)
+
+The users bookings are presented with the workshop that is next in time appears first. Each booked workshop card has an Edit button and one Cancel button. When the Edit button is pressed, the user gets directed to the edit page. When the Cancel button is pressed, a confirmation modal is triggered. These two buttons allows the user to edit and delete the booked session if the user has to change their plans.
+
 #### Confirm cancellation modal
+
+![Modal that the user gets to assure that they want to cancel their booking](doc/confirm-delete.webp)
+
+When the user press the Cancel button in their active booking, a confirm cancellation modal is triggered. This is to make sure the user didn't press Cancel by mistake. The Confirm button in the modal is red to mark that if you press it, something that is irreversible.
 
 ### Edit booking page
 
