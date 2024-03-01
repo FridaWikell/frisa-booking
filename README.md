@@ -196,18 +196,39 @@ When the user press the Cancel button in their active booking, a confirm cancell
 
 #### Availible workshops
 
+![All availible workshops presented as booking buttons](doc/availible-workshops.webp)
+
+All availible workshops are presented in a similar way as on the booking page. The title of the workshop, date, time and availible spots are presented. The similarity should make the user to recognize the how to book a workshop session. When the user clicks the workshop they want to change their booking to, a confirmation modal is triggered.
+
 #### Confirm workshop change modal
+
+![Confirmation modal to ensure the user wants to change their workshop booking](doc/confirm-edit.webp)
+
+The confirmation modal ensures that the user wants to edit their booking to the selected workshop session. This to avoid the user edit their booking to a session they didn't want to. The text is written in a way that should enhance the users feeling that this is a friendly and fun website.
 
 ### Sign up page
 
+![Sign up page with fields for email, username, password and password again](doc/sign-up.webp)
+
+The sign up page have fields where the user is required to fill out email, username, password and password again. This to make sure the user doesn't get a typo in the password and to ensure the user register a way to contact them.
+
 ### Sign in page
+
+![Sign in page with fields for email and password](doc/sign-in.webp)
+
+The sign in page allows the user who already has an account to sign in. This to make the user experience smoother where they don't have to fill out their email every time they want to make a booking. It is also an advantage that the user can see all their bookings.
 
 ### Sign out page
 
+![Sign out page with a confirmation button](doc/sign-out.webp)
 
-Screenshot of implemented feature
-Description of the value this feature has for the users
+The sign out page allows the user to sign out to ensure no one else can edit the users booking. The sign out button ensures the user really wanted to sign out and didn't press on Sign out by mistake.
 
+### Footer
+
+![Footer with developers name and year to the left and links to the Contact form and connecting Facebook, Instagram and Pinterest accounts](doc/footer.webp)
+
+To the left, the developers name is to tell the world who the brain behind the website is. To the right, four symbols represent what they link to. The first, the pen, links the user to the Contact form at the about page. The second, Facebook icon, links the user to the owners Facebook page in a new tab. The third, Instagram icon, links the user to the owners Instagram page in a new tab. The fourth, Pinterest icon, links the user to the owners Pinterest 
 
 ## Features to be Added
 Describe some additional features you could potentially add to the project that would increase user value - could be things linked to technologies not yet covered by the course but would be a benefit to the user for example, the ability to save an article, or add an article to the site, leave a review.
