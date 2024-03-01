@@ -41,8 +41,10 @@
             <button type="button" class="btn book-session-btn session-slot booking-btn py-3 {% if session.spots_available == 0 %}disabled{% endif %}" 
             {% if session.spots_available != 0 %} 
             data-session-id="{{ session.id }}" data-bs-toggle="modal" data-bs-target="#confirmationBookingModal"
-            {% endif %}> <h6>{{ session.course.name }}</h6> {{ session.start_time|date:"j F Y" }} <br>
-            {{ session.start_time|time:"H.i" }} - {{ session.end_time|time:"H.i" }} <br> Available spots: {{ session.spots_available }}</button>
+            {% endif %}> 
+                <div class="session-course-name">{{ session.course.name }}</div> <div>{{ session.start_time|date:"j F Y" }}</div>
+                <div>{{ session.start_time|time:"H.i" }} - {{ session.end_time|time:"H.i" }}</div> Available spots: {{ session.spots_available }}
+            </button>
         </form>
     </div>
     {% endfor %}
