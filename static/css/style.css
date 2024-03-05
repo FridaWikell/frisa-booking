@@ -123,6 +123,20 @@ a {
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; 
 }
 
+.active>.page-link {
+    background-color: #cacaca;
+    border-color: #353535;
+    color: #353535;
+}
+
+.active>.page-link:hover {
+    background-color: #6d6d6d;
+}
+
+.page-link:hover {
+    color: #cacaca;
+}
+
 .home-btn {
     background-color: #cacaca;
     color: #353535;
