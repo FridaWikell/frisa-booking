@@ -123,6 +123,21 @@ a {
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; 
 }
 
+.active>.page-link {
+    background-color: #cacaca;
+    border-color: #353535;
+    color: #353535;
+}
+
+.active>.page-link:hover {
+    background-color: #cacaca;
+}
+
+.page-link:hover {
+    color: #353535;
+    background-color: #a0a0a0;
+}
+
 .home-btn {
     background-color: #cacaca;
     color: #353535;
@@ -154,13 +169,12 @@ a {
     font-family: 'Rock Salt', sans-serif;
 }
 
-
 /* Booking page */
 .more {
     display: none;
 }
 
-.card, .about-text, .my-bookings, .dark-back {
+.card, .about-text, .my-bookings, .dark-back, .darker-card {
     background-color: #353535;
     color: #cacaca;
 }
@@ -179,6 +193,11 @@ a {
 }
 
 /* My bookings */
+
+.user-name {
+    overflow-wrap: break-word;
+}
+
 .my-bookings {
     display: flex;
     flex-direction: column; 
