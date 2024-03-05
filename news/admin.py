@@ -1,9 +1,10 @@
 from django.contrib import admin
+from django_summernote.admin import SummernoteModelAdmin
 from .models import News
 
 
 @admin.register(News)
-class NewsAdmin(admin.ModelAdmin):
+class NewsAdmin(SummernoteModelAdmin):
     list_display = ('title', 'author', 'course', 'created_on')
     list_filter = ('created_on', 'course')
     date_hierarchy = 'created_on'
