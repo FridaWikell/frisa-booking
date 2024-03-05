@@ -2,13 +2,16 @@
 {% load static %}
 
 {% block content %}
+<!-- Hero image with welcome text -->
 <div class="row hero-img mt-2 mb-lg-4">
     <div class="col-md-6 my-5 mx-auto">
         <div class="w-100 px-5 py-4 dark-back">
             <h3>Step into the magic world of upcycling</h3>
-                <p>In our fast-paced world, we all need an oasis to nurture ourselves and rejuvenate our belongings. 
-                    Here, we transform forgotten items into decorative treasures and empower individuals to unleash their creative potential.</p>
-                <a href="{% url 'booking' %}" class="btn submit-btn">Check out availible workshops</a>
+            <p>
+                In our fast-paced world, we all need an oasis to nurture ourselves and rejuvenate our belongings. 
+                Here, we transform forgotten items into decorative treasures and empower individuals to unleash their creative potential.
+            </p>
+            <a href="{% url 'booking' %}" class="btn submit-btn">Check out availible workshops</a>
         </div>
     </div>
 </div>
@@ -26,6 +29,7 @@
     </div>
 </div>
 
+<!-- Image carousel -->
 <div>
     <div id="carouselExample" class="carousel slide start-carousel mx-auto">
         <div class="carousel-inner">
@@ -92,6 +96,5 @@
 <div class="row justify-content-center">
     <hr class="col-8 my-4 mt-lg-5">
 </div>
-
 
 {% endblock content %}
