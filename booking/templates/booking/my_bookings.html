@@ -13,7 +13,7 @@
 {% endif %}
 
 <div class="row mx-3 md-mx-5 justify-content-center">
-    <h2 class="col-md-8 mt-3 user-name text-center"><span class="user-name-no-wrap">{{ user.username|slice:":20" }}'s</span> booked workshops</h2>
+    <h2 class="col-md-8 mt-3 text-center">My booked workshops</h2>
 </div>
 <div class="row justify-content-center">
     <hr class="col-8 mt-2 mt-md-3">
@@ -22,7 +22,7 @@
 <div class="row col-10 col-md-6 justify-content-center mx-auto">
     {% if bookings %}
         <p>
-            Hold onto your hats, folks! We've wrangled up all the workshops you've booked with us 
+            Hold onto your hat, <span class="user-name">{{ user.username|slice:":25" }}</span>! We've wrangled up all the workshops you've booked with us 
             - it was like herding cats, but we did it! Each session is lined up, polished, and 
             practically doing a little jig in anticipation of your grand entrance. So, lace up your 
             adventure boots, and get ready for a rollercoaster of learning, laughter, and the occasional 

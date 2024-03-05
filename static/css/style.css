@@ -198,10 +198,6 @@ a {
     overflow-wrap: break-word;
 }
 
-.user-name-no-wrap {
-    overflow-wrap: normal;
-}
-
 .my-bookings {
     display: flex;
     flex-direction: column; 
