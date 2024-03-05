@@ -55,7 +55,7 @@
                                     </li>
                                 {% endif %}
                                 <li class="nav-item">
-                                    <a class="nav-link {% if '_booking' in request.path %}active" aria-current="page{% endif %}" href="{% url 'my_bookings' %}"><i class="fa-regular fa-user"></i> {{ user }}</a>
+                                    <a class="nav-link {% if '_booking' in request.path %}active" aria-current="page{% endif %}" href="{% url 'my_bookings' %}"><i class="fa-regular fa-user"></i> {{ user.username|slice:":20" }}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}?next={{ request.path }}">Sign out</a>
