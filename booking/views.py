@@ -50,6 +50,9 @@ def success_page(request):
 @login_required
 def my_bookings(request):
     bookings = Booking.objects.filter(user=request.user).select_related('course_session').order_by('course_session__start_time')
+    paginator = Paginator(bookings, 4)
+    page_number = request.GET.get('page')
+    bookings = paginator.get_page(page_number)
     return render(request, 'booking/my_bookings.html', {
         'bookings': bookings})
 

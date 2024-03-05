@@ -44,6 +44,33 @@
             </div>
         </div>
         {% endfor %}
+
+        {% if bookings.paginator.num_pages > 1 %}
+            <nav aria-label="Bookings pagination">
+                <ul class="pagination justify-content-center">
+                    {% if bookings.has_previous %}
+                        <li class="page-item">
+                            <a class="page-link take-me-btn" href="?page={{ bookings.previous_page_number }}" aria-label="Previous">&laquo</a>
+                        </li>
+                    {% endif %}
+            
+                    {% for num in bookings.paginator.page_range %}
+                        {% if bookings.number == num %}
+                            <li class="page-item active"><a class="page-link take-me-btn" href="?page={{ num }}">{{ num }}</a></li>
+                        {% else %}
+                            <li class="page-item"><a class="page-link take-me-btn" href="?page={{ num }}">{{ num }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+            
+                    {% if bookings.has_next %}
+                        <li class="page-item">
+                            <a class="page-link take-me-btn" href="?page={{ bookings.next_page_number }}" aria-label="Next">&raquo;</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        {% endif %}
+
     {% else %}
         <div class="col-sm-5 my-3 mx-3 text-center">
             <h5>Oopsie daisy!</h5>
