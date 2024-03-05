@@ -3,5 +3,5 @@ from . import views
 
 #ändra views
 urlpatterns = [
-    path('', views.list_courses, name="news"),
+    path('', views.NewsList.as_view(), name="news"),
 ]
