@@ -9,46 +9,52 @@
 <div class="row justify-content-center">
     <hr class="col-8 mb-3 mb-md-4">
 </div>
+
+<!-- Workshop presentation -->
 <div class="row mx-3 md-mx-5 justify-content-center">
     {% for course in courses %}
-    <div class="card mx-sm-1 mx-md-2 mx-lg-3 mb-3 col-sm-5 col-md-5">
-        {% if course.name == "Perler beads" %}
-        <img src="{% static 'img/christmas.webp' %}" class="card-img-top" alt="{{ course.name }}">
-        {% elif course.name == "Transforming treasures" %}
-        <img src="{% static 'img/phone.webp' %}" class="card-img-top" alt="{{ course.name }}">
-        {% elif course.name == "Our ultimate crafting experience" %}
-        <img src="{% static 'img/lamp.webp' %}" class="card-img-top" alt="{{ course.name }}">
-        {% endif %}
-        <div class="card-body">
-            <h5 class="card-title">{{ course.name }}</h5>
-            <p class="card-text">{{ course.description|safe }}</p>
-            <button class="read-more">Read more &#62;&#62;</button>
+        <div class="card mx-sm-1 mx-md-2 mx-lg-3 mb-3 col-sm-5 col-md-5">
+            {% if course.name == "Perler beads" %}
+                <img src="{% static 'img/christmas.webp' %}" class="card-img-top" alt="{{ course.name }}">
+            {% elif course.name == "Transforming treasures" %}
+                <img src="{% static 'img/phone.webp' %}" class="card-img-top" alt="{{ course.name }}">
+            {% elif course.name == "Our ultimate crafting experience" %}
+                <img src="{% static 'img/lamp.webp' %}" class="card-img-top" alt="{{ course.name }}">
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ course.name }}</h5>
+                <p class="card-text">{{ course.description|safe }}</p>
+                <button class="read-more">Read more &#62;&#62;</button>
+            </div>
         </div>
-    </div>
     {% endfor %}
 </div>    
 
 <div class="row justify-content-center">
     <hr class="col-8 mt-2 mt-md-3">
 </div>
+
+<!-- Booking section -->
 <div class="row justify-content-center mx-3">
     <h2 class="my-4 text-center" id="book-more">Upcoming workshops</h2>
     {% for session in sessions %}
-    <div class="col-10 col-sm-6 col-lg-3 mb-2 mb-sm-3">
-        <!-- Button trigger modal -->
-        <form method="post" action="{% url 'book_session' session.id %}" id="bookingForm-{{ session.id }}">
-            {% csrf_token %}
-            <button type="button" class="btn book-session-btn session-slot booking-btn py-3 {% if session.spots_available == 0 %}disabled{% endif %}" 
-            {% if session.spots_available != 0 %} 
-            data-session-id="{{ session.id }}" data-bs-toggle="modal" data-bs-target="#confirmationBookingModal"
-            {% endif %}> 
-                <div class="session-course-name">{{ session.course.name }}</div> <div>{{ session.start_time|date:"j F Y" }}</div>
-                <div>{{ session.start_time|time:"H.i" }} - {{ session.end_time|time:"H.i" }}</div> Available spots: {{ session.spots_available }}
-            </button>
-        </form>
-    </div>
+        <div class="col-10 col-sm-6 col-lg-3 mb-2 mb-sm-3">
+            <form method="post" action="{% url 'book_session' session.id %}" id="bookingForm-{{ session.id }}">
+                {% csrf_token %}
+                <button type="button" class="btn book-session-btn session-slot booking-btn py-3 {% if session.spots_available == 0 %}disabled{% endif %}" 
+                {% if session.spots_available != 0 %} 
+                    data-session-id="{{ session.id }}" data-bs-toggle="modal" data-bs-target="#confirmationBookingModal"
+                {% endif %}> 
+                    <div class="session-course-name">{{ session.course.name }}</div>
+                    <div>{{ session.start_time|date:"j F Y" }}</div>
+                    <div>{{ session.start_time|time:"H.i" }} - {{ session.end_time|time:"H.i" }}</div> 
+                    <div>Available spots: {{ session.spots_available }}</div>
+                </button>
+            </form>
+        </div>
     {% endfor %}
-    <!-- Bootstrap Pagination -->
+
+    <!-- Pagination -->
     <nav aria-label="Sessions pagination">
         <ul class="pagination justify-content-center">
         {% if sessions.has_previous %}
@@ -73,7 +79,7 @@
     <hr class="col-8 mt-2 mt-md-3">
 </div>
 
-<!-- Bootstrap modal for booking notification -->
+<!-- Modal for booking notification -->
 <div class="modal fade" id="bookingNotificationModal" tabindex="-1" aria-labelledby="bookingNotificationModalLabel" aria-hidden="true" data-already-booked="{{ already_booked|lower }}">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -97,7 +103,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="confirmationBookingModalLabel">Confirm Booking</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 Fantastic! You've selected a workshop that will be a lot of fun! 
@@ -113,5 +119,5 @@
 {% endblock content %}
 
 {% block script %}
-<script src="{% static 'js/booking.js' %}"></script>
+    <script src="{% static 'js/booking.js' %}"></script>
 {% endblock script %}
