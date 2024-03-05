@@ -3,6 +3,7 @@
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
 {% url 'booking' as booking_url %}
+{% url 'news' as news_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -48,6 +49,9 @@
                                 <a class="nav-link {% if request.path == booking_url or request.path == success_url %}active" aria-current="page{% endif %}" href="{% url 'booking' %}">Booking</a>
                             </li>
                             {% if user.is_authenticated %}
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == news_url %}active" aria-current="page{% endif %}" href="{% url 'news' %}">News</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link {% if '_booking' in request.path %}active" aria-current="page{% endif %}" href="{% url 'my_bookings' %}"><i class="fa-regular fa-user"></i> {{ user }}</a>
                             </li>
