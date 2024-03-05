@@ -10,7 +10,7 @@ from .models import Course, CourseSession, Booking
 def list_courses(request):
     courses = Course.objects.all()  
     sessions = CourseSession.objects.filter(start_time__gte=timezone.now()).order_by('start_time')  
-    paginator = Paginator(sessions, 12)
+    paginator = Paginator(sessions, 8)
     page_number = request.GET.get('page') 
     sessions = paginator.get_page(page_number)
 
