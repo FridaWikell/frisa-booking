@@ -10,10 +10,8 @@ from .models import Course, CourseSession, Booking
 def list_courses(request):
     courses = Course.objects.all()  
     sessions = CourseSession.objects.filter(start_time__gte=timezone.now()).order_by('start_time')  
-
-    # Pagination setup
-    paginator = Paginator(sessions, 12)  # Show 12 sessions per page
-    page_number = request.GET.get('page')  # Get the page number from the URL
+    paginator = Paginator(sessions, 12)
+    page_number = request.GET.get('page') 
     sessions = paginator.get_page(page_number)
 
     return render(request, 'booking/booking.html', {
