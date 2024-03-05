@@ -16,6 +16,10 @@ class CourseSession(models.Model):
     end_time = models.DateTimeField()
     spots_available = models.IntegerField(default=5)
 
+    def __str__(self):
+        formatted_start_time = self.start_time.strftime('%Y-%m-%d %H:%M')
+        return f"{self.course.name} - {formatted_start_time}"
+
 
 class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
