@@ -1,25 +1,31 @@
 {% extends 'base.html' %}
-{% block content %}
 {% load static %}
+
+{% block content %}
 
 <div class="row justify-content-center">
     <hr class="col-8 mt-2 mt-md-3">
 </div>
+
+<!-- Select another workshop section -->
 <div class="row mx-3 justify-content-center">
     <h2 class="my-4 text-center">Please select another workshop</h2>
     {% for session in sessions %}
-    <div class="col-10 col-sm-6 col-lg-3 mb-2 mb-sm-3">
-        <form method="post" action="" id="sessionForm">
-            {% csrf_token %}
-            <input type="hidden" name="session_id" id="selectedSessionId" value="">         
-            <button type="button" class="btn session-btn booking-btn py-3" data-session-id="{{ session.id }}">
-                <h6>{{ session.course.name }}</h6> {{ session.start_time|date:"j F Y" }} <br> 
-                {{ session.start_time|time:"H.i" }} - {{ session.end_time|time:"H.i" }} <br> Available spots: {{ session.spots_available }}
-            </button>
-        </form>
-    </div>
+        <div class="col-10 col-sm-6 col-lg-3 mb-2 mb-sm-3">
+            <form method="post" action="" id="sessionForm">
+                {% csrf_token %}
+                <input type="hidden" name="session_id" id="selectedSessionId" value="">         
+                <button type="button" class="btn session-btn booking-btn py-3" data-session-id="{{ session.id }}">
+                    <h6>{{ session.course.name }}</h6> 
+                    <div>{{ session.start_time|date:"j F Y" }}</div>
+                    <div>{{ session.start_time|time:"H.i" }} - {{ session.end_time|time:"H.i" }}</div>
+                    <div>Available spots: {{ session.spots_available }}</div>
+                </button>
+            </form>
+        </div>
     {% endfor %}
 </div>
+
 <div class="row justify-content-center">
     <hr class="col-8 mt-2 mt-md-3">
 </div>
@@ -33,9 +39,9 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                Found a workshop that doesn&#146t clash with your cat&#146s yoga session or your commitment to being 
-                a couch potato on Tuesdays? Marvelous! Just give that &#146Confirm&#146 button a gentle tap, no, not a poke... 
-                yeah, right there! And voilà, we&#146ll handle the rest faster than you can say “I accidentally joined a circus.”
+                Found a workshop that doesn't clash with your cat's yoga session or your commitment to being 
+                a couch potato on Tuesdays? Marvelous! Just give that 'Confirm' button a gentle tap, no, not a poke... 
+                yeah, right there! And voilà, we'll handle the rest faster than you can say “I accidentally joined a circus.”
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn cancel-btn" data-bs-dismiss="modal">Cancel</button>
@@ -44,10 +50,8 @@
         </div>
     </div>
 </div>
-
-
 {% endblock content %}
 
 {% block script %}
-<script src="{% static 'js/edit_booking.js' %}"></script>
+    <script src="{% static 'js/edit_booking.js' %}"></script>
 {% endblock script %}
