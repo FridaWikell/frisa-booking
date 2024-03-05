@@ -21,4 +21,13 @@ class NewsAdmin(SummernoteModelAdmin):
             form.base_fields['author'].queryset = form.base_fields['author'].queryset.filter(id=user.id)
         return form
 
+    def get_queryset(self, request):
+        """
+        Override to limit the queryset to only show items authored by the logged-in user.
+        """
+        qs = super(NewsAdmin, self).get_queryset(request)
+        if request.user.is_superuser:
+            return qs  # Superusers see all items.
+        return qs.filter(author=request.user)  # Other users see only their items.
+
 
