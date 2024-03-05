@@ -2,15 +2,6 @@
 {% load static %}
 
 {% block content %}
-{% if messages %} 
-    {% for message in messages %}
-        {% if 'edit_booking' in message.tags %}
-            <div class="alert alert-{{ message.tags }}">
-                {{ message }}
-            </div>
-        {% endif %}
-    {% endfor %}
-{% endif %}
 
 <div class="row mx-3 md-mx-5 justify-content-center">
     <h2 class="col-md-8 mt-3 text-center">My booked workshops</h2>
