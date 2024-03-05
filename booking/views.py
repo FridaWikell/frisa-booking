@@ -1,4 +1,5 @@
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
 from django.db import transaction
 from django.db.models import Q
 from django.shortcuts import render, redirect, get_object_or_404
@@ -9,6 +10,12 @@ from .models import Course, CourseSession, Booking
 def list_courses(request):
     courses = Course.objects.all()  
     sessions = CourseSession.objects.filter(start_time__gte=timezone.now()).order_by('start_time')  
+
+    # Pagination setup
+    paginator = Paginator(sessions, 12)  # Show 12 sessions per page
+    page_number = request.GET.get('page')  # Get the page number from the URL
+    sessions = paginator.get_page(page_number)
+
     return render(request, 'booking/booking.html', {
         'courses': courses,
         'sessions': sessions})
