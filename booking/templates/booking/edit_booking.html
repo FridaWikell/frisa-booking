@@ -17,9 +17,9 @@
                 <input type="hidden" name="session_id" id="selectedSessionId" value="">         
                 <button type="button" class="btn session-btn booking-btn py-3" data-session-id="{{ session.id }}">
                     <h6>{{ session.course.name }}</h6> 
-                    <div>{{ session.start_time|date:"j F Y" }}</div>
-                    <div>{{ session.start_time|time:"H.i" }} - {{ session.end_time|time:"H.i" }}</div>
-                    <div>Available spots: {{ session.spots_available }}</div>
+                    {{ session.start_time|date:"j F Y" }}<br>
+                    {{ session.start_time|time:"H.i" }} - {{ session.end_time|time:"H.i" }}<br>
+                    Available spots: {{ session.spots_available }}
                 </button>
             </form>
         </div>
