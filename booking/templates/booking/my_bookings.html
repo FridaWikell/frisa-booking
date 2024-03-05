@@ -13,7 +13,7 @@
 {% endif %}
 
 <div class="row mx-3 md-mx-5 justify-content-center">
-    <h2 class="text-center mt-3">{{ user }}'s booked workshops</h2>
+    <h2 class="col-md-8 mt-3 user-name text-center"><span class="user-name-no-wrap">{{ user.username|slice:":20" }}'s</span> booked workshops</h2>
 </div>
 <div class="row justify-content-center">
     <hr class="col-8 mt-2 mt-md-3">

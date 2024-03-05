@@ -169,7 +169,6 @@ a {
     font-family: 'Rock Salt', sans-serif;
 }
 
-
 /* Booking page */
 .more {
     display: none;
@@ -194,6 +193,15 @@ a {
 }
 
 /* My bookings */
+
+.user-name {
+    overflow-wrap: break-word;
+}
+
+.user-name-no-wrap {
+    overflow-wrap: normal;
+}
+
 .my-bookings {
     display: flex;
     flex-direction: column; 
