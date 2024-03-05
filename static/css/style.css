@@ -160,7 +160,7 @@ a {
     display: none;
 }
 
-.card, .about-text, .my-bookings, .dark-back {
+.card, .about-text, .my-bookings, .dark-back, .darker-card {
     background-color: #353535;
     color: #cacaca;
 }
