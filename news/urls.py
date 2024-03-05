@@ -3,5 +3,5 @@ from . import views
 
 #ändra views
 urlpatterns = [
-    path('', views.NewsList.as_view(), name="news"),
+    path('', views.news_list, name="news"),
 ]

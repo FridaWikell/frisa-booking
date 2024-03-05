@@ -1,8 +1,12 @@
 from django.shortcuts import render
 from django.views import generic
+from django.contrib.admin.views.decorators import staff_member_required
 from .models import News
 
 # Create your views here.
-class NewsList(generic.ListView):
-    queryset = News.objects.all()
-    template_name = 'news/news.html'
+@staff_member_required
+def news_list(request):
+    news_items = News.objects.all()
+    return render(request, 'news/news.html', {
+        'news_items': news_items
+    })
