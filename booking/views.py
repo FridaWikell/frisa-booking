@@ -61,7 +61,12 @@ def my_bookings(request):
 def edit_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id, user=request.user)
     user_session_ids = Booking.objects.filter(user=request.user).exclude(id=booking_id).values_list('course_session_id', flat=True)
-    sessions = CourseSession.objects.filter(spots_available__gt=0).exclude(Q(id=booking.course_session.id) | Q(id__in=user_session_ids)).order_by('start_time')
+    session_list = CourseSession.objects.filter(spots_available__gt=0).exclude(Q(id=booking.course_session.id) | Q(id__in=user_session_ids)).order_by('start_time')
+    
+    # Pagination
+    paginator = Paginator(session_list, 8)  # Show 8 sessions per page
+    page_number = request.GET.get('page')
+    sessions = paginator.get_page(page_number)
 
     if request.method == 'POST':
         new_session_id = request.POST.get('session_id')
