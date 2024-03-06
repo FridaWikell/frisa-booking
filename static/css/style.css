@@ -32,6 +32,10 @@ a {
     min-height: 900px;
 }
 
+.flower-power {
+    background: url('https://res.cloudinary.com/dihkuau3v/image/upload/v1709743375/frisa-booking/floral-vecteezy.webp') center center/cover;
+}
+
 .start-carousel {
     max-width: 600px;
 }
