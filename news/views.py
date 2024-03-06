@@ -3,7 +3,7 @@ from django.views import generic
 from django.contrib.admin.views.decorators import staff_member_required
 from .models import News
 
-# Create your views here.
+
 @staff_member_required
 def news_list(request):
     news_items = News.objects.all()
