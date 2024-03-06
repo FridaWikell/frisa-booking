@@ -12,7 +12,7 @@ def about(request):
     <p>&#128640; Your question just zoomed through the internet and 
     landed in our inbox with a superhero landing! We're currently 
     assembling a team of highly trained squirrels to craft the perfect response. 
-    We aim to get back to you within 48 hours, assuming the squirrels don&#146t 
+    We aim to get back to you within 48 hours, assuming the squirrels don't 
     get distracted by any shiny objects...</p>
     """
 
