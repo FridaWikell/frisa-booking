@@ -165,6 +165,15 @@ a {
     height: 240px;
 }
 
+.member-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.fa-circle-check {
+    color: #2b6429;
+}
+
 
 /* About page */
 .custom-form input[type="text"],
