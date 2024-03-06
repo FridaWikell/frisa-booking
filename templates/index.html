@@ -21,7 +21,7 @@
 </div>
 
 <!-- Member benefits -->
-<div class="flower-power mt-2 mb-lg-4">
+<div class="flower-power mt-2 mb-lg-4 py-5">
     <div class="row">
         <div class="col-11 col-md-8 mx-auto mt-4 mb-3 members">
             <div class="pt-4 pb-2 px-5 mx-auto">
@@ -35,38 +35,50 @@
     </div>
 
     <div class="row justify-content-center">
-        <div class="col-10 mx-auto d-flex justify-content-center">
-            <div class="col-md-5 my-2 d-flex mx-2 justify-content-end">
-                <div class="col-md-9 px-5 py-4 members">
-                    <h5>For our future members</h5>
-                    <ul>
-                        <li>Inspiration gathering</li>
-                        <li>Book Workshops</li>
-                        <li>Edit Bookings</li>
-                        <li>Cancel Bookings</li>
-                        <li>View Your Bookings</li>
-                    </ul>
-                </div>
-            </div>
-        
-            <div class="col-md-5 my-5 d-flex mx-2 justify-content-start">
-                <div class="col-md-9 px-5 py-4 members">
-                    <h5>For our esteemed members</h5>
-                    <ul>
-                        <li>Inspiration gathering</li>
-                        <li>Book Workshops</li>
-                        <li>Edit Bookings</li>
-                        <li>Cancel Bookings</li>
-                        <li>View Your Bookings</li>
-                    </ul>
-                </div>
+        <div class="col-3 p-4 mx-2 members member-or-not">
+            <h5 class="px-1">For our future members</h5>
+            <ul>
+                <li>Inspiration gathering</li>
+                <li>Book Workshops</li>
+                <li>Edit Bookings</li>
+                <li>Cancel Bookings</li>
+                <li>View Your Bookings</li>
+            </ul>
+        </div>
+        <div class="col-3 p-4 mx-2 members member-or-not">
+            <h5 class="px-1">For our esteemed members</h5>
+            <ul>
+                <li>Inspiration gathering</li>
+                <li>Book Workshops</li>
+                <li>Edit Bookings</li>
+                <li>Cancel Bookings</li>
+                <li>View Your Bookings</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-11 col-md-8 mx-auto mt-3 mb-3 members">
+            <div class="pt-4 pb-2 px-5 mx-auto">
+                <p>
+                    Ah, we see that twinkle in your eye! The irresistible pull of creativity has got you in 
+                    its grasp, hasn't it? Don't fight it; embrace the allure of endless crafting adventures! 
+                    Go on, press that sign-up button. Your future self, decked out in glitter and wielding a 
+                    paintbrush like a magic wand, will thank you!
+                </p>
+                {% if not user.is_authenticated %}
+                    <div class="d-flex justify-content-center">
+                        <a href="{% url 'account_signup' %}" class="btn submit-btn mb-3">Sign up</a>
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>
 </div>
 
-
-
+<div class="row justify-content-center">
+    <hr class="col-8 mt-5 mb-4 mb-lg-5">
+</div>
 
 <div class="row">
     <div class="col-11 col-md-6 mx-auto mb-3 dark-back">

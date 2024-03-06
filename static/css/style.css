@@ -33,7 +33,9 @@ a {
 }
 
 .flower-power {
-    background: url('https://res.cloudinary.com/dihkuau3v/image/upload/v1709743375/frisa-booking/floral-vecteezy.webp') center center/cover;
+    background: url('https://res.cloudinary.com/dihkuau3v/image/upload/v1709743375/frisa-booking/floral-vecteezy.webp');
+    margin-left: -12px;
+    margin-right: -12px;
 }
 
 .start-carousel {
@@ -154,9 +156,13 @@ a {
     color: #000000;
 }
 
-.members {
+.members, .member-or-not {
     background: rgba(53, 53, 53, 0.9);
     color: #cacaca;
+}
+
+.member-or-not {
+    height: 240px;
 }
 
 
