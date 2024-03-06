@@ -171,7 +171,11 @@ a {
 }
 
 .fa-circle-check {
-    color: #2b6429;
+    color: #2ebd29;
+}
+
+.fa-circle-xmark {
+    color: #ce1c1c;
 }
 
 
@@ -237,7 +241,7 @@ a {
 
 /* Footer */
 .fa-brands, 
-.fa-regular {
+.fa-pen-to-square {
     color: #000000;
 }
 
