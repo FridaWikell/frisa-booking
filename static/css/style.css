@@ -28,7 +28,7 @@ a {
 /* Images */
 
 .hero-img {
-    background: url('../img/hero-image.webp') center center/cover;
+    background: url('https://res.cloudinary.com/dihkuau3v/image/upload/v1709735168/frisa-booking/hero-image.webp') center center/cover;
     min-height: 900px;
 }
 
