@@ -57,23 +57,23 @@
         </div>
     </div>
     
-    <div class="row">
-        <div class="col-10 col-md-8 mx-auto mt-4 mb-3 members">
-            <div class="pt-4 pb-2 px-4 px-md-5 mx-auto">
-                <p>
-                    Ah, we see that twinkle in your eye! The irresistible pull of creativity has got you in 
-                    its grasp, hasn't it? Don't fight it; embrace the allure of endless crafting adventures! 
-                    Go on, press that sign-up button. Your future self, decked out in glitter and wielding a 
-                    paintbrush like a magic wand, will thank you!
-                </p>
-                {% if not user.is_authenticated %}
+    {% if not user.is_authenticated %}
+        <div class="row">
+            <div class="col-10 col-md-8 mx-auto mt-4 mb-3 members">
+                <div class="pt-4 pb-2 px-4 px-md-5 mx-auto">
+                    <p>
+                        Ah, we see that twinkle in your eye! The irresistible pull of creativity has got you in 
+                        its grasp, hasn't it? Don't fight it; embrace the allure of endless crafting adventures! 
+                        Go on, press that sign-up button. Your future self, decked out in glitter and wielding a 
+                        paintbrush like a magic wand, will thank you!
+                    </p>
                     <div class="d-flex justify-content-center">
                         <a href="{% url 'account_signup' %}" class="btn submit-btn mb-3">Sign up</a>
                     </div>
-                {% endif %}
+                </div>
             </div>
         </div>
-    </div>
+    {% endif %}
 </div>
 
 <div class="row justify-content-center">
