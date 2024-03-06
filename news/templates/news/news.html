@@ -5,10 +5,12 @@
     <div class="row mx-3 md-mx-5 justify-content-center">
         <h2 class="mt-3 text-center">Staff news</h2>
         <h5 class="mb-3 mb-md-4 text-center">What have we been up to lately?</h5>
-    </div> 
+    </div>
+
     <div class="row justify-content-center">
         <hr class="col-8">
     </div>
+    
     <div class="row md-mx-5 justify-content-center">
         {% for news_item in news_items %}
             <div class="col-md-9 mb-4 px-4 {% if forloop.counter|divisibleby:2 %}darker-card{% endif %}">
