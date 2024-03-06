@@ -162,7 +162,8 @@ a {
 }
 
 .member-or-not {
-    height: 240px;
+    min-height: 240px;
+    max-width: 266px;
 }
 
 .member-list {
