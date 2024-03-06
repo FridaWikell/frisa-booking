@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-8 my-1 mx-auto">
+            <div class="w-100 px-5 py-4 dark-back">
+                <h2>&#x1F680; Houston, we have a problem!</h2>
+                <p>
+                    It looks like our server has decided to take a little unscheduled break and ventured into a 
+                    black hole. Fear not! Our team of digital astronauts is already on a spacewalk to fix the issue.
+                </p>
+                <p>
+                    In the meantime, here's what you can do:
+                </p>
+                <ul>
+                    <li>
+                        Hit the refresh button as if you're firing up your spaceship's engines. Maybe we're back from the black hole!
+                    </li>
+                    <li>
+                        Navigate back to our <a href="{% url 'home' %}">homepage</a> where it's safe and cozy.
+                    </li>
+                    <li>
+                        Send us a space telegram <a href="{% url 'about' %}#contact-form">(a.k.a. an email)</a> if you think we should know about this cosmic event.
+                    </li>
+                    <li>
+                        Practice your moonwalk. Hey, why not make the most out of this little break?
+                    </li>
+                </ul>
+                <div>
+                    We promise to get things up and running as soon as possible. Until then, keep your helmets 
+                    close and your adventure spirit closer. Thank you for your patience and for not launching any 
+                    satellites to find us. We'll be back before you can say "Extraterrestrial!"
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
