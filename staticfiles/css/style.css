@@ -32,6 +32,12 @@ a {
     min-height: 900px;
 }
 
+.flower-power {
+    background: url('https://res.cloudinary.com/dihkuau3v/image/upload/v1709743375/frisa-booking/floral-vecteezy.webp');
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
 .start-carousel {
     max-width: 600px;
 }
@@ -149,6 +155,25 @@ a {
 .fa-chevron-right {
     color: #000000;
 }
+
+.members, .member-or-not {
+    background: rgba(53, 53, 53, 0.9);
+    color: #cacaca;
+}
+
+.member-or-not {
+    height: 240px;
+}
+
+.member-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.fa-circle-check {
+    color: #2b6429;
+}
+
 
 /* About page */
 .custom-form input[type="text"],
