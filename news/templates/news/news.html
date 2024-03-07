@@ -17,11 +17,8 @@
                 <h3 class="pt-4">{{ news_item.title }}</h3>
                 <h6>{{ news_item.course }}</h6>
                 <p>{{ news_item.content|safe }}</p>
-                <div class="row justify-content-center">
-                    <hr class="col-8">
-                </div>
-                <p>Written by: {{ news_item.author }}</p>
-                <p>Published: {{ news_item.created_on }}</p>
+                <p><strong>Written by:</strong> {{ news_item.author }}</p>
+                <p><strong>Published:</strong> {{ news_item.created_on }}</p>
             </div>
             <div class="row justify-content-center">
                 <hr class="col-8 mb-3 mb-md-4">
