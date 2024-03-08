@@ -16,7 +16,7 @@
                 {% csrf_token %}
                 <input type="hidden" name="session_id" id="selectedSessionId" value="">         
                 <button type="button" class="btn session-btn booking-btn py-3" data-session-id="{{ session.id }}">
-                    <h6>{{ session.course.name }}</h6> 
+                    <span class="session-course-name"><strong>{{ session.course.name }}</strong></span><br>
                     {{ session.start_time|date:"j F Y" }}<br>
                     {{ session.start_time|time:"H.i" }} - {{ session.end_time|time:"H.i" }}<br>
                     Available spots: {{ session.spots_available }}
