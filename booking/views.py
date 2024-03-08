@@ -5,13 +5,19 @@ from django.db.models import Q
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
 from .models import Course, CourseSession, Booking
-    
+
 
 def list_courses(request):
-    courses = Course.objects.all()  
-    sessions = CourseSession.objects.filter(start_time__gte=timezone.now()).order_by('start_time')  
+    """
+    List all availible courses and sessions.
+    Paginate to show eight availible sessions at each page.
+    """
+    courses = Course.objects.all()
+    sessions = CourseSession.objects.filter(
+        start_time__gte=timezone.now()).order_by('start_time')
+
     paginator = Paginator(sessions, 8)
-    page_number = request.GET.get('page') 
+    page_number = request.GET.get('page')
     sessions = paginator.get_page(page_number)
 
     return render(request, 'booking/booking.html', {
@@ -21,19 +27,26 @@ def list_courses(request):
 
 @login_required
 def book_session(request, session_id):
-    courses = Course.objects.all()  
-    sessions = CourseSession.objects.filter(start_time__gte=timezone.now()).order_by('start_time')
+    """
+    Show sessions that user doesn't have an excisting booking at.
+    Book chosen section and decrease availible spots by one.
+    """
+    courses = Course.objects.all()
+    sessions = CourseSession.objects.filter(
+        start_time__gte=timezone.now()).order_by('start_time')
     session = get_object_or_404(CourseSession, id=session_id)
     already_booked = False
 
     if request.method == 'POST':
-        if Booking.objects.filter(user=request.user, course_session=session).exists():
+        if Booking.objects.filter(
+                user=request.user, course_session=session).exists():
             already_booked = True
         else:
             with transaction.atomic():
                 session.spots_available -= 1
                 session.save()
-                Booking.objects.create(user=request.user, course_session=session)
+                Booking.objects.create(
+                    user=request.user, course_session=session)
             return redirect('success_page')
 
     return render(request, 'booking/booking.html', {
@@ -44,27 +57,44 @@ def book_session(request, session_id):
 
 
 def success_page(request):
+    """
+    Direct to Success page
+    """
     return render(request, 'booking/success_page.html')
 
 
 @login_required
 def my_bookings(request):
-    bookings = Booking.objects.filter(user=request.user).select_related('course_session').order_by('course_session__start_time')
+    """
+    Present an users all active bookings, sorted by start date.
+    Paginate if the user has more than four acive bookings.
+    """
+    bookings = Booking.objects.filter(user=request.user).select_related(
+        'course_session').order_by('course_session__start_time')
+
     paginator = Paginator(bookings, 4)
     page_number = request.GET.get('page')
     bookings = paginator.get_page(page_number)
+
     return render(request, 'booking/my_bookings.html', {
         'bookings': bookings})
 
 
 @login_required
 def edit_booking(request, booking_id):
+    """
+    Present all workshops sessions which the user doesn't has any active
+    bookings at. Paginate if it is more than eight active workshop sessions
+    availible. When a booking is made, the availible spots decreases by one.
+    """
     booking = get_object_or_404(Booking, id=booking_id, user=request.user)
-    user_session_ids = Booking.objects.filter(user=request.user).exclude(id=booking_id).values_list('course_session_id', flat=True)
-    session_list = CourseSession.objects.filter(spots_available__gt=0).exclude(Q(id=booking.course_session.id) | Q(id__in=user_session_ids)).order_by('start_time')
-    
-    # Pagination
-    paginator = Paginator(session_list, 8)  # Show 8 sessions per page
+    user_session_ids = Booking.objects.filter(user=request.user).exclude(
+        id=booking_id).values_list('course_session_id', flat=True)
+    session_list = CourseSession.objects.filter(spots_available__gt=0).exclude(
+        Q(id=booking.course_session.id) | Q(id__in=user_session_ids)).order_by(
+            'start_time')
+
+    paginator = Paginator(session_list, 8)
     page_number = request.GET.get('page')
     sessions = paginator.get_page(page_number)
 
@@ -83,12 +113,15 @@ def edit_booking(request, booking_id):
         return redirect('my_bookings')
 
     return render(request, 'booking/edit_booking.html', {
-        'booking': booking, 
+        'booking': booking,
         'sessions': sessions})
 
 
 @login_required
 def delete_booking(request, booking_id):
+    """
+    Delete an existing booking. Increase availible spots by one.
+    """
     booking = get_object_or_404(Booking, id=booking_id, user=request.user)
     if request.method == 'POST':
         course_session = booking.course_session
