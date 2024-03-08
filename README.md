@@ -345,7 +345,23 @@ All three JavaScript files were validated through [JSHint](https://jshint.com/).
 
 #### Python
 
-Insert screenshots of HTML, CSS and any other code files being tested in the relevant code validator - CSS validator might not validate newer CSS syntax - be careful to read and fully understand why it is giving you an error.
+All Python files have been validated through [CI Python Linter](https://pep8ci.herokuapp.com/) to make sure the code meet the standards of PEP8. The validation resulted without errors.
+
+**Bookings - views.py**
+
+![Python validation of views.py in bookings](doc/pep8-booking-views.webp)
+
+**About - views.py**
+
+![Python validation of views.py in about](doc/pep8-about-views.webp)
+
+**News - views.py**
+
+![Python validation of views.py in news](doc/pep8-news-views.webp)
+
+- [Python validation of models.py in bookings](doc/pep8-booking-models.webp)
+- [Python validation of admin.py in news](doc/pep8-news-admin.webp)
+- [Python validation of models.py in news](doc/pep8-news-models.webp)
 
 ### Lighthouse
 You can perform a test of your website for performance, accessibility, best practices and SEO through the google chrome lighthouse test - it is in your Dev tools. Bear in mind that your internet connection speed plays a part in the performance figures obtained. Where it scores low, it will give you suggestions on how to improve the site - read the suggestions and think about how to implement them - it could be a good idea.
