@@ -329,6 +329,20 @@ The CSS code was tested at [W3C CSS Validation Service](https://jigsaw.w3.org/cs
 
 #### JavaScript
 
+All three JavaScript files were validated through [JSHint](https://jshint.com/). The validation rendered without errors. In two of the files, Booking and Edit Booking, one undefined variable was discovered. This undefined variable was bootstrap. This variable originates from the Bootstrap framework and is thus declared in its documentation.
+
+**Booking page**
+
+![JavaScript validation of Booking page](doc/js-valid-booking.webp)
+
+**Edit booking page**
+
+![JavaScript validation of Edit booking](doc/js-valid-edit.webp)
+
+**Delete booking**
+
+![JavaScript validation of Delete booking](doc/js-valid-delete.webp)
+
 #### Python
 
 Insert screenshots of HTML, CSS and any other code files being tested in the relevant code validator - CSS validator might not validate newer CSS syntax - be careful to read and fully understand why it is giving you an error.
