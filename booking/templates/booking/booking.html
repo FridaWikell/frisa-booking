@@ -23,7 +23,7 @@
             {% endif %}
             <div class="card-body">
                 <h5 class="card-title">{{ course.name }}</h5>
-                <p class="card-text">{{ course.description|safe }}</p>
+                {{ course.description|safe }}
                 <button class="read-more">Read more &#62;&#62;</button>
             </div>
         </div>
