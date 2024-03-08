@@ -86,12 +86,12 @@ a {
 }
 
 .delete-btn {
-    background-color: #9e3e3e;
+    background-color: #8d3838;
     color: #ffffff;
 }
 
 .delete-btn:hover {
-    background-color: #8a3636;
+    background-color: #491919;
 }
 
 .submit-btn {
