@@ -286,7 +286,7 @@ The 500 page explains to the user that the server isn't working as intended. It 
 
 ![Footer with developers name and year to the left and links to the Contact form and connecting Facebook, Instagram and Pinterest accounts](doc/footer.webp)
 
-To the left, the developers name is to tell the world who the brain behind the website is. To the right, four symbols represent what they link to. The first, the pen, links the user to the Contact form at the about page. The second, Facebook icon, links the user to the owners Facebook page in a new tab. The third, Instagram icon, links the user to the owners Instagram page in a new tab. The fourth, Pinterest icon, links the user to the owners Pinterest 
+To the left, the developers name is to tell the world who the brain behind the website is. To the right, four symbols represent what they link to. The first, the pen, links the user to the Contact form at the about page. The second, Facebook icon, links the user to Facebook in a new tab. The third, Instagram icon, links the user to Instagram page in a new tab. The fourth, Pinterest icon, links the Pinterest in a new tab.
 
 ## Features to be Added
 
