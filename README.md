@@ -303,6 +303,23 @@ Several features can be added in the future.
 ## Testing
 
 ### Validation of Code
+
+![Screenshot of HTML validation of index page](doc/index-html-valid.webp)
+
+All the pages were tested at the [W3C Markup Validation Service](https://validator.w3.org/). The index page validation is presented above, all the other validations are linked below.
+
+- [About page](doc/about-html-valid.webp)
+- [Booking page](doc/booking-html-valid.webp)
+- [My bookings](doc/my-bookings-html-valid.webp)
+- [News page](doc/news-html-valid.webp)
+- [Edit booking](doc/edit-booking-html-valid.webp)
+- [Success page](doc/success-html-valid.webp)
+- [400 page]()
+- [500 page](doc/500-page-html-valid.webp)
+
+INSERT 400 PAGE!!!!
+
+
 Insert screenshots of HTML, CSS and any other code files being tested in the relevant code validator - CSS validator might not validate newer CSS syntax - be careful to read and fully understand why it is giving you an error.
 
 ### Lighthouse
