@@ -5,7 +5,7 @@
         Do you want to book a course for a larger group? No problem, just send me 
         a message and we will work it out!
     </p>
-    <form method="post" action="." class="custom-form" hx-post="." hx-target="#contact-form" hx-swap="outerHTML">
+    <form method="post" action="." class="custom-form" data-hx-post="." data-hx-target="#contact-form" data-hx-swap="outerHTML">
         {% csrf_token %}
         {{ form.as_p }}
         <div class="text-end">
