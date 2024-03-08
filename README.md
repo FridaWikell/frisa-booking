@@ -1,6 +1,6 @@
 # Frisa Booking
 
-![image of site](link to image) - use an image from AmIResponsive that shows the site on multiple devices
+![AmIResponsive image of Frisa Booking](doc/amiresponsive.webp)
 
 ## Introduction
 The project is to build a website where you as a user can book a workshop to upcycle old things. If the user doesn't visit the website with the goal to book a workshop right away, the website should work as an inspiration.
