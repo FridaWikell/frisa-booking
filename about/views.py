@@ -6,6 +6,10 @@ from .forms import ContactForm
 
 
 def about(request):
+    """
+    Validate contact form and send the filled out form to chosen backend.
+    An htmx response is rendered when the contact form is sent.
+    """
     response = """
     <h2>Whoa, that was fast!</h2>
     <p>&#128640; Your question just zoomed through the internet and
