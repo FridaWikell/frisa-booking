@@ -16,7 +16,7 @@
             <div class="col-md-9 mb-4 px-4 {% if forloop.counter|divisibleby:2 %}darker-card{% endif %}">
                 <h3 class="pt-4">{{ news_item.title }}</h3>
                 <h6>{{ news_item.course }}</h6>
-                <p>{{ news_item.content|safe }}</p>
+                {{ news_item.content|safe }}
                 <p><strong>Written by:</strong> {{ news_item.author }}</p>
                 <p><strong>Published:</strong> {{ news_item.created_on }}</p>
             </div>
