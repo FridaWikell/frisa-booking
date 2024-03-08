@@ -54,6 +54,12 @@ All the images are chosen to inspire the website users. The images should give a
 #### Sign out page
 ![Wireframe of sign out page](doc/wireframe-sign-out.webp)
 
+#### 404 page
+![Wireframe of 404 page](doc/wireframe-404.webp)
+
+#### 500 page
+![Wireframe of 500 page](doc/wireframe-500.webp)
+
 ### Entity Relationship Diagram - ERD
 
 Three different models were used in the website.
