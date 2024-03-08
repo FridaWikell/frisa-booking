@@ -304,6 +304,8 @@ Several features can be added in the future.
 
 ### Validation of Code
 
+#### HTML
+
 ![Screenshot of HTML validation of index page](doc/index-html-valid.webp)
 
 All the pages were tested at the [W3C Markup Validation Service](https://validator.w3.org/). The index page validation is presented above, all the other validations are linked below.
@@ -319,6 +321,15 @@ All the pages were tested at the [W3C Markup Validation Service](https://validat
 
 INSERT 400 PAGE!!!!
 
+#### CSS
+
+![Screenshot of CSS validation](doc/css-valid.webp)
+
+The CSS code was tested at [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/). It resulted without any errors but with one warning. The warning was "Imported style sheets are not checked in direct input and file upload modes" which refers to the fonts which are imported from Google fonts.
+
+#### JavaScript
+
+#### Python
 
 Insert screenshots of HTML, CSS and any other code files being tested in the relevant code validator - CSS validator might not validate newer CSS syntax - be careful to read and fully understand why it is giving you an error.
 
