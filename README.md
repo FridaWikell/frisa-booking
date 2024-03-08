@@ -368,7 +368,20 @@ You can perform a test of your website for performance, accessibility, best prac
 Do this for both Desktop and Mobile.
 
 ### Wave Webaim - accessibility testing
-You can test your site for accessibility through the wave.webaim site - it needs to be deployed in order for it to test it. Fix any errors that it gives
+
+The accessibility test at [Wave Webaim](https://wave.webaim.org/) resulted without both errors and contrast errors on all pages.
+
+**Index page**
+
+![Wave webaim test of index page](doc/wave-webaim.webp)
+
+**About page**
+
+![Wave webaim test of about page](doc/wave-webaim-about.webp)
+
+**Booking page**
+
+![Wave webaim test of about page](doc/wave-webaim-booking.webp)
 
 ### Manual Testing
 
