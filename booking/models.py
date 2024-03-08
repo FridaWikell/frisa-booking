@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 
 class Course(models.Model):
+    '''Django database model for workshop courses'''
     name = models.CharField(max_length=100)
     description = models.TextField()
 
@@ -11,6 +12,7 @@ class Course(models.Model):
 
 
 class CourseSession(models.Model):
+    '''Django database model for workshop sessions'''
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
@@ -22,6 +24,7 @@ class CourseSession(models.Model):
 
 
 class Booking(models.Model):
+    '''Django database model for book a workshop course'''
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     course_session = models.ForeignKey(CourseSession, on_delete=models.CASCADE)
     booking_date = models.DateTimeField(auto_now_add=True)
