@@ -86,6 +86,12 @@ The navigation bar makes it easy for the user to navigate at the site. It takes 
 
 The navigation bar for a logged in user is almost the same as the not logged in user. The main difference is that the sign in and sign up links are replaced with the users username and sign out links. The users username is linking to the page where the user can see their bookings. 
 
+#### Navigation bar (as a staff member or superuser)
+
+![Navigation bar as a staff member or superuser](doc/navbar-staff.webp)
+
+The navigation bar for a logged in staff member or superuser adds another link which links to the News page. This page is only accessible for staff members and superusers.
+
 ### Index page
 
 #### Hero image
@@ -100,11 +106,23 @@ The hero image is an eyecatching image selected to get the user to feel "wow, I 
 
 At the hero image, the welcome text is presented. The text has a darker background which makes it easier for the user to read. The text is there to welcome the user and present a short description of what they can expect of the website. After the text, a button which links to the booking page, is present. It has a lighter color which makes it pop from the background. This presents and directs the user to the main purpose of the website.
 
+#### Members benefit
+
+![Benefits of becoming a member](doc/members.webp)
+
+A motivational text of why the user should sign up and become a member is supposed to get the user to sign up. If the user isn't convinced, two lists are present of what you get as a member and what you miss out on. 
+
+#### Sign up button
+
+![Sign up button below member benefits](doc/members-sign-up.webp)
+
+If the user is visiting the index page without beeing signed in, a sign up page is present below the member benefits. This to make it easy for the user to sign up when they have read the fantastic benefits. 
+
 #### Carousel
 
 ![Carousel of images](doc/carousel.webp)
 
-At the bottom of the index page, a carousel with images are located. This carousel is there to present several more objects that can me done at the workshops. Their goal is to inspire users and increase their interest in registering for the workshops.
+At the bottom of the index page, a carousel with images are located. This carousel is there to present several more objects that can me done at the workshops. Their goal is to inspire users and increase their interest in registering for the workshops. The start image is an image with a text on it to get the user to start looking at the images.
 
 ### About page
 
@@ -139,6 +157,12 @@ The three different workshops are presented with a informative text. Each presen
 ![The booking section where the user can select which session they are interested in](doc/workshop-booking.webp)
 
 The booking section of the page presents the availible workshop sessions. Each session is presented with the name of the workshop, date, time and how many availible spots that are left. Each session is represented as a button where the user can click on the button to book the section.
+
+#### Booking pagination
+
+![Pagination at booking page](doc/booking-pagination.webp)
+
+Below the booking section a pagination is present if the availible workshops are more than eight. This is to enhance the user experience to avoid scrolling in an eternity.
 
 #### Confirm booking modal
 
@@ -192,6 +216,12 @@ When the user have at least one booking, the user gets a text that informs that 
 
 The users bookings are presented with the workshop that is next in time appears first. Each booked workshop card has an Edit button and one Cancel button. When the Edit button is pressed, the user gets directed to the edit page. When the Cancel button is pressed, a confirmation modal is triggered. These two buttons allows the user to edit and delete the booked session if the user has to change their plans.
 
+#### Active bookings pagination
+
+![My bookings pagination](doc/my-bookings-pagination.webp)
+
+If the user has more than four active bookings, a pagination appears below the active bookings. This is to enhance the user experience, to make it easier for the user to see their active bookings.
+
 #### Confirm cancellation modal
 
 ![Modal that the user gets to assure that they want to cancel their booking](doc/confirm-delete.webp)
@@ -206,11 +236,23 @@ When the user press the Cancel button in their active booking, a confirm cancell
 
 All availible workshops are presented in a similar way as on the booking page. The title of the workshop, date, time and availible spots are presented. The similarity should make the user to recognize the how to book a workshop session. When the user clicks the workshop they want to change their booking to, a confirmation modal is triggered.
 
+#### Availible workshops pagination
+
+![Availible workshops pagination](doc/edit-booking-pagination.webp)
+
+If it is more than eight availible workshops to select from, pagination is present. This to enhance the user experience, to avoid to scroll through a wall of availible workshops.
+
 #### Confirm workshop change modal
 
 ![Confirmation modal to ensure the user wants to change their workshop booking](doc/confirm-edit.webp)
 
 The confirmation modal ensures that the user wants to edit their booking to the selected workshop session. This to avoid the user edit their booking to a session they didn't want to. The text is written in a way that should enhance the users feeling that this is a friendly and fun website.
+
+### News page
+
+![News page, only visible for staff members and superusers](doc/news-page.webp)
+
+The news page is only visible for staff members and supersers. Through the admin panel all staff members and superusers can write news what happened at their last workshop. The name of the workshops are located below the header. The members who was written it and when it is published are located at the bottom of section.
 
 ### Sign up page
 
@@ -229,6 +271,16 @@ The sign in page allows the user who already has an account to sign in. This to 
 ![Sign out page with a confirmation button](doc/sign-out.webp)
 
 The sign out page allows the user to sign out to ensure no one else can edit the users booking. The sign out button ensures the user really wanted to sign out and didn't press on Sign out by mistake.
+
+### 404 page
+
+![]
+
+### 500 page
+
+![Screenshot of the 500 page](doc/500-page.webp)
+
+The 500 page explains to the user that the server isn't working as intended. It suggest the user what they can do, refresh the page, go back to the homepage or send the website owner an email. The suggestion about going back to the homepage is provided with a link to the homepage. The suggestion about sending an email is provided with a link to the contact form.
 
 ### Footer
 
