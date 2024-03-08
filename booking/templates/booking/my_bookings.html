@@ -87,7 +87,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <form action="" method="POST" id="deleteForm">
+                <form method="POST" id="deleteForm">
                     {% csrf_token %}
                     <input type="hidden" name="booking_id" value="" id="hiddenBookingId">
                     <button type="submit" class="btn delete-btn">Confirm</button>
