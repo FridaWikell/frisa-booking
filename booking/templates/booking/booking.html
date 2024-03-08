@@ -45,7 +45,7 @@
                 {% if session.spots_available != 0 %} 
                     data-session-id="{{ session.id }}" data-bs-toggle="modal" data-bs-target="#confirmationBookingModal"
                 {% endif %}> 
-                    <span class="session-course-name">{{ session.course.name }}</span><br>
+                    <span class="session-course-name"><strong>{{ session.course.name }}</strong></span><br>
                     {{ session.start_time|date:"j F Y" }}<br>
                     {{ session.start_time|time:"H.i" }} - {{ session.end_time|time:"H.i" }}<br>
                     Available spots: {{ session.spots_available }}
