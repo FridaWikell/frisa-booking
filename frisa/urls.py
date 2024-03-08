@@ -26,6 +26,11 @@ def homepage_view(request):
     template = loader.get_template('index.html')
     return HttpResponse(template.render({}, request))
 
+# Visa startsidan
+def fivehoundred_view(request):
+    template = loader.get_template('500.html')
+    return HttpResponse(template.render({}, request))
+
 
 # Blank path last
 urlpatterns = [
@@ -36,4 +41,5 @@ urlpatterns = [
     path('news/', include('news.urls')),
     path('summernote/', include('django_summernote.urls')),
     path('', homepage_view, name='home'),
+    path('500/', fivehoundred_view, name='fivehoundred'),
 ]
