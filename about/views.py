@@ -9,11 +9,11 @@ from .forms import ContactForm
 def about(request):
     response = """
     <h2>Whoa, that was fast!</h2>
-    <p>&#128640; Your question just zoomed through the internet and 
-    landed in our inbox with a superhero landing! We're currently 
-    assembling a team of highly trained squirrels to craft the perfect response. 
-    We aim to get back to you within 48 hours, assuming the squirrels don't 
-    get distracted by any shiny objects...</p>
+    <p>&#128640; Your question just zoomed through the internet and
+     landed in our inbox with a superhero landing! We're currently
+     assembling a team of highly trained squirrels to craft the perfect
+     response. We aim to get back to you within 48 hours, assuming
+     the squirrels don't get distracted by any shiny objects...</p>
     """
 
     if request.method == 'POST':
@@ -32,13 +32,16 @@ def about(request):
                 'content': content
             })
 
-            send_mail('New message from contact form', 'Message', 'frisa.craft@gmail.com', ['frisa.craft@gmail.com'], html_message=html)
-            
+            send_mail('New message from contact form', 'Message',
+                      'frisa.craft@gmail.com', ['frisa.craft@gmail.com'],
+                      html_message=html)
+
             if request.headers.get('HX-Request'):
                 return HttpResponse(response)
         else:
             if request.headers.get('HX-Request'):
-                return render(request, 'about/_contact_form.html', {'form': form})
+                return render(request, 'about/_contact_form.html',
+                              {'form': form})
 
     else:
         form = ContactForm()
