@@ -383,6 +383,12 @@ The accessibility test at [Wave Webaim](https://wave.webaim.org/) resulted witho
 
 ![Wave webaim test of about page](doc/wave-webaim-booking.webp)
 
+### Contrast Grid
+
+The [Contrast Grid](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23CACACA%2C%20%20Background%20color%0D%0A%23353535%2C%20Text%0D%0A%23411919%2C%20Cancel%20btn%20-%20background%0D%0A%23FFFFFF%2C%20Cancel%2Fconfirm%2Fdelete%20btn%20-%20text%0D%0A%23193A18%2C%20Confirm%20btn%20-%20background%0D%0A%238d3838%2C%20Delete%20btn%20-%20background%0D%0A%23000000%2C%20Footer%20icons&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp) resulted in only AAA results for the combination used on the webpage. The main combination throughout the page is #CACACA and #353535 which has a value of 7.4 (where the limit for AAA is 7+).
+
+![Contrast Grid of the webpage](doc/contrast-grid.webp)
+
 ### Manual Testing
 
 You need to perform, and document everything you did to manually test your site.
