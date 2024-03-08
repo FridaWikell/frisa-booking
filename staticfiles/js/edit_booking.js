@@ -4,17 +4,26 @@ let selectedSessionId = null;
 document.addEventListener('click', function(e) {
     if (e.target && e.target.matches('.session-btn')) {
         selectedSessionId = e.target.getAttribute('data-session-id');
+        
         var confirmationModal = new bootstrap.Modal(document.getElementById('confirmationModal'), {
             keyboard: false
         });
         confirmationModal.show();
+        
+        let hiddenInput = document.getElementById('selectedSessionId-' + selectedSessionId);
+        if (hiddenInput) {
+            hiddenInput.value = selectedSessionId;
+        }
     }
 });
 
-/* Submits the form in the pop up modal when editing booking */
+/* Submits the form in the pop-up modal when confirming booking */
 document.getElementById('confirmChange').addEventListener('click', function() {
     if (selectedSessionId) {
-        document.getElementById('selectedSessionId').value = selectedSessionId; // Set the hidden input value
-        document.getElementById('sessionForm').submit(); // Submit the form
+        let formId = 'sessionForm-' + selectedSessionId;
+        let form = document.getElementById(formId);
+        if (form) {
+            form.submit();
+        }
     }
 });

@@ -12,9 +12,9 @@
     <h2 class="my-4 text-center">Please select another workshop</h2>
     {% for session in sessions %}
         <div class="col-10 col-sm-6 col-lg-3 mb-2 mb-sm-3">
-            <form method="post" id="sessionForm">
+            <form method="post" id="sessionForm-{{ session.id }}">
                 {% csrf_token %}
-                <input type="hidden" name="session_id" id="selectedSessionId" value="">         
+                <input type="hidden" name="session_id" id="selectedSessionId-{{ session.id }}" value="">         
                 <button type="button" class="btn session-btn booking-btn py-3" data-session-id="{{ session.id }}">
                     <span class="session-course-name"><strong>{{ session.course.name }}</strong></span><br>
                     {{ session.start_time|date:"j F Y" }}<br>
