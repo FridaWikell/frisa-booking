@@ -18,11 +18,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.http import HttpResponse
 from django.template import loader
-from about import views as about_views
 
 
-# Show index page
 def homepage_view(request):
+    """
+    Render the index page
+    """
     template = loader.get_template('index.html')
     return HttpResponse(template.render({}, request))
 
