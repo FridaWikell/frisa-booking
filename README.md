@@ -389,6 +389,34 @@ The [Contrast Grid](https://contrast-grid.eightshapes.com/?version=1.1.0&backgro
 
 ![Contrast Grid of the webpage](doc/contrast-grid.webp)
 
+### Automated Testing
+
+Automated testing is made for all three different apps (about, booking and news). Totally 33 tests were made divided into 8 tests in about, 12 tests in booking and 13 tests in news.
+
+![Automated tests for all apps](doc/tests-all.webp)
+
+**About**
+
+![Automated tests for about app](doc/tests-about.webp)
+
+- [Test of forms.py](about/tests_forms.py)
+- [Test of views.py](about/tests_views.py)
+
+**Booking**
+
+![Automated tests for booking app](doc/tests-booking.webp)
+
+- [Test of models.py](booking/tests_models.py)
+- [Test of views.py](booking/tests_views.py)
+
+**News**
+
+![Automated tests for news app](doc/tests-news.webp)
+
+- [Tests of admin.py](news/tests_admin.py)
+- [Tests of models.py](news/tests_models.py)
+- [Tests of views.py](news/tests_views.py)
+
 ### Manual Testing
 
 You need to perform, and document everything you did to manually test your site.
