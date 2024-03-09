@@ -427,10 +427,45 @@ You should also load the site once deployed on as many devices you have access t
 
 Test the user stories that you created earlier in the readme - did you satisfy the goal, how?
 
-To write up the tests you can use a table,
+
+
+Every page at the website has been manually tested. It is done in Google Chrome DevTools and on different devices. The devices used were one mobile phone, one laptop and one external screen:
+
+- Samsung Galaxy A52s (1080 x 2400)
+- HP 250 G4 Notebook PC (1366 x 768)
+- HP 2309v LCD Screen (1920 x 1080)
+
+#### Navigation bar
+
 | Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
 | -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
-| enter details here | enter details here | enter details here | enter details here | enter details here |
+| Home link | When clicked, direct the user to the home page | Click at "Home" | Got directed to the home page | Pass |
+| About link | When clicked, direct the user to the about page | Click at "About" | Got directed to the about page | Pass |
+| Booking link | When clicked, direct the user to the booking page | Click at "Booking" | Got directed to the booking page | Pass |
+| Sign up link | When clicked, direct the user to the sign up page | Click at "Sign up" | Got directed to the sign up page | Pass |
+| Sign in link | When clicked, direct the user to the sign in page | Click at "Sign in" | Got directed to the sign in page | Pass |
+| News link not visible (signed out) | News link not visible as a signed out user | Sign out and inspect navigation bar | News link not visible | Pass |
+| News link not visible (signed in user - regular) | News link not visible as a signed in user (without staff or superuser credentials) | Sign in as a regular user, check navigation bar | News link not visible | Pass |
+| News link visible (signed in user - staff or superuser) | News link visible as a signed in user (with staff or superuser credentials) | Sign in as staff or superuser, check navigation bar | News link visible | Pass |
+| News link | When clicked, direct the signed in user (staff or superuser) to the news page | Sign in as a staff or superuser, click at "News" | Got directed to the news page | Pass |
+| My bookings link not visible | My bookings link not visible as a signed out user | Sign out and inspect navigation bar | My bookings link not visible | Pass |
+| Me bookings link visible | My bookings link visible as a signed in user | Sign in, check navigation bar | My bookings link visible | Pass |
+| Username showing (signed in user) | When the user is signed in, the username is presented as the link to my bookings | Sign in, check navigation bar | Username is showing | Pass |
+| My bookings link | When clicked, direct the signed in user to my bookings page | Click at username | Got directed to the my bookings page | Pass |
+| Sign out link | When clicked, direct the user to the sign out page | Click at "Sign out" | Got directed to the sign out page | Pass |
+
+#### Index page
+
+| Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
+| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
+| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The index page was responsive and changed depending on screen size | Pass |
+| "Check out availible workshops" button | Directs the user to the Booking page | Click at the "Check out availible workshops" button | Got directed to the Booking page | Pass |
+| Text readability | Enough margins and padding to make text readable | Read all text blocks in all different Bootstrap breakpoints | The text is readable at all breakpoints | Pass |
+
+
+		
+
+
 
 You should have tests for every section of every page.. individually.
 
