@@ -12,7 +12,7 @@ The project is to build a website where you as a user can book a workshop to upc
 
 ### User Goals
 
-One of the user goals is to be able to book wanted workshops sessions. The user should also have a smooth experience with full CRUD accessibility to their bookings. The goal is also to view already created projects and to inspire the user.
+One of the user goals is to be able to book wanted workshop sessions. The user should also have a smooth experience with full CRUD (Create, Read, Update and Delete) accessibility to their bookings. The goal is also to view already created projects and to inspire the user.
 
 ### Site Owner Goals
 
@@ -20,7 +20,7 @@ The site owner goal is to get more bookings to the hosted workshops.
 
 ### User Stories
 
-For the project, five different Epics were created. To them, a total of 23 user stories were created. To view all user stories, they are viewable at the [Projects board](https://github.com/users/FridaWikell/projects/4/views/1). All user stories were assigned one of following class; Must have, Should have, Could have and Won't have. Each of the user stories were also assigned a point depending on how much time they were estimated to take.
+For the project, five different Epics were created. To them, a total of 23 user stories were created. To view all user stories, they are viewable at the [Projects board](https://github.com/users/FridaWikell/projects/4/views/1). All user stories were assigned one of the following classes; Must have, Should have, Could have or Won't have. Each of the user stories were also assigned points depending on how much time they were estimated to take.
 
 | Class | Points | Percentage of total points |
 | -------------- | --------- | --------------- |
@@ -293,13 +293,13 @@ Then the post is permanently removed from the news feed, and the user receives a
 The design is set to be modern but easy to read. It should draw the attention to the images which will enhance the chance to get the users to get inspired. The design should feel welcoming and like you're visiting a friends place. 
 
 ### Color Scheme
-The color scheme is set to feel modern and harmonize with the hero image. Any bright colors in the scheme were avoided due to not draw any attention from the images at the website. The colors are reused on all pages to make every page feel familiar and to enhance the feeling that the website is an unity. 
+The color scheme is set to feel modern and harmonize with the hero image. Any bright colors in the scheme were avoided to not draw any attention from the images at the website. The colors are reused on all pages to make every page feel familiar and to enhance the feeling that the website is a unit. 
 
 ### Typography
-The typography were chosen to have a modern touch. They were chosen to feel easygoing and fun, but at the same time easy to read. The text was designed to incorporate some spacing, ensuring it doesn't appear as a dense block of text upon opening a page. The written communication across the website adopts a playful tone to foster a friendly atmosphere. Emojis was added to make the tone more playful and friendly.  
+The typography was chosen to have a modern touch. It was chosen to feel easygoing and fun, but at the same time easy to read. The text was designed to incorporate some spacing, ensuring it doesn't appear as a dense block of text upon opening a page. The written communication across the website adopts a playful tone to foster a friendly atmosphere. Emojis were added to make the tone more playful and friendly.  
 
 ### Imagery
-All the images are chosen to inspire the website users. The images should give a warm feeling with the help of the content and a warm tone in them. The images have been designed with a playful and dynamic excerpt to encourage user engagement and increase sign-ups for the workshop. The objects on the images are things that has been made by the leader of the workshops. In other words, they are objects that you can do at the workshops!
+All the images are chosen to inspire the website users. The images should give a warm feeling through their content and warm tone. The images have been designed with a playful and dynamic excerpt to encourage user engagement and increase sign-ups for the workshops. The objects on the images are things that has been made by the leader of the workshops. In other words, they are objects that you can create at the workshops!
 
 ### Wireframes
 
@@ -338,7 +338,7 @@ All the images are chosen to inspire the website users. The images should give a
 
 ### Entity Relationship Diagram - ERD
 
-Three different models were used in the website.
+Three different models were used in the making of the website.
 
 ![ERD of Booking Model](doc/erd-booking.webp)
 
@@ -354,13 +354,13 @@ Three different models were used in the website.
 
 ![Navigation bar as a not logged in user](doc/navbar-not-logged-in.webp)
 
-The navigation bar makes it easy for the user to navigate at the site. It takes the user directly to the home page, about page, booking page, sign in page and sign up page. This helps the user to get a overview of the website.
+The navigation bar makes it easy for the user to navigate at the site. It takes the user directly to the home page, about page, booking page, sign in page and sign up page. This helps the user to get an overview of the website.
 
 #### Navigation bar (as a logged in user)
 
 ![Navigation bar as a logged in user](doc/navbar-logged-in.webp)
 
-The navigation bar for a logged in user is almost the same as the not logged in user. The main difference is that the sign in and sign up links are replaced with the users username and sign out links. The users username is linking to the page where the user can see their bookings. 
+The navigation bar for a logged in user is almost the same as the not logged in user. The main difference is that the sign up and sign in links are replaced with the users username and sign out links. The users username is linking to the page where the user can see their bookings. 
 
 #### Navigation bar (as a staff member or superuser)
 
@@ -374,31 +374,31 @@ The navigation bar for a logged in staff member or superuser adds another link w
 
 ![Hero image at index page](doc/hero-image.webp)
 
-The hero image is an eyecatching image selected to get the user to feel "wow, I want to do that aswell". It's selected to get the user to feel the inspiration flow. The warm tones in the images are there to get a warm and welcoming feeling.
+The hero image is an eyecatching image selected to get the user to feel "wow, I want to create that aswell". It's selected to get the user to feel the inspiration flow. The warm tones in the image are there to get a warm and welcoming feeling.
 
 #### Welcome text
 
 ![Welcome text at index page](doc/welcome-text.webp)
 
-At the hero image, the welcome text is presented. The text has a darker background which makes it easier for the user to read. The text is there to welcome the user and present a short description of what they can expect of the website. After the text, a button which links to the booking page, is present. It has a lighter color which makes it pop from the background. This presents and directs the user to the main purpose of the website.
+At the hero image, the welcome text is presented. The text has a dark background which makes it easier for the user to read. The text is there to welcome the user and present a short description of what they can expect of the website. After the text, a button which links to the booking page is presented. It has a lighter color which makes it pop from the background. This presents and directs the user to the main purpose of the website.
 
-#### Members benefit
+#### Member benefits
 
 ![Benefits of becoming a member](doc/members.webp)
 
-A motivational text of why the user should sign up and become a member is supposed to get the user to sign up. If the user isn't convinced, two lists are present of what you get as a member and what you miss out on. 
+A motivational text of why the user should sign up and become a member is supposed to get the user to sign up. If the user isn't convinced, there are two lists that compare what you get as a member and what you miss out on as a non-member. 
 
 #### Sign up button
 
 ![Sign up button below member benefits](doc/members-sign-up.webp)
 
-If the user is visiting the index page without beeing signed in, a sign up page is present below the member benefits. This to make it easy for the user to sign up when they have read the fantastic benefits. 
+If the user is visiting the index page without being signed in, there is a sign up button below the member benefits. This is to make it easy for the user to sign up when they have read the fantastic benefits. 
 
 #### Carousel
 
 ![Carousel of images](doc/carousel.webp)
 
-At the bottom of the index page, a carousel with images are located. This carousel is there to present several more objects that can me done at the workshops. Their goal is to inspire users and increase their interest in registering for the workshops. The start image is an image with a text on it to get the user to start looking at the images.
+At the bottom of the index page, a carousel with images are located. This carousel is there to present several more objects that can be created at the workshops. Their goal is to inspire users and increase their interest in registering for the workshops. The start image is an image with a text on it to get the user to start looking at the images.
 
 ### About page
 
@@ -406,25 +406,25 @@ At the bottom of the index page, a carousel with images are located. This carous
 
 ![Profile image at the about page](doc/profile-img.webp)
 
-The profile image presents the founder and owner of Frisa. To show who it is makes the user to feel closer and get a more friendly feeling when they may fill out the contact form or sign up to a workshop. 
+The profile image presents the founder and owner of Frisa. The face of the founder is shown to make the user feel closer and get a more friendly feeling when they may fill out the contact form or sign up to a workshop. 
 
 #### About text
 
 ![A text about the owner and founder of Frisa](doc/about-text.webp)
 
-The text is a compliment to the profile image to present the founder and owner of Frisa. It will help to enhance the friendly feeling. This will also help the user to know what to expect from the webpage.
+The text is a complement to the profile image to present the founder and owner of Frisa. It will help to enhance the friendly feeling. This will also help the user to know what to expect from the webpage.
 
 #### Contact form
 
 ![The contact form at the about page](doc/contact-form.webp)
 
-The contact form is a channel for the user to get in contact if they have any questions. The text on top of the contact form encourage the user to reach out to the site owner.
+The contact form is a channel for the user to get in contact if they have any questions. The text on top of the contact form encourages the user to reach out to the site owner.
 
 #### Contact form response
 
 ![The response after submitting the contact form](doc/contact-form-response.webp)
 
-The response after submitting the contact form confirms for the user that the form was submitted and sent to the site owner.
+The response after submitting the contact form confirms to the user that the form was submitted and sent to the site owner.
 
 ### Booking page
 
@@ -432,19 +432,19 @@ The response after submitting the contact form confirms for the user that the fo
 
 ![The three different workshops are presented](doc/workshop-presentation.webp)
 
-The three different workshops are presented with a informative text. Each presentation has a read more button so the user can read more if they are interested. The read more button is also there to avoid that the user is met by a wall of text when they are visiting the booking page.
+The three different workshops are presented with an informative text. Each presentation has a read more button so the user can read more if they are interested. The read more button is also there to avoid that the user is met by a wall of text when they are visiting the booking page.
 
 #### Workshop booking
 
 ![The booking section where the user can select which session they are interested in](doc/workshop-booking.webp)
 
-The booking section of the page presents the availible workshop sessions. Each session is presented with the name of the workshop, date, time and how many availible spots that are left. Each session is represented as a button where the user can click on the button to book the section.
+The booking section of the page presents the available workshop sessions. Each session is presented with the name of the workshop, date, time and how many available spots that are left. Each session is represented as a button where the user can click on the button to book the session.
 
 #### Booking pagination
 
 ![Pagination at booking page](doc/booking-pagination.webp)
 
-Below the booking section a pagination is present if the availible workshops are more than eight. This is to enhance the user experience to avoid scrolling in an eternity.
+Below the booking section a pagination is located if the available workshops are more than eight. This is to enhance the user experience to avoid scrolling for an eternity.
 
 #### Confirm booking modal
 
@@ -456,7 +456,7 @@ A confirmation modal is triggered when the user has pressed a booking button. Th
 
 ![Modal to show that the user already has a booking at the chosen workshop](doc/double-booked.webp)
 
-A double booking modal is triggered when the user tries to book a workshop session that they already has a booking at. This is to avoid that the user books the workshop session several times.
+A double booking modal is triggered when the user tries to book a workshop session that they already have booked. This is to avoid that the user books the workshop session several times.
 
 ### Success page
 
@@ -464,7 +464,7 @@ A double booking modal is triggered when the user tries to book a workshop sessi
 
 ![Confirmation text after a successful booking](doc/confirmation-text.webp)
 
-After a successful booking, a text that confirms the booking appears. This is to confirm that everything went just fine with the booking. The text is also supposed to give the user a fun welcome to the upcoming workshop.
+After a successful booking, a text that confirm the booking appears. This is to confirm that everything went just fine with the booking. The text is also supposed to give the user a fun welcome to the upcoming workshop.
 
 #### Navigation buttons
 
@@ -484,19 +484,19 @@ When the user doesn't have any active bookings, a text informs the user about it
 
 ![Button to direct the user to the booking page](doc/take-me-there.webp)
 
-When the user click on the button, they get directed to the booking page. This to have the user to make a booking.
+When the user clicks on the button, they get directed to the booking page. This to convince the user to make a booking.
 
 #### Active bookings - text
 
 ![Text to notice the user that they have at least one active booking](doc/my-bookings-text.webp)
 
-When the user have at least one booking, the user gets a text that informs that all their booked sessions are presented below. The text is also supposed to get the user to have a small giggle and get excited for upcoming workshops.
+When the user has at least one booking, the user gets a text that informs that all their booked sessions are presented below. The text is also supposed to get the user to have a small giggle and get excited for upcoming workshops.
 
 #### Active bookings - booked workshops
 
-![The users bookings are presented](doc/my-bookings-workshops.webp)
+![The user bookings are presented](doc/my-bookings-workshops.webp)
 
-The users bookings are presented with the workshop that is next in time appears first. Each booked workshop card has an Edit button and one Cancel button. When the Edit button is pressed, the user gets directed to the edit page. When the Cancel button is pressed, a confirmation modal is triggered. These two buttons allows the user to edit and delete the booked session if the user has to change their plans.
+The user bookings are presented so that the workshop that is next in time appears first. Each booked workshop card has an Edit button and a Cancel button. When the Edit button is pressed, the user gets directed to the edit booking page. When the Cancel button is pressed, a confirmation modal is triggered. These two buttons allows the user to edit and delete the booked session if the user has to change their plans.
 
 #### Active bookings pagination
 
@@ -508,33 +508,33 @@ If the user has more than four active bookings, a pagination appears below the a
 
 ![Modal that the user gets to assure that they want to cancel their booking](doc/confirm-delete.webp)
 
-When the user press the Cancel button in their active booking, a confirm cancellation modal is triggered. This is to make sure the user didn't press Cancel by mistake. The Confirm button in the modal is red to mark that if you press it, something that is irreversible.
+When the user presses the Cancel button in their active bookings, a confirm cancellation modal is triggered. This is to make sure the user didn't press Cancel by mistake. The Confirm button in the modal is red to mark that if you press it, something that is irreversible will happen.
 
 ### Edit booking page
 
-#### Availible workshops
+#### Available workshops
 
-![All availible workshops presented as booking buttons](doc/availible-workshops.webp)
+![All available workshops presented as booking buttons](doc/available-workshops.webp)
 
-All availible workshops are presented in a similar way as on the booking page. The title of the workshop, date, time and availible spots are presented. The similarity should make the user to recognize the how to book a workshop session. When the user clicks the workshop they want to change their booking to, a confirmation modal is triggered.
+All available workshops are presented in a similar way as on the booking page. The title of the workshop, date, time and available spots are presented. The similarity should make the user recognize the how to book a workshop session. When the user clicks the workshop they want to change their booking to, a confirmation modal is triggered.
 
-#### Availible workshops pagination
+#### Available workshops pagination
 
-![Availible workshops pagination](doc/edit-booking-pagination.webp)
+![Available workshops pagination](doc/edit-booking-pagination.webp)
 
-If it is more than eight availible workshops to select from, pagination is present. This to enhance the user experience, to avoid to scroll through a wall of availible workshops.
+If there are more than eight available workshops to select from, pagination appears. This is to enhance the user experience, to avoid scrolling through a wall of available workshops.
 
 #### Confirm workshop change modal
 
 ![Confirmation modal to ensure the user wants to change their workshop booking](doc/confirm-edit.webp)
 
-The confirmation modal ensures that the user wants to edit their booking to the selected workshop session. This to avoid the user edit their booking to a session they didn't want to. The text is written in a way that should enhance the users feeling that this is a friendly and fun website.
+The confirmation modal ensures that the user wants to edit their booking to the selected workshop session. This to avoid the user editing their booking to a session they didn't want to book. The text is written in a way that should enhance the user's feeling that this is a friendly and fun website.
 
 ### News page
 
 ![News page, only visible for staff members and superusers](doc/news-page.webp)
 
-The news page is only visible for staff members and supersers. Through the admin panel all staff members and superusers can write news what happened at their last workshop. The name of the workshops are located below the header. The members who was written it and when it is published are located at the bottom of section.
+The news page is only visible for staff members and superusers. Through the admin panel all staff members and superusers can write news of what happened at their latest workshop. The name of the workshops are located below the header. The name of the member who has written it and when it is published are located at the bottom of the section.
 
 ### Sign up page
 
@@ -574,19 +574,19 @@ The button below the 404 text directs the user back to the homepage. This allows
 
 ![Screenshot of the text at the 500 page](doc/500-text.webp)
 
-The text at the 500 page explains to the user that the server isn't working as intended. This is to make sure the user know what is happening.
+The text at the 500 page explains to the user that the server isn't working as intended. This is to make sure the user knows what is happening.
 
 #### 500 page tips
 
 ![The tips of what to do when a 500 page is rendered](doc/500-tips.webp)
 
-The tips suggest the user what they can do, refresh the page, go back to the homepage or send the website owner an email. The suggestion about going back to the homepage is provided with a link to the homepage. The suggestion about sending an email is provided with a link to the contact form.
+The tips suggests to the user what they can do; refresh the page, go back to the homepage or send the website owner an email. The suggestion about going back to the homepage is provided with a link to the homepage. The suggestion about sending an email is provided with a link to the contact form.
 
 ### Footer
 
 ![Footer with developers name and year to the left and links to the Contact form and connecting Facebook, Instagram and Pinterest accounts](doc/footer.webp)
 
-To the left, the developers name is to tell the world who the brain behind the website is. To the right, four symbols represent what they link to. The first, the pen, links the user to the Contact form at the about page. The second, Facebook icon, links the user to Facebook in a new tab. The third, Instagram icon, links the user to Instagram page in a new tab. The fourth, Pinterest icon, links the Pinterest in a new tab.
+To the left, the developers name is to tell the world who the brain behind the website is. To the right, four symbols represent what they link to. The first, the pen, links the user to the Contact form at the about page. The second, Facebook icon, links the user to Facebook in a new tab. The third, Instagram icon, links the user to Instagram in a new tab. The fourth, Pinterest icon, links to Pinterest in a new tab.
 
 ## Features to be Added
 
@@ -747,7 +747,7 @@ Every page at the website has been manually tested. It is done in Google Chrome 
 | Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
 | -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
 | Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The index page was responsive and changed depending on screen size | Pass |
-| "Check out availible workshops" button | Directs the user to the Booking page | Click at the "Check out availible workshops" button | Got directed to the Booking page | Pass |
+| "Check out available workshops" button | Directs the user to the Booking page | Click at the "Check out available workshops" button | Got directed to the Booking page | Pass |
 | Text readability | Enough margins and padding to make text readable | Read all text blocks in all different Bootstrap breakpoints | The text is readable at all breakpoints | Pass |
 | Sign up button visible (not signed in) | The sign up button below member benefits is visible when the user isn't signed in | Sign out and check below member benefits | Sign up button is visible | Pass |
 | Sign up button not visible (signed in) | The sign up button below member benefits is not visible when the user is signed in | Sign in and check below member benefits | Sign up button isn't visible | Pass |
@@ -814,7 +814,7 @@ Every page at the website has been manually tested. It is done in Google Chrome 
 | Confirmation modal - Close | When the "Close" button at the confirmation modal is pressed, the modal is closed without cancelling the booking | Trigger confirmation modal, press "Close" | The modal closed without cancelling the booking | Pass |
 | Confirmation modal - outside modal | When the user click anywhere outside of the confirmation modal, it is closed without cancelling the booking | Trigger confirmation modal, click somewhere outside of the modal | The modal closed without cancelling the booking | Pass |
 | Confirmation modal - Confirm | When the "Confirm" button is pressed, the booking is cancelled | Press "Confirm", check "My bookings" if the booking has been cancelled | The booking was cancelled | Pass |
-| Availible spots increase | When a booking is cancelled, availible spots are increased by one | Check availible spots at an already booked workshop, cancel the booking and check availible spots again | Availible spots increased by one | Pass |
+| Available spots increase | When a booking is cancelled, available spots are increased by one | Check available spots at an already booked workshop, cancel the booking and check available spots again | Available spots increased by one | Pass |
 | Pagination | When it is more than four upcoming workshops, pagination appears | Scroll down below my bookings buttons | After four bookings, pagination buttons appears | Pass |
 | No bookings - text | Another text than the text which appears when the user has active bookings appears | Cancel all the users bookings | Another text appeared | Pass |
 | No bookings - Take me there button | The "Take me there" button directs the user to the booking page | Click "Take me there" button | The user got directed to the bookings page | Pass |
@@ -825,15 +825,15 @@ Every page at the website has been manually tested. It is done in Google Chrome 
 | -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
 | Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The booking page was responsive and changed depending on screen size | Pass |
 | Text readability | Enough margins and padding to make text readable | Read all text blocks in all different Bootstrap breakpoints | The text is readable at all breakpoints | Pass |
-| Availible workshop sessions | Only sessions where the user doesn't already has an active booking is shown | Compare upcoming workshops, the users active bookings and the availible sessions in edit booking | Only sessions where the user doesn't has an active bookings are visible | Pass |
+| Available workshop sessions | Only sessions where the user doesn't already has an active booking is shown | Compare upcoming workshops, the users active bookings and the available sessions in edit booking | Only sessions where the user doesn't has an active bookings are visible | Pass |
 | Booking buttons - trigger modal | When a booking button is pressed, a confirmation modal is triggered | Click all booking buttons | All booking buttons triggered a confirmation modal | Pass |
 | Confirmation modal - X | When the X at the confirmation modal is pressed, the modal is closed without making any booking | Trigger confirmation modal, press X | The modal closed without making any booking | Pass |
 | Confirmation modal - Close | When the "Close" button at the confirmation modal is pressed, the modal is closed without making any booking | Trigger confirmation modal, press "Close" | The modal closed without making any booking | Pass |
 | Confirmation modal - outside modal | When the user click anywhere outside of the confirmation modal, it is closed without making any booking | Trigger confirmation modal, click somewhere outside of the modal | The modal closed without making any booking | Pass |
 | Confirmation modal - Confirm | When the "Confirm" button is pressed, the existing booking is changed to the selected workshop session | Press "Confirm", check "My bookings" if the booking has been changed | The booking was changed | Pass |
-| Availible spots - increase | In the session the user cancel their booking, availible spots increases by one | Check availible spots at the session, edit the booking, check availible spots again | Availible spots increased by one | Pass |
-| Availible spots - decrease | In the session the user want to change their booking to, availible spots decreases by one | Check availible spots at the session, edit the booking, check availible spots again | Availible spots decreased by one | Pass |
-| Pagination | When it is more than eight availible workshops, pagination appears | Scroll down below active bookings buttons | After eight bookings, pagination buttons appears | Pass |
+| Available spots - increase | In the session the user cancel their booking, available spots increases by one | Check available spots at the session, edit the booking, check available spots again | Available spots increased by one | Pass |
+| Available spots - decrease | In the session the user want to change their booking to, available spots decreases by one | Check available spots at the session, edit the booking, check available spots again | Available spots decreased by one | Pass |
+| Pagination | When it is more than eight available workshops, pagination appears | Scroll down below active bookings buttons | After eight bookings, pagination buttons appears | Pass |
 
 #### News page
 
