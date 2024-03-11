@@ -9,8 +9,8 @@ from .models import Course, CourseSession, Booking
 
 def list_courses(request):
     """
-    List all availible courses and sessions.
-    Paginate to show eight availible sessions at each page.
+    List all available courses and sessions.
+    Paginate to show eight available sessions at each page.
     """
     courses = Course.objects.all()
     sessions = CourseSession.objects.filter(
@@ -29,7 +29,7 @@ def list_courses(request):
 def book_session(request, session_id):
     """
     Show sessions that user doesn't have an excisting booking at.
-    Book chosen section and decrease availible spots by one.
+    Book chosen section and decrease available spots by one.
     """
     courses = Course.objects.all()
     sessions = CourseSession.objects.filter(
@@ -85,7 +85,7 @@ def edit_booking(request, booking_id):
     """
     Present all workshops sessions which the user doesn't has any active
     bookings at. Paginate if it is more than eight active workshop sessions
-    availible. When a booking is made, the availible spots decreases by one.
+    available. When a booking is made, the available spots decreases by one.
     """
     booking = get_object_or_404(Booking, id=booking_id, user=request.user)
     user_session_ids = Booking.objects.filter(user=request.user).exclude(
@@ -120,7 +120,7 @@ def edit_booking(request, booking_id):
 @login_required
 def delete_booking(request, booking_id):
     """
-    Delete an existing booking. Increase availible spots by one.
+    Delete an existing booking. Increase available spots by one.
     """
     booking = get_object_or_404(Booking, id=booking_id, user=request.user)
     if request.method == 'POST':
