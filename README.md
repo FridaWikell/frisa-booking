@@ -12,7 +12,7 @@ The project is to build a website where you as a user can book a workshop to upc
 
 ### User Goals
 
-One of the user goals is to be able to book wanted workshops sessions. It is also to view already created projects and be inspired.
+One of the user goals is to be able to book wanted workshops sessions. The user should also have a smooth experience with full CRUD accessibility to their bookings. The goal is also to view already created projects and to inspire the user.
 
 ### Site Owner Goals
 
