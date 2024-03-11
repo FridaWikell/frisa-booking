@@ -420,6 +420,12 @@ The text is a compliment to the profile image to present the founder and owner o
 
 The contact form is a channel for the user to get in contact if they have any questions. The text on top of the contact form encourage the user to reach out to the site owner.
 
+#### Contact form response
+
+![The response after submitting the contact form](doc/contact-form-response.webp)
+
+The response after submitting the contact form confirms for the user that the form was submitted and sent to the site owner.
+
 ### Booking page
 
 #### Workshop presentation
@@ -550,13 +556,31 @@ The sign out page allows the user to sign out to ensure no one else can edit the
 
 ### 404 page
 
-![]
+#### 404 page text
+
+![Text provided when a 404 page is rendered](doc/404-text.webp)
+
+The text explains to the user in a fun way that the page they are looking for doesn't exist. It points the user in the direction of heading back to the homepage to give it a new try.
+
+#### 404 page button
+
+![Button which takes the user to the homepage](doc/404-button.webp)
+
+The button below the 404 text directs the user back to the homepage. This allows the user to give it a new shot to find the page they were looking for.
 
 ### 500 page
 
-![Screenshot of the 500 page](doc/500-page.webp)
+#### 500 page text
 
-The 500 page explains to the user that the server isn't working as intended. It suggest the user what they can do, refresh the page, go back to the homepage or send the website owner an email. The suggestion about going back to the homepage is provided with a link to the homepage. The suggestion about sending an email is provided with a link to the contact form.
+![Screenshot of the text at the 500 page](doc/500-text.webp)
+
+The text at the 500 page explains to the user that the server isn't working as intended. This is to make sure the user know what is happening.
+
+#### 500 page tips
+
+![The tips of what to do when a 500 page is rendered](doc/500-tips.webp)
+
+The tips suggest the user what they can do, refresh the page, go back to the homepage or send the website owner an email. The suggestion about going back to the homepage is provided with a link to the homepage. The suggestion about sending an email is provided with a link to the contact form.
 
 ### Footer
 
