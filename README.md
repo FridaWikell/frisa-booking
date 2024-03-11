@@ -20,18 +20,16 @@ The site owner goal is to get more bookings to the hosted workshops.
 
 ### User Stories
 
-ADD LINK""""""" gånger två
-
-For the project, five different Epics were created. To them, a total of 23 user stories were created. To view all user stories, they are viewable at the Projects board. All user stories were assigned one of following class; Must have, Should have, Could have and Won't have. Each of the user stories were also assigned a point depending on how much time they were estimated to take.
+For the project, five different Epics were created. To them, a total of 23 user stories were created. To view all user stories, they are viewable at the [Projects board](https://github.com/users/FridaWikell/projects/4/views/1). All user stories were assigned one of following class; Must have, Should have, Could have and Won't have. Each of the user stories were also assigned a point depending on how much time they were estimated to take.
 
 | Class | Points | Percentage of total points |
 | -------------- | --------- | --------------- |
-| Must have | | |
-| Should have | | |
-| Could have | | |
-| Won't have | | |
+| Must have | 62 p | 56 % |
+| Should have | 16 p | 15 % |
+| Could have | 8 p | 7 % |
+| Won't have | 24 p | 22 % |
 
-The following user stories were completed within the first release of Frisa Booking. To view the Won't have, they are listed in the Project board.
+The following user stories were completed within the first release of Frisa Booking. To view the Won't have, they are listed in the [Project board](https://github.com/users/FridaWikell/projects/4/views/1).
 
 #### Epic 1 - User account creation process
 
@@ -247,7 +245,7 @@ Then text styling is consistent throughout the website
 
 As a website owner I can incorporate text content throughout my website that is fun, engaging, and easygoing so that visitors can experience my playful side and enjoy a more relatable and memorable visit to my site
 
--Acceptance criteria 1  
+- Acceptance criteria 1  
 Given I am reading the text content on the website  
 When I engage with any piece of content (such as about us, services, or blog posts)  
 Then the text should feel like a conversation with a friend, using casual language, jokes, or puns where appropriate, making the reading experience enjoyable and relaxed  
