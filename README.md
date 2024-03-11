@@ -717,10 +717,6 @@ Automated testing is made for all three different apps (about, booking and news)
 
 ### Manual Testing
 
-Test the user stories that you created earlier in the readme - did you satisfy the goal, how?
-
-
-
 Every page at the website has been manually tested. It is done in Google Chrome DevTools and on different devices. The devices used were one mobile phone, one laptop and one external screen:
 
 - Samsung Galaxy A52s (1080 x 2400)
@@ -910,7 +906,22 @@ Detail what technologies you used. So what code languages, what frameworks, libr
 
 ## Deployment
 
-Detail how to clone the repository, how to fork the repository - how to run the site locally and how to deploy it.
+- Open Heroku and log in
+- Click on "New" and choose the option "Create new app"
+- Choose an app name and which region (Europe or United States) you are located in
+- Press "Create app"
+- When the app is created, choose the Settings tab
+- Under "Config Vars", press "Reveal Config Vars"
+- In keys, write DATABASE_URL
+- In value, insert the url to the database
+- Press "Add"
+- Under "Buildpacks", press "Add buildpack"
+- Choose "Python", press "Add buildpack"
+- Change tab to the Deploy tab
+- Choose deploy method - GitHub
+- Search for the correct repository name at your connected GitHub account
+- Press "Connect"
+- Under "Manual deploy", choose which branch to deploy and press "Deploy Branch"
 
 Link to deployed website: <https://frisa-booking-e7f1e4a00ea9.herokuapp.com/>
 
