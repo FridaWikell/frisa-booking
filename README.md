@@ -902,6 +902,22 @@ Every page at the website has been manually tested. It is done in Google Chrome 
 
 ## Technologies Used
 
+The repository is created from [Code Institutes Gitpod full template](https://github.com/Code-Institute-Org/gitpod-full-template) through [GitHub](https://github.com/). The Project board is created at [GitHub](https://github.com/). The code is written in [Gitpod](https://www.gitpod.io/) and deployed at [Heroku](https://www.heroku.com/).
+
+The code languages used in this project are HTML, CSS, JavaScript and Python. The main frameworks used are Django and Bootstrap.
+
+| Library | Functionality |
+| ------------------- | --------------------------------- |
+| django-allauth | Used for authentication, registration and account management |
+| django-summernote | Integrated editor in djangos admin panel |
+| gunicorn | Used to run Python web applications |
+| oauthlib | Used to implement OAuth functionality |
+| sendgrid | For interacting with the SendGrid email service |
+| urllib3 | Used to make HTTP requests |
+| whitenoise | Simplifies static file serving for Python web apps |
+
+
+
 Detail what technologies you used. So what code languages, what frameworks, libraries, what software did you use to develop the site - Balsamic for your wireframes, Figma for a mockup?
 
 ## Deployment
@@ -926,6 +942,10 @@ Detail what technologies you used. So what code languages, what frameworks, libr
 Link to deployed website: <https://frisa-booking-e7f1e4a00ea9.herokuapp.com/>
 
 ## Credits
+
+### Libraries/framworks used
+
+| Library/framework | 
 
 You need to credit where you got anything for your site from.. where are the images from, are they all from the same site? where did you get the content from, if you wrote it yourself, did you fact check anywhere? did you get code from anywhere? if so, it needs to be clearly marked in both the code and the readme.
 
