@@ -616,10 +616,8 @@ All the pages were tested at the [W3C Markup Validation Service](https://validat
 - [News page](doc/news-html-valid.webp)
 - [Edit booking](doc/edit-booking-html-valid.webp)
 - [Success page](doc/success-html-valid.webp)
-- [400 page]()
+- [404 page](doc/404-html-valid.webp)
 - [500 page](doc/500-page-html-valid.webp)
-
-INSERT 400 PAGE!!!!
 
 #### CSS
 
