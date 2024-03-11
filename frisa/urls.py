@@ -28,6 +28,15 @@ def homepage_view(request):
     return HttpResponse(template.render({}, request))
 
 
+
+def this_view(request):
+    """
+    Render the index page
+    """
+    template = loader.get_template('500.html')
+    return HttpResponse(template.render({}, request))
+
+
 urlpatterns = [
     path('about/', include('about.urls')),
     path('accounts/', include('allauth.urls')),
@@ -36,4 +45,5 @@ urlpatterns = [
     path('news/', include('news.urls')),
     path('summernote/', include('django_summernote.urls')),
     path('', homepage_view, name='home'),
+    path('500/', this_view, name='500'),
 ]
