@@ -42,6 +42,10 @@ a {
     background: url('https://res.cloudinary.com/dihkuau3v/image/upload/v1710152657/frisa-booking/404.webp') center center/cover;
 }
 
+.milky-way {
+    background: url('https://res.cloudinary.com/dihkuau3v/image/upload/v1710154566/frisa-booking/milky-way.webp') center center/cover;
+}
+
 .start-carousel {
     max-width: 600px;
 }
