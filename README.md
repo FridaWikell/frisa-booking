@@ -9,9 +9,287 @@ The project is to build a website where you as a user can book a workshop to upc
 [[_TOC_]]
 
 ## User Experience
+
+### User Goals
+
+One of the user goals is to be able to book wanted workshops sessions. It is also to view already created projects and be inspired.
+
+### Site Owner Goals
+
+The site owner goal is to get more bookings to the hosted workshops.
+
 ### User Stories
-- User Goals
-- Site Owner Goals
+
+ADD LINK""""""" gånger två
+
+For the project, five different Epics were created. To them, a total of 23 user stories were created. To view all user stories, they are viewable at the Projects board. All user stories were assigned one of following class; Must have, Should have, Could have and Won't have. Each of the user stories were also assigned a point depending on how much time they were estimated to take.
+
+| Class | Points | Percentage of total points |
+| -------------- | --------- | --------------- |
+| Must have | | |
+| Should have | | |
+| Could have | | |
+| Won't have | | |
+
+The following user stories were completed within the first release of Frisa Booking. To view the Won't have, they are listed in the Project board.
+
+#### Epic 1 - User account creation process
+
+As a site owner, I would like to enable a seamless, secure, and user-friendly account creation process for new users, so that they can efficiently transition from sign-up to verification and initial login, ultimately engaging with the platform's features smoothly.
+
+**User Story - Accessing the sign-up page**
+
+As a site user I can easily find and access the sign-up page from the homepage so that I can create an account without confusion or unnecessary delays
+
+- Acceptance Criteria 1  
+Given that I am a not signed in user  
+When I visit the page  
+Then a visible and clearly labeled "Sign Up" button is present on the homepage  
+- Acceptance Criteria 2  
+Given that I am a not signed in user  
+When clicking the "Sign Up" button  
+Then it navigates the user to the sign-up form  
+
+**User Story - Filling out the sign-up form**
+
+As a site user I can enter my personal details into a sign-up form so that I can register for a new account
+
+- Acceptance Criteria 1  
+Given the user isn't signed in  
+When the user is filling out the sign up form  
+That the form includes fields for necessary information (e.g., email, password, confirmation of password)  
+- Acceptance Criteria 2  
+Given the user isn't signed in  
+When the user is filling out the sign up form  
+That the form has input validation (e.g., email format)
+
+#### Epic 2 - Development of a course booking system
+
+As a site owner I would like to have a comprehensive, user-friendly booking system, so that users can effortlessly view, create, modify, and cancel bookings for various courses so that the user easy can book courses.
+
+**User Story - Viewing available courses**
+
+As a registered user I can easily view all available courses so that I can decide which courses to book based on my interests and schedule
+
+- Acceptance Criteria 1  
+Given as a site visitor  
+When the booking page is visited  
+Then a list of courses is available  
+- Acceptance Criteria 2  
+Given as a site visitor  
+When the booking page is visited  
+Then course listing includes essential details such as course title, description, dates, and availability  
+
+**User Story - Creating a new booking**
+
+As a registered user I can book a course so that I can secure my spot in courses I'm interested in attending
+
+- Acceptance Criteria 1  
+Given that the user is signed in  
+When the user is visiting the booking page  
+Then a clear "Book Now" button is available for courses with available spots  
+- Acceptance Criteria 2
+Given that the user is signed in  
+When the user is visiting the booking page  
+Then the booking process collects necessary user information and confirms the booking  
+
+**User Story - Viewing my bookings**
+
+As a registered user I can view a list of my current course bookings so that I can manage my schedule and review the courses I'm enrolled in
+
+- Acceptance Criteria 1  
+Given the user has enrolled at a course  
+When the user visit the personal dashboard  
+Then the user can view their bookings  
+- Acceptance Criteria 2  
+Given the user has enrolled at a course  
+When the user visit the personal dashboard  
+Then the user can view each each booking entry including course details and the booked date  
+
+**User Story - Modifying an existing booking**
+
+As a registered user I can change the date or details of my existing course bookings so that I can adjust my schedule
+
+- Acceptance Criteria 1  
+Given the user has an existing booking  
+When the user is signed in  
+Then the user can modify bookings in the user's booking dashboard  
+
+**User Story - Cancelling a booking**
+
+As a registered user I can cancel a booking if I can no longer attend so that I can manage my commitments and possibly allow others to book the now-available spot
+
+- Acceptance Criteria 1  
+Given the user has a booked course  
+When the user visit their booking dashboard  
+Then the user can cancel their booking  
+- Acceptance Criteria 2  
+Given the user has a booked course  
+When the user cancel their booking  
+Then the user get a confirmation in form of a message at the site  
+
+**User Story - Implement modal pop-up confirmations for booking and booking changes**
+
+As a site user I can receive immediate, clear confirmation requests in the form of modal pop-ups whenever I attempt to make any changes to my bookings so that instantly understand the impact of my actions and confirm my intentions in a more interactive and user-friendly manner, avoiding the passive nature of Django's built-in messages
+
+- Acceptance Criteria 1  
+Given a user is on the booking or booking modification page  
+When the user initiates a new booking or change to an existing booking  
+Then a modal pop-up should immediately appear, confirming the booking or change  
+- Acceptance Criteria 2  
+Given a modal pop-up is displayed to the user  
+When the user confirms the proposed action by clicking the "Confirm" button  
+Then the booking should be updated accordingly in the system, and the changes will be visible immediately  
+- Acceptance Criteria 3  
+Given a modal pop-up is displayed to the user  
+When the user clicks the "Cancel" button to abort the proposed change  
+Then the modal should close without making any modifications to the booking, and the user should remain on the page without any further action taken  
+
+#### Epic 3 - Development of a contact form
+
+As a site owner I can have a user-friendly contact form so that visitors can easily send messages, inquiries, or feedback directly through our website, enhancing communication and engagement
+
+**User Story - Accessing the contact form**
+
+As a site user I can easily find and access the contact form from any page on the website so that I can contact the website owner without hassle
+
+- Acceptance Criteria 1  
+Given the user is anywhere at the website  
+When the user wants to contact the site owner  
+Then a clear and accessible link to the contact form is available on every page, either in the navigation menu or footer  
+- Acceptance Criteria 2  
+Given the user is anywhere at the website  
+When the user tries to reach the contact form  
+Then the contact form page loads efficiently and is mobile-responsive  
+
+**User Story - Submitting a message**
+
+As a site user I can submit messages using the contact form so that I can communicate my inquiries, suggestions, or feedback
+
+- Acceptance Criteria 1  
+Given the user has any questions  
+When the user is trying to use the contact form  
+Then the form includes fields for name, email and message  
+- Acceptance Criteria 2  
+Given the user has any questions  
+When the user is trying to use the contact form  
+Then there is validation for each field to ensure the information is entered correctly  
+- Acceptance Criteria 3  
+Given the user has any questions  
+When the user is trying to use the contact form  
+Then a clear "Submit" button sends the message and provides a confirmation to the user that it has been sent  
+
+**User Story - Receive confirmation after sending contact form**
+
+As a site user I can receive immediate confirmation that my message has been sent successfully when I submit the contact form so that I am assured my message has been received and will be addressed
+
+- Acceptance Criteria 1  
+Given I am a website visitor on the contact page  
+When I fill out the contact form with my information and submit it  
+Then I should see a confirmation message on the website indicating that my message has been sent successfully  
+
+#### Epic 4 - Enhancing website aesthetics
+
+As a website owner I would like to enhance the visual appeal and user experience of the website so that visitors are more engaged, find the website more trustworthy, and are encouraged to sign up for courses due to an attractive and professional presentation
+
+**User Story - Implementing a responsive design**
+
+As a site user I can easily navigate and view content so that I can use any device, whether it's a desktop, tablet, or smartphone, ensuring a seamless experience
+
+- Acceptance Criteria 1  
+Given the user is visiting the site  
+When the user is using different devices  
+Then the website automatically adjusts its layout based on the screen size and orientation  
+- Acceptance Criteria 2  
+Given the user is visiting the site  
+When the user is using different devices  
+Then all elements, including text, images, and buttons, are easily readable and accessible on various devices  
+- Acceptance Criteria 3  
+Given the user is visiting the site  
+When the user is using different devices  
+Then navigation menus are optimized for touch interactions on mobile devices  
+
+**User Story - Uploading high-quality images for courses**
+
+As a site owner I can upload high-quality images for each course so that visitors are visually attracted to the courses and can make informed decisions to sign up, enhancing course appeal through professional and engaging imagery.
+
+- Acceptance Criteria 1  
+Given the site owner have high-quality images  
+When the site owner wants to draw attention to the different courses  
+Then the website provides an interface for administrators to upload, edit, and associate images with specific courses  
+- Acceptance Criteria 2  
+Given the site owner have high-quality images  
+When the site owner wants to draw attention to the different courses  
+Then the uploaded images are automatically resized and optimized for web use without compromising quality  
+- Acceptance Criteria 3  
+Given the site owner have high-quality images  
+When the site owner wants to draw attention to the different courses  
+Then each course section displays its associated image prominently, with clear, high-resolution visuals  
+
+**User Story - Utilizing modern, attractive fonts and color scheme**
+
+As a site user I can visit the website with modern, attractive fonts and a cohesive color scheme so that eading and interacting with the site is a pleasant experience, contributing to the overall aesthetic appeal and professionalism
+
+- Acceptance Criteria 1  
+Given the user doesn't only use screen reader  
+When the user visits the website  
+Then the website adopts a consistent set of fonts that are easy to read and visually appealing  
+- Acceptance Criteria 2  
+Given the user doesn't only use screen reader  
+When the user visits the website  
+Then a color scheme is chosen that reflects the brand and enhances readability, with sufficient contrast between text and background colors  
+- Acceptance Criteria 3  
+Given the user doesn't only use screen reader  
+When the user visits the website  
+Then text styling is consistent throughout the website  
+
+**User Story - Playful and engaging text content**
+
+As a website owner I can incorporate text content throughout my website that is fun, engaging, and easygoing so that visitors can experience my playful side and enjoy a more relatable and memorable visit to my site
+
+-Acceptance criteria 1  
+Given I am reading the text content on the website  
+When I engage with any piece of content (such as about us, services, or blog posts)  
+Then the text should feel like a conversation with a friend, using casual language, jokes, or puns where appropriate, making the reading experience enjoyable and relaxed  
+
+#### Epic 5 - Employee workshop news feed
+
+As a site user (employee) I can access the employee workshop news feed so that I can stay informed about workshops and learn from my colleagues' experiences
+
+**User Story - Submitting workshop stories**
+
+As a site user (employee) I can submit stories about the workshops I have held so that share my experiences and insights with my colleagues.
+
+- Acceptance criteria 1  
+Given the user is logged in and has held a workshop  
+When the user navigates to the employees page and fills in the story submission form with details about the workshop (title, content, etc.) and submits it  
+Then the story is published to the news feed  
+- Acceptance criteria 2  
+Given the user has filled in the submission form but left some mandatory fields empty  
+When the user attempts to submit the form  
+Then an error message is displayed, and the submission is not processed until all mandatory fields are filled  
+
+**User Story - Reading workshop stories**
+
+As a site user (employee) I can read stories about workshops submitted by my colleagues so that I can learn from their experiences
+
+- Acceptance Criteria 1  
+Given the user is logged in  
+When the user navigates to the news feed  
+Then the user can see a list of published workshop stories  
+
+**User Story - Deleting own post**
+
+As a site user (employeer) I can delete my own posts on the employee workshop news feed so that I can remove content that I no longer wish to share or that has become outdated
+
+- Acceptance Criteria 1  
+Given the user is logged in and viewing their own post on the employee workshop news feed  
+When the user selects the option to delete their post  
+Then the system prompts the user to confirm the deletion to prevent accidental removal  
+- Acceptance Criteria 2  
+Given the user confirms the deletion of their post  
+When the deletion process is initiated  
+Then the post is permanently removed from the news feed, and the user receives a confirmation message that their post has been successfully deleted  
 
 ## Design
 The design is set to be modern but easy to read. It should draw the attention to the images which will enhance the chance to get the users to get inspired. The design should feel welcoming and like you're visiting a friends place. 
