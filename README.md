@@ -419,12 +419,6 @@ Automated testing is made for all three different apps (about, booking and news)
 
 ### Manual Testing
 
-You need to perform, and document everything you did to manually test your site.
-At a minimum - you need to check every link on every page works as intended.
-So that is check every link in the nav bar (do this on every single page because its a link in a different file) and any other links that appear on your site.
-Test the responsiveness of the site - you can do this in the dev tools in responsive mode.
-You should also load the site once deployed on as many devices you have access to. What is different from one device to the next? why is it different?
-
 Test the user stories that you created earlier in the readme - did you satisfy the goal, how?
 
 
@@ -602,11 +596,15 @@ Every page at the website has been manually tested. It is done in Google Chrome 
 
 #### Footer
 
+| Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
+| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
+| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The booking page was responsive and changed depending on screen size | Pass |
+| Text readability | Enough margins and padding to make text readable | Read all text blocks in all different Bootstrap breakpoints | The text is readable at all breakpoints | Pass |
+| Link to contact form | When the pencil icon is clicked at, the user gets directed to the contact form | Click at the pencil icon | The user got directed to the contact form | Pass |
+| Link to Facebook | When the Facebook icon is clicked at, the user gets directed to Facebook which opens in a new tab | Click at the Facebook icon | The user got directed to Facebook which opens in a new tab | Pass |
+| Link to Instagram | When the Instagram icon is clicked at, the user gets directed to Instagram which opens in a new tab | Click at the Instagram icon | The user got directed to Instagram which opens in a new tab | Pass |
+| Link to Pinterest | When the Pinterest icon is clicked at, the user gets directed to Pinterest which opens in a new tab | Click at the Pinterest icon | The user got directed to Pinterest which opens in a new tab | Pass |
 
-
-
-
-You should have tests for every section of every page.. individually.
 
 ## Technologies Used
 
