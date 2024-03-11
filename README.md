@@ -597,7 +597,8 @@ Every page at the website has been manually tested. It is done in Google Chrome 
 | -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
 | Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The booking page was responsive and changed depending on screen size | Pass |
 | Text readability | Enough margins and padding to make text readable | Read all text blocks in all different Bootstrap breakpoints | The text is readable at all breakpoints | Pass |
-
+| Link to homepage | When the link to the homepage is clicked at, the user gets directed to the homepage | Click at homepage link | The user got directed to the homepage | Pass |
+| Link to contact form | When the link to the contact form is clicked at, the user gets directed to the contact form | Click at the link to the contact form | The user got directed to the contact form | Pass | 
 
 #### Footer
 
