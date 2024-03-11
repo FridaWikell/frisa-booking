@@ -38,6 +38,10 @@ a {
     margin-right: -12px;
 }
 
+.craft-shop {
+    background: url('https://res.cloudinary.com/dihkuau3v/image/upload/v1710152657/frisa-booking/404.webp') center center/cover;
+}
+
 .start-carousel {
     max-width: 600px;
 }
@@ -86,12 +90,12 @@ a {
 }
 
 .delete-btn {
-    background-color: #8d3838;
+    background-color: #9e3e3e;
     color: #ffffff;
 }
 
 .delete-btn:hover {
-    background-color: #491919;
+    background-color: #8a3636;
 }
 
 .submit-btn {
@@ -242,7 +246,9 @@ a {
 }
 
 .session-course-name {
+    font-weight: 200;
     font-family: 'Comfortaa', sans-serif;
+    margin-bottom: 10px;
 }
 
 /* My bookings */
