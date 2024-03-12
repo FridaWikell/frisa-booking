@@ -902,23 +902,11 @@ Every page at the website has been manually tested. It is done in Google Chrome 
 
 ## Technologies Used
 
-The repository is created from [Code Institutes Gitpod full template](https://github.com/Code-Institute-Org/gitpod-full-template) through [GitHub](https://github.com/). The Project board is created at [GitHub](https://github.com/). The code is written in [Gitpod](https://www.gitpod.io/) and deployed at [Heroku](https://www.heroku.com/).
+The repository is created from [Code Institutes Gitpod full template](https://github.com/Code-Institute-Org/gitpod-full-template) through [GitHub](https://github.com/). The Project board is created at [GitHub](https://github.com/). The code is written in [Gitpod](https://www.gitpod.io/) and deployed at [Heroku](https://www.heroku.com/). The wireframes are created in [Balsamiq](https://balsamiq.com/) and the ERD's are created in [Google Spreadsheet](https://docs.google.com/spreadsheets/).
 
 The code languages used in this project are HTML, CSS, JavaScript and Python. The main frameworks used are Django and Bootstrap.
 
-| Library | Functionality |
-| ------------------- | --------------------------------- |
-| django-allauth | Used for authentication, registration and account management |
-| django-summernote | Integrated editor in djangos admin panel |
-| gunicorn | Used to run Python web applications |
-| oauthlib | Used to implement OAuth functionality |
-| sendgrid | For interacting with the SendGrid email service |
-| urllib3 | Used to make HTTP requests |
-| whitenoise | Simplifies static file serving for Python web apps |
 
-
-
-Detail what technologies you used. So what code languages, what frameworks, libraries, what software did you use to develop the site - Balsamic for your wireframes, Figma for a mockup?
 
 ## Deployment
 
@@ -945,11 +933,50 @@ Link to deployed website: <https://frisa-booking-e7f1e4a00ea9.herokuapp.com/>
 
 ### Libraries/framworks used
 
-| Library/framework | 
+**Libraries used**
 
-You need to credit where you got anything for your site from.. where are the images from, are they all from the same site? where did you get the content from, if you wrote it yourself, did you fact check anywhere? did you get code from anywhere? if so, it needs to be clearly marked in both the code and the readme.
+| Library | Functionality |
+| ------------------- | --------------------------------- |
+| django-allauth | Used for authentication, registration and account management |
+| django-summernote | Integrated editor in djangos admin panel |
+| gunicorn | Used to run Python web applications |
+| htmx | Used for response in contact form |
+| oauthlib | Used to implement OAuth functionality |
+| sendgrid | For interacting with the SendGrid email service |
+| urllib3 | Used to make HTTP requests |
+| whitenoise | Simplifies static file serving for Python web apps |
+
+**Used resources**
+
+| Page | Used for |
+| --------------| ----------------- |
+| [Djecrety](https://djecrety.ir/) | Generate a secret key |
+| [Font Awesome](https://fontawesome.com/) | All icons at the website |
+| [Code with Stein](https://github.com/SteinOveHelset/contactform) | Creating contact form |
+| [Flavio Copes](https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/) | How to add event listener to multiple elements |
+| [W3Schools](https://www.w3schools.com/howto/howto_js_read_more.asp) | Base for read more/read less buttons |
+| [Medium](https://medium.com/@biswajitpanda973/django-model-relationships-11ef9d73168d ) | Knowledge about double underscore |
+| [htmx](https://htmx.org/docs/ ) | Knowledge about htmx |
+| [django](https://docs.djangoproject.com/) | Knowledge about django |
+| [Emojipedia](https://emojipedia.org/) | Select emojis |
+
+**Images**
+
+| Page | Used for |
+| ------------- | --------------- |
+| [Vecteezy](https://www.vecteezy.com/vector-art/8322134-elegant-floral-line-art-seamless-pattern) | Background image at member benefits section, from [Agnet Art](https://www.vecteezy.com/members/agnetart) |
+| [Vecteezy](https://www.vecteezy.com/photo/36594863-ai-generated-craft-shop-advertisment-background-with-copy-space) | Background image at 404 page, from [Oleg Gapeenko](https://www.vecteezy.com/members/gankogroup) |
+| [Vecteezy](https://www.vecteezy.com/photo/2264081-galactic-center-of-the-milky-way-with-many-colors-on-a-starry-sky-in-deep-space) | Background image at 500 page, from [TheCatEmpire Studio](https://www.vecteezy.com/members/thecatempirestudio) |
+| [BeFunky](https://www.befunky.com/) | Edit and resize images |
+| [Pixelied](https://pixelied.com/convert) | Convert images to webp |
+| [TinyPNG](https://tinypng.com/) | Compress images |
+
+All other images are taken by the website creator, [Frida Wikell](https://github.com/FridaWikell).
 
 ## Acknowledgements
-Any special acknowledgements you'd like to leave
 
-Back to top link to return to the top of the readme.
+A big thanks to Matt Bodden for invaluable thoughts and ideas in how to get the project going in the right direction!
+
+Hats off to my proofreading master, Linus Wikell!
+
+[Back to top](#frisa-booking)
