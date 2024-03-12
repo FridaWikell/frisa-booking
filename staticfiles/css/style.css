@@ -28,7 +28,7 @@ a {
 /* Images */
 
 .hero-img {
-    background: url('https://res.cloudinary.com/dihkuau3v/image/upload/v1710239424/hero-img-small.webp') center center/cover;
+    background: url('https://res.cloudinary.com/dihkuau3v/image/upload/v1709735168/frisa-booking/hero-image.webp') center center/cover;
     min-height: 823px;
 }
 
@@ -281,20 +281,6 @@ a {
 
 
 /* Media query */
-/* For screens larger than 540px */
-@media screen and (min-width: 540px) {
-    .hero-img {
-        background: url('https://res.cloudinary.com/dihkuau3v/image/upload/v1710239425/hero-img-medium.webp') center center/cover;
-    }
-}
-
-/* For screens larger than 768px */
-@media screen and (min-width: 768px) {
-    .hero-img {
-        background: url('https://res.cloudinary.com/dihkuau3v/image/upload/v1710238033/frisa-booking/hero-image-all.webp') center center/cover;
-    }   
-}
-
 /* For screens larger than 1024px */
 @media screen and (min-width: 1024px) {
     .card {
