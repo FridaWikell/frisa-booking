@@ -281,20 +281,19 @@ a {
 
 
 /* Media query */
-/* For screens larger than 540px 
+/* For screens larger than 540px */
 @media screen and (min-width: 540px) {
     .hero-img {
         background: url('https://res.cloudinary.com/dihkuau3v/image/upload/v1710235791/hero-image-medium.webp') center center/cover;
     }
 }
 
-/* For screens larger than 768px 
+/* For screens larger than 768px */
 @media screen and (min-width: 768px) {
     .hero-img {
         background: url('https://res.cloudinary.com/dihkuau3v/image/upload/v1709735168/frisa-booking/hero-image.webp') center center/cover;
-        min-height: 900px;
     }   
-}*/
+}
 
 /* For screens larger than 1024px */
 @media screen and (min-width: 1024px) {
