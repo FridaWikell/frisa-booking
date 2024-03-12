@@ -900,6 +900,22 @@ Every page at the website has been manually tested. It is done in Google Chrome 
 | Link to Instagram | When the Instagram icon is clicked at, the user gets directed to Instagram which opens in a new tab | Click at the Instagram icon | The user got directed to Instagram which opens in a new tab | Pass |
 | Link to Pinterest | When the Pinterest icon is clicked at, the user gets directed to Pinterest which opens in a new tab | Click at the Pinterest icon | The user got directed to Pinterest which opens in a new tab | Pass |
 
+### Bugs
+
+During the testing several bugs have been discovered. No bugs were left unfixed.
+
+When the html validation of all pages were completed, it summed up to 95 error. This high amount of errors were caused by repeated errors. The most common error was that the button element had prohibited child element. Both divs and h6 elements were child to buttons. This was corrected before the final version was deployed.
+
+Another validation error that occured at several places were that "hx not allowed on element form". This was solved by adding "data-" in front of the hx. 
+
+A third validation error that was recurring through the different pages was that form action was left empty. This was solved by deleting form action since it wasn't used.
+
+When the PEP8 validation of the Python code was made, 39 errors occured. Most of them were one of following:
+- trailing whitespace
+- line too long
+- blank line contains whitespace
+
+After the first Lighthouse test, the SEO was 90. To enhance this, meta tags with description and keywords were added. This increased the score to 100. 
 
 ## Technologies Used
 
