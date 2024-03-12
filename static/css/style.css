@@ -14,7 +14,7 @@ body {
     background-color: #cacaca;
     color: #353535;
     font-family: 'Dosis', sans-serif;
-  }
+}
 
 main {
     background-color: #cacaca;
@@ -26,7 +26,6 @@ a {
 }
 
 /* Images */
-
 .hero-img {
     background: url('https://res.cloudinary.com/dihkuau3v/image/upload/v1710235791/hero-image-small.webp') center center/cover;
     min-height: 823px;
@@ -164,7 +163,8 @@ a {
     color: #cacaca;
 }
 
-.members, .member-or-not {
+.members,
+.member-or-not {
     background: rgba(53, 53, 53, 0.9);
     color: #cacaca;
 }
@@ -212,7 +212,6 @@ a {
     color: #cacaca;
 }
 
-
 /* About page */
 .custom-form input[type="text"],
 .custom-form input[type="email"],
@@ -226,7 +225,6 @@ a {
     margin-bottom: 5px; 
 }
 
-
 /* Navbar */
 .frisa-log {
     font-family: 'Rock Salt', sans-serif;
@@ -237,7 +235,11 @@ a {
     display: none;
 }
 
-.card, .about-text, .my-bookings, .dark-back, .darker-card {
+.card,
+.about-text,
+.my-bookings,
+.dark-back,
+.darker-card {
     background-color: #353535;
     color: #cacaca;
 }
@@ -256,7 +258,6 @@ a {
 }
 
 /* My bookings */
-
 .user-name {
     overflow-wrap: break-word;
 }
@@ -272,16 +273,14 @@ a {
     margin-top: auto;
 }
 
-
 /* Footer */
 .fa-brands, 
 .fa-pen-to-square {
     color: #000000;
 }
 
-
 /* Media query */
-
+/* For screens larger than 540px */
 @media screen and (min-width: 540px) {
     .hero-img {
         background: url('https://res.cloudinary.com/dihkuau3v/image/upload/v1710242735/frisa-booking/hero-image-cassette.webp') center center/cover;
