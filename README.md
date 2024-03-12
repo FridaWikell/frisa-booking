@@ -662,6 +662,7 @@ All Python files have been validated through [CI Python Linter](https://pep8ci.h
 - [Python validation of models.py in news](doc/pep8-news-models.webp)
 
 ### Lighthouse
+
 You can perform a test of your website for performance, accessibility, best practices and SEO through the google chrome lighthouse test - it is in your Dev tools. Bear in mind that your internet connection speed plays a part in the performance figures obtained. Where it scores low, it will give you suggestions on how to improve the site - read the suggestions and think about how to implement them - it could be a good idea.
 Do this for both Desktop and Mobile.
 
@@ -669,15 +670,15 @@ Do this for both Desktop and Mobile.
 
 The accessibility test at [Wave Webaim](https://wave.webaim.org/) resulted without errors and contrast errors on all pages.
 
-**Index page**
+#### Index page
 
 ![Wave webaim test of index page](doc/wave-webaim.webp)
 
-**About page**
+#### About page
 
 ![Wave webaim test of about page](doc/wave-webaim-about.webp)
 
-**Booking page**
+#### Booking page
 
 ![Wave webaim test of about page](doc/wave-webaim-booking.webp)
 
@@ -693,21 +694,21 @@ Automated testing is done for all three different apps (about, booking and news)
 
 ![Automated tests for all apps](doc/tests-all.webp)
 
-**About**
+#### About
 
 ![Automated tests for about app](doc/tests-about.webp)
 
 - [Test of forms.py](about/tests_forms.py)
 - [Test of views.py](about/tests_views.py)
 
-**Booking**
+#### Booking
 
 ![Automated tests for booking app](doc/tests-booking.webp)
 
 - [Test of models.py](booking/tests_models.py)
 - [Test of views.py](booking/tests_views.py)
 
-**News**
+#### News
 
 ![Automated tests for news app](doc/tests-news.webp)
 
@@ -906,8 +907,6 @@ The repository is created from [Code Institutes Gitpod full template](https://gi
 
 The code languages used in this project are HTML, CSS, JavaScript and Python. The main frameworks used are Django and Bootstrap.
 
-
-
 ## Deployment
 
 - Open Heroku and log in
@@ -933,8 +932,6 @@ Link to deployed website: <https://frisa-booking-e7f1e4a00ea9.herokuapp.com/>
 
 ### Libraries/framworks used
 
-**Libraries used**
-
 | Library | Functionality |
 | ------------------- | --------------------------------- |
 | django-allauth | Used for authentication, registration and account management |
@@ -946,7 +943,7 @@ Link to deployed website: <https://frisa-booking-e7f1e4a00ea9.herokuapp.com/>
 | urllib3 | Used to make HTTP requests |
 | whitenoise | Simplifies static file serving for Python web apps |
 
-**Used resources**
+### Used resources
 
 | Page | Used for |
 | --------------| ----------------- |
@@ -960,7 +957,7 @@ Link to deployed website: <https://frisa-booking-e7f1e4a00ea9.herokuapp.com/>
 | [django](https://docs.djangoproject.com/) | Knowledge about django |
 | [Emojipedia](https://emojipedia.org/) | Select emojis |
 
-**Images**
+### Images
 
 | Page | Used for |
 | ------------- | --------------- |
