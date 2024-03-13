@@ -32,6 +32,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['8000-fridawikell-frisabookin-1z0vled9q65.ws-eu108.gitpod.io',
                 '8000-fridawikell-frisabookin-8y4e7irxokf.ws-eu108.gitpod.io',
+                '8000-fridawikell-frisabookin-8y4e7irxokf.ws-eu110.gitpod.io',
                 '.herokuapp.com']
 
 EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
