@@ -675,7 +675,7 @@ The test for desktop resulted in 98 in both performance and accessibility. It al
 
 ![Lighthouse test for mobile](doc/lighthouse-mobile.webp)
 
-The test for mobile resulted in 91 in performance and the same score for accessibility, best practice and SEO as in the desktop test. A part in the relatively low score in performance was "Largest Contentful Paint element". This was regarding the hero image. The image is small (around 60 kB) and has webp format which eliminates this to be the problem. The part which took the largest time was load delay. This can be caused by Cloudinary, where the images are stored. The time it takes for the Cloudinary server to serve the images, it can be the delayed time which increase the load delay for the webpage. There are several ways to solve the problem. Since the main problem seems to be Cloudinary, a way to improve is to use another service. It can be GitHub, Amazon S3 or any similiar service. If the use of Cloudinary should continue, it could be an idea to get a paid account to get faster server service.
+The test for mobile resulted in 91 in performance and the same score for accessibility (98), best practice (100) and SEO (100) as in the desktop test. The relatively low score in performance was partly because of "Largest Contentful Paint element". This was regarding the hero image. The image is small (around 60 kB) and has webp format which eliminates the image itself to be the problem. The part which took the largest time was load delay. This can be caused by Cloudinary, where the images are stored. The time it takes for the Cloudinary server to serve the images, can increase the load delay for the webpage. There are several ways to solve the problem. Since the main problem seems to be Cloudinary, a way to improve is to use another service. It can be GitHub, Amazon S3 or any similar service. If the use of Cloudinary should continue, it could be a good idea to get a paid account to get faster server service.
 
 ### Wave Webaim - accessibility testing
 
@@ -808,50 +808,50 @@ Every page at the website has been manually tested. It is done in Google Chrome 
 | Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The booking page was responsive and changed depending on screen size | Pass |
 | Text readability | Enough margins and padding to make text readable | Read all text blocks at all different Bootstrap breakpoints | The text is readable at all breakpoints | Pass |
 | View my bookings button | The "View my bookings" button directs the user to My bookings page | Click at "View my bookings" button | The user got directed to the My bookings page | Pass |
-| Book another workshop button | The "Book another workshop" button directs the user to Bookings page - booking buttons section | Click at "Book another workshop" | The user got directed to the Booking page, booking button section | Pass |
-| Home button - not visible | On devices smaller than 768px (breakpoint below medium in Bootstrap), the "Home" button is not visible | Select breakpoints smaller than medium and view the page | The "Home" button is not visible | Pass |
+| Book another workshop button | The "Book another workshop" button directs the user to Bookings page - booking buttons section | Click at "Book another workshop" | The user got directed to the Booking page, booking buttons section | Pass |
+| Home button - not visible | On devices smaller than 768px (breakpoint below medium in Bootstrap), the "Home" button is not visible | Select breakpoint smaller than medium and view the page | The "Home" button is not visible | Pass |
 | Home button - visible | On devices with 768px or larger (breakpoint medium or larger in Bootstrap), the "Home" button is visible | Select medium breakpoint and view the page | The "Home" button is visible | Pass |
 
 #### My bookings page
 
 | Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
 | -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
-| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The booking page was responsive and changed depending on screen size | Pass |
+| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The page was responsive and changed depending on screen size | Pass |
 | Text readability | Enough margins and padding to make text readable | Read all text blocks at all different Bootstrap breakpoints | The text is readable at all breakpoints | Pass |
 | Username in text | In the first sentence, the username is presented | Sign in and compare the username with the presented name | The username and the presented name is equal | Pass |
-| Active bookings | All of the users active bookings are presented | Compare active bookings in the admin panel to the presented active bookings | The active bookings are the same in the admin panel as presented at the My bookings page | Pass |
-| Edit button | When the "Edit" button is pressed, the user gets directed to Edit booking page | Press "Edit" button | The user got directed to the Edit booking page | Pass |
+| Active bookings | All of the user's active bookings are presented | Compare active bookings in the admin panel to the presented active bookings | The active bookings are the same in the admin panel as presented at My bookings page | Pass |
+| Edit button | When the "Edit" button is pressed, the user gets directed to Edit booking page | Press "Edit" button | The user got directed to Edit booking page | Pass |
 | Cancel button | When the "Cancel" button is pressed, a confirmation modal is triggered | Press "Cancel" button | A confirmation modal is triggered | Pass |
 | Confirmation modal - X | When the X at the confirmation modal is pressed, the modal is closed without cancelling the booking | Trigger confirmation modal, press X | The modal closed without cancelling the booking | Pass |
 | Confirmation modal - Close | When the "Close" button at the confirmation modal is pressed, the modal is closed without cancelling the booking | Trigger confirmation modal, press "Close" | The modal closed without cancelling the booking | Pass |
 | Confirmation modal - outside modal | When the user click anywhere outside of the confirmation modal, it is closed without cancelling the booking | Trigger confirmation modal, click somewhere outside of the modal | The modal closed without cancelling the booking | Pass |
-| Confirmation modal - Confirm | When the "Confirm" button is pressed, the booking is cancelled | Press "Confirm", check "My bookings" if the booking has been cancelled | The booking was cancelled | Pass |
+| Confirmation modal - Confirm | When the "Confirm" button is pressed, the booking is cancelled | Trigger confirmat modal, press "Confirm", check "My bookings" if the booking has been cancelled | The booking was cancelled | Pass |
 | Available spots increase | When a booking is cancelled, available spots are increased by one | Check available spots at an already booked workshop, cancel the booking and check available spots again | Available spots increased by one | Pass |
 | Pagination | When it is more than four upcoming workshops, pagination appears | Scroll down below my bookings buttons | After four bookings, pagination buttons appears | Pass |
-| No bookings - text | Another text than the text which appears when the user has active bookings appears | Cancel all the users bookings | Another text appeared | Pass |
-| No bookings - Take me there button | The "Take me there" button directs the user to the booking page | Click "Take me there" button | The user got directed to the bookings page | Pass |
+| No bookings - text | A text about no bookings were found appears at the top of the page | Cancel all the user's bookings | No bookings were found text appeared | Pass |
+| No bookings - Take me there button | The "Take me there" button directs the user to booking page | Click at "Take me there" button | The user got directed to booking page | Pass |
 
 #### Edit booking page
 
 | Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
 | -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
-| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The booking page was responsive and changed depending on screen size | Pass |
+| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The page was responsive and changed depending on screen size | Pass |
 | Text readability | Enough margins and padding to make text readable | Read all text blocks at all different Bootstrap breakpoints | The text is readable at all breakpoints | Pass |
-| Available workshop sessions | Only sessions where the user doesn't already has an active booking is shown | Compare upcoming workshops, the users active bookings and the available sessions in edit booking | Only sessions where the user doesn't has an active bookings are visible | Pass |
+| Available workshop sessions | Only sessions where the user doesn't already have an active booking is shown | Compare upcoming workshops, the user's active bookings and the available sessions in edit booking | Only sessions where the user doesn't have an active booking are visible | Pass |
 | Booking buttons - trigger modal | When a booking button is pressed, a confirmation modal is triggered | Click all booking buttons | All booking buttons triggered a confirmation modal | Pass |
 | Confirmation modal - X | When the X at the confirmation modal is pressed, the modal is closed without making any booking | Trigger confirmation modal, press X | The modal closed without making any booking | Pass |
 | Confirmation modal - Close | When the "Close" button at the confirmation modal is pressed, the modal is closed without making any booking | Trigger confirmation modal, press "Close" | The modal closed without making any booking | Pass |
 | Confirmation modal - outside modal | When the user click anywhere outside of the confirmation modal, it is closed without making any booking | Trigger confirmation modal, click somewhere outside of the modal | The modal closed without making any booking | Pass |
-| Confirmation modal - Confirm | When the "Confirm" button is pressed, the existing booking is changed to the selected workshop session | Press "Confirm", check "My bookings" if the booking has been changed | The booking was changed | Pass |
+| Confirmation modal - Confirm | When the "Confirm" button is pressed, the existing booking is changed to the selected workshop session | Trigger confirmation modal, press "Confirm", check "My bookings" if the booking has been changed | The booking was changed | Pass |
 | Available spots - increase | In the session the user cancel their booking, available spots increases by one | Check available spots at the session, edit the booking, check available spots again | Available spots increased by one | Pass |
-| Available spots - decrease | In the session the user want to change their booking to, available spots decreases by one | Check available spots at the session, edit the booking, check available spots again | Available spots decreased by one | Pass |
+| Available spots - decrease | The available spots in the new session the user chooses, decreases by one | Check available spots at the session, edit the booking, check available spots again | Available spots decreased by one | Pass |
 | Pagination | When it is more than eight available workshops, pagination appears | Scroll down below active bookings buttons | After eight bookings, pagination buttons appears | Pass |
 
 #### News page
 
 | Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
 | -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
-| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The booking page was responsive and changed depending on screen size | Pass |
+| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The page was responsive and changed depending on screen size | Pass |
 | Text readability | Enough margins and padding to make text readable | Read all text blocks at all different Bootstrap breakpoints | The text is readable at all breakpoints | Pass |
 | Color change - every other | Every other news have dark backgrounds, every other light backgrounds | Scroll through the news | Every other news has dark background, every other news has light background | Pass |
 
@@ -859,35 +859,35 @@ Every page at the website has been manually tested. It is done in Google Chrome 
 
 | Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
 | -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
-| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The booking page was responsive and changed depending on screen size | Pass |
+| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The page was responsive and changed depending on screen size | Pass |
 | Text readability | Enough margins and padding to make text readable | Read all text blocks at all different Bootstrap breakpoints | The text is readable at all breakpoints | Pass |
 | All fields required | An error message appears when the user tries to sign up but leaves one field empty | Leave one field empty one by one and try to Sign Up | An error message appeared when a field was left empty | Pass |
-| Redirected | When the "Sign Up" button is pressed, the user gets redirected to the page they visited before | Visit Booking page, click Sign up, fill out all required fields, press "Sign Up" button | The user got redirected to the Bookings page | Pass |
+| Redirected | When the "Sign Up" button is pressed, the user gets redirected to the page they visited before | Visit Booking page, click Sign up, fill out all required fields, press "Sign Up" button | The user got redirected to Booking page | Pass |
 
 #### Sign in page
 
 | Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
 | -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
-| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The booking page was responsive and changed depending on screen size | Pass |
+| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The page was responsive and changed depending on screen size | Pass |
 | Text readability | Enough margins and padding to make text readable | Read all text blocks at all different Bootstrap breakpoints | The text is readable at all breakpoints | Pass |
 | All fields required | An error message appears when the user tries to sign in but leaves one field empty | Leave one field empty one by one and try to Sign In | An error message appeared when a field was left empty | Pass |
 | Sign In button | When the "Sign In" button is pressed, the user gets signed in | Click at "Sign In" button | The user gets signed in | Pass |
-| Redirected | When the "Sign In" button is pressed, the user gets redirected to the page they visited before | Visit Booking page, click Sign in, press "Sign In" button | The user got redirected to the Bookings page | Pass |
+| Redirected | When the "Sign In" button is pressed, the user gets redirected to the page they visited before | Visit Booking page, click Sign in, press "Sign In" button | The user got redirected to Booking page | Pass |
 
 #### Sign out page
 
 | Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
 | -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
-| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The booking page was responsive and changed depending on screen size | Pass |
+| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The page was responsive and changed depending on screen size | Pass |
 | Text readability | Enough margins and padding to make text readable | Read all text blocks at all different Bootstrap breakpoints | The text is readable at all breakpoints | Pass |
 | Sign Out button | When the "Sign Out" button is pressed, the user gets signed out | Click at "Sign Out" button | The user gets signed out | Pass |
-| Redirected | When the "Sign Out" button is pressed, the user gets redirected to the page they visited before | Visit Booking page, click Sign out, press "Sign Out" button | The user got redirected to the Bookings page | Pass |
+| Redirected | When the "Sign Out" button is pressed, the user gets redirected to the page they visited before | Visit Booking page, click Sign out, press "Sign Out" button | The user got redirected to Booking page | Pass |
 
 #### 404 page
 
 | Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
 | -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
-| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The booking page was responsive and changed depending on screen size | Pass |
+| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The page was responsive and changed depending on screen size | Pass |
 | Text readability | Enough margins and padding to make text readable | Read all text blocks at all different Bootstrap breakpoints | The text is readable at all breakpoints | Pass |
 | Return to stability button | When "Return to stability" button is pressed, the user gets directed to the home page | Click at "Return to stability" button | The user got directed to the home page | Pass |
 
@@ -895,27 +895,27 @@ Every page at the website has been manually tested. It is done in Google Chrome 
 
 | Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
 | -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
-| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The booking page was responsive and changed depending on screen size | Pass |
+| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The page was responsive and changed depending on screen size | Pass |
 | Text readability | Enough margins and padding to make text readable | Read all text blocks at all different Bootstrap breakpoints | The text is readable at all breakpoints | Pass |
-| Link to homepage | When the link to the homepage is clicked at, the user gets directed to the homepage | Click at homepage link | The user got directed to the homepage | Pass |
-| Link to contact form | When the link to the contact form is clicked at, the user gets directed to the contact form | Click at the link to the contact form | The user got directed to the contact form | Pass | 
+| Link to homepage | When the link to the homepage is clicked, the user gets directed to the homepage | Click at homepage link | The user got directed to the homepage | Pass |
+| Link to contact form | When the link to the contact form is clicked, the user gets directed to the contact form | Click at the link to the contact form | The user got directed to the contact form | Pass | 
 
 #### Footer
 
 | Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
 | -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
-| Responsive design | The page changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The booking page was responsive and changed depending on screen size | Pass |
+| Responsive design | The footer changes so the content fit at the smallest to the largest screens without scrolling sideways | In DevTools, select the smallest device and make it larger step by step | The footer was responsive and changed depending on screen size | Pass |
 | Text readability | Enough margins and padding to make text readable | Read all text blocks at all different Bootstrap breakpoints | The text is readable at all breakpoints | Pass |
-| Link to contact form | When the pencil icon is clicked at, the user gets directed to the contact form | Click at the pencil icon | The user got directed to the contact form | Pass |
-| Link to Facebook | When the Facebook icon is clicked at, the user gets directed to Facebook which opens in a new tab | Click at the Facebook icon | The user got directed to Facebook which opens in a new tab | Pass |
-| Link to Instagram | When the Instagram icon is clicked at, the user gets directed to Instagram which opens in a new tab | Click at the Instagram icon | The user got directed to Instagram which opens in a new tab | Pass |
-| Link to Pinterest | When the Pinterest icon is clicked at, the user gets directed to Pinterest which opens in a new tab | Click at the Pinterest icon | The user got directed to Pinterest which opens in a new tab | Pass |
+| Link to contact form | When the pencil icon is clicked, the user gets directed to the contact form | Click at the pencil icon | The user got directed to the contact form | Pass |
+| Link to Facebook | When the Facebook icon is clicked, the user gets directed to Facebook which opens in a new tab | Click at the Facebook icon | The user got directed to Facebook which opens in a new tab | Pass |
+| Link to Instagram | When the Instagram icon is clicked, the user gets directed to Instagram which opens in a new tab | Click at the Instagram icon | The user got directed to Instagram which opens in a new tab | Pass |
+| Link to Pinterest | When the Pinterest icon is clicked, the user gets directed to Pinterest which opens in a new tab | Click at the Pinterest icon | The user got directed to Pinterest which opens in a new tab | Pass |
 
 ### Bugs
 
 During the testing several bugs have been discovered. No bugs were left unfixed.
 
-When the html validation of all pages were completed, it summed up to 95 error. This high amount of errors were caused by repeated errors. The most common error was that the button element had prohibited child element. Both divs and h6 elements were child to buttons. This was corrected before the final version was deployed.
+When the html validation of all pages were completed, it summed up 95 errors. This high amount of errors were caused by repeated errors. The most common error was that the button element had prohibited child element. Both divs and h6 elements were child to buttons. This was corrected before the final version was deployed.
 
 Another validation error that occured at several places were that "hx not allowed on element form". This was solved by adding "data-" in front of the hx. 
 
@@ -977,7 +977,7 @@ Link to deployed website: <https://frisa-booking-e7f1e4a00ea9.herokuapp.com/>
 
 ## Credits
 
-### Libraries/framworks used
+### Libraries used
 
 | Library | Functionality |
 | ------------------- | --------------------------------- |
@@ -1015,7 +1015,7 @@ Link to deployed website: <https://frisa-booking-e7f1e4a00ea9.herokuapp.com/>
 | [Pixelied](https://pixelied.com/convert) | Convert images to webp |
 | [TinyPNG](https://tinypng.com/) | Compress images |
 
-All other images are taken by the website creator, [Frida Wikell](https://github.com/FridaWikell).
+All other photos are taken by the website creator, [Frida Wikell](https://github.com/FridaWikell).
 
 ## Acknowledgements
 
