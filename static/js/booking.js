@@ -1,6 +1,6 @@
 /* Variables */
 let currentSessionId = null;
-let modalElement = document.getElementById('bookingNotificationModal');
+let modalElement = document.getElementById('booking-notification-modal');
 let alreadyBooked = modalElement.getAttribute('data-already-booked') === 'true';
 
 
@@ -13,9 +13,9 @@ document.querySelectorAll('.book-session-btn').forEach(button => {
 
 
 /* Submits the form in the pop up modal when making a new booking */
-document.getElementById('confirmBooking').addEventListener('click', function() {
+document.getElementById('confirm-booking').addEventListener('click', function() {
     if (currentSessionId) {
-        document.getElementById(`bookingForm-${currentSessionId}`).submit();
+        document.getElementById(`booking-form-${currentSessionId}`).submit();
     }
 });
 
