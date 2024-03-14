@@ -663,8 +663,19 @@ All Python files have been validated through [CI Python Linter](https://pep8ci.h
 
 ### Lighthouse
 
-You can perform a test of your website for performance, accessibility, best practices and SEO through the google chrome lighthouse test - it is in your Dev tools. Bear in mind that your internet connection speed plays a part in the performance figures obtained. Where it scores low, it will give you suggestions on how to improve the site - read the suggestions and think about how to implement them - it could be a good idea.
-Do this for both Desktop and Mobile.
+Tests in Lighthouse were performed for both desktop and mobile.
+
+#### Desktop
+
+![Lighthouse test for desktop](doc/lighthouse-desktop.webp)
+
+The test for desktop resulted in 98 in both performance and accessibility. It also resulted in 100 in both best practice and SEO.
+
+#### Mobile
+
+![Lighthouse test for mobile](doc/lighthouse-mobile.webp)
+
+The test for mobile resulted in 91 in performance and the same score for accessibility, best practice and SEO as in the desktop test. A part in the relatively low score in performance was "Largest Contentful Paint element". This was regarding the hero image. The image is small (around 60 kB) and has webp format which eliminates this to be the problem. The part which took the largest time was load delay. This can be caused by Cloudinary, where the images are stored. The time it takes for the Cloudinary server to serve the images, it can be the delayed time which increase the load delay for the webpage. There are several ways to solve the problem. Since the main problem seems to be Cloudinary, a way to improve is to use another service. It can be GitHub, Amazon S3 or any similiar service. If the use of Cloudinary should continue, it could be an idea to get a paid account to get faster server service.
 
 ### Wave Webaim - accessibility testing
 
