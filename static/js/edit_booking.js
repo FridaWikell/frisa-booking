@@ -5,12 +5,12 @@ document.addEventListener('click', function(e) {
     if (e.target && e.target.matches('.session-btn')) {
         selectedSessionId = e.target.getAttribute('data-session-id');
         
-        var confirmationModal = new bootstrap.Modal(document.getElementById('confirmationModal'), {
+        var confirmationModal = new bootstrap.Modal(document.getElementById('confirmation-modal'), {
             keyboard: false
         });
         confirmationModal.show();
         
-        let hiddenInput = document.getElementById('selectedSessionId-' + selectedSessionId);
+        let hiddenInput = document.getElementById('selected-session-id-' + selectedSessionId);
         if (hiddenInput) {
             hiddenInput.value = selectedSessionId;
         }
@@ -18,9 +18,9 @@ document.addEventListener('click', function(e) {
 });
 
 /* Submits the form in the pop-up modal when confirming booking */
-document.getElementById('confirmChange').addEventListener('click', function() {
+document.getElementById('confirm-change').addEventListener('click', function() {
     if (selectedSessionId) {
-        let formId = 'sessionForm-' + selectedSessionId;
+        let formId = 'session-form-' + selectedSessionId;
         let form = document.getElementById(formId);
         if (form) {
             form.submit();
