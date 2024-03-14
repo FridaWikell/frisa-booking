@@ -2,7 +2,7 @@
 document.querySelectorAll('.delete-booking').forEach(button => {
     button.addEventListener('click', function() {
         let bookingId = this.getAttribute('data-booking-id');
-        let form = document.getElementById('deleteForm');
+        let form = document.getElementById('delete-form');
         form.action = `/booking/delete_booking/${bookingId}/`;
     });
 });

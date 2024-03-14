@@ -29,7 +29,7 @@
             <p>{{ booking.course_session.start_time|time:"H.i" }} - {{ booking.course_session.end_time|time:"H.i" }}</p>
             <div class="d-flex justify-content-center stick-to-bottom">
                 <a href="{% url 'edit_booking' booking.id %}" class="btn btn-secondary me-2">Edit</a>
-                <button type="button" class="btn delete-btn delete-booking" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal" data-booking-id="{{ booking.id }}">Cancel</button>
+                <button type="button" class="btn delete-btn delete-booking" data-bs-toggle="modal" data-bs-target="#delete-confirmation-modal" data-booking-id="{{ booking.id }}">Cancel</button>
             </div>
         </div>
         {% endfor %}
@@ -75,11 +75,11 @@
 </div>
 
 <!-- Deletion confirmation modal -->
-<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+<div class="modal fade" id="delete-confirmation-modal" tabindex="-1" aria-labelledby="delete-confirmation-modal-label" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="deleteConfirmationModalLabel">Confirm booking cancellation</h5>
+                <h5 class="modal-title" id="delete-confirmation-modal-label">Confirm booking cancellation</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -87,9 +87,9 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <form method="POST" id="deleteForm">
+                <form method="POST" id="delete-form">
                     {% csrf_token %}
-                    <input type="hidden" name="booking_id" value="" id="hiddenBookingId">
+                    <input type="hidden" name="booking_id" value="" id="hidden-booking-id">
                     <button type="submit" class="btn delete-btn">Confirm</button>
                 </form>
             </div>
