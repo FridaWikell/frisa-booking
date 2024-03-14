@@ -412,50 +412,65 @@ When the deletion process is initiated
 Then the post is permanently removed from the news feed, and the user receives a confirmation message that their post has been successfully deleted  
 
 ## Design
+
 The design is set to be modern but easy to read. It should draw the attention to the images which will enhance the chance to get the users to get inspired. The design should feel welcoming and like you're visiting a friends place. 
 
 ### Color Scheme
+
 The color scheme is set to feel modern and harmonize with the hero image. Any bright colors in the scheme were avoided to not draw any attention from the images at the website. The colors are reused on all pages to make every page feel familiar and to enhance the feeling that the website is a unit. 
 
 ### Typography
+
 The typography was chosen to have a modern touch. It was chosen to feel easygoing and fun, but at the same time easy to read. The text was designed to incorporate some spacing, ensuring it doesn't appear as a dense block of text upon opening a page. The written communication across the website adopts a playful tone to foster a friendly atmosphere. Emojis were added to make the tone more playful and friendly.  
 
 ### Imagery
+
 All the images are chosen to inspire the website users. The images should give a warm feeling through their content and warm tone. The images have been designed with a playful and dynamic excerpt to encourage user engagement and increase sign-ups for the workshops. The objects on the images are things that has been made by the leader of the workshops. In other words, they are objects that you can create at the workshops!
 
 ### Wireframes
 
 #### Index page
+
 ![Wireframe of index page](doc/wireframe-index.webp)
 
 #### About page
+
 ![Wireframe of about page](doc/wireframe-about.webp)
 
 #### Booking page
+
 ![Wireframe of booking page](doc/wireframe-booking.webp)
 
 #### My bookings page
+
 ![Wireframe of my bookings page](doc/wireframe-my-bookings.webp)
 
 #### Success page
+
 ![Wireframe of success page](doc/wireframe-success.webp)
 
 #### Edit booking page
+
 ![Wireframe of edit booking page](doc/wireframe-edit-booking.webp)
 
 #### Sign up page
+
 ![Wireframe of sign up page](doc/wireframe-sign-up.webp)
 
 #### Sign in page
+
 ![Wireframe of sign in page](doc/wireframe-sign-in.webp)
 
 #### Sign out page
+
 ![Wireframe of sign out page](doc/wireframe-sign-out.webp)
 
 #### 404 page
+
 ![Wireframe of 404 page](doc/wireframe-404.webp)
 
 #### 500 page
+
 ![Wireframe of 500 page](doc/wireframe-500.webp)
 
 ### Entity Relationship Diagram - ERD
