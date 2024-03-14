@@ -32,9 +32,9 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = False
 
 ALLOWED_HOSTS = ['8000-fridawikell-frisabookin-1z0vled9q65.ws-eu108.gitpod.io',
-                '8000-fridawikell-frisabookin-8y4e7irxokf.ws-eu108.gitpod.io',
-                '8000-fridawikell-frisabookin-8y4e7irxokf.ws-eu110.gitpod.io',
-                '.herokuapp.com']
+                 '8000-fridawikell-frisabookin-8y4e7irxokf.ws-eu108.gitpod.io',
+                 '8000-fridawikell-frisabookin-8y4e7irxokf.ws-eu110.gitpod.io',
+                 '.herokuapp.com']
 
 EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
 EMAIL_HOST_USER = '99202597b4d756'
@@ -162,7 +162,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
