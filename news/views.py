@@ -6,7 +6,7 @@ from .models import News
 @staff_member_required
 def news_list(request):
     """
-    Render all news if the logged in user is and is a staff member or superuser.
+    Render all news if the logged in user is a staff member or superuser.
     """
     news_items = News.objects.all()
     return render(request, 'news/news.html', {
