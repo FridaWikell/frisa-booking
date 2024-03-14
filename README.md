@@ -936,6 +936,26 @@ The code languages used in this project are HTML, CSS, JavaScript and Python. Th
 
 ## Deployment
 
+### Fork repository in GitHub
+
+- Open the chosen repository in GitHub 
+- Click on the "Fork" button
+- A copy of the repository is now located in your own account
+
+### Clone repository in GitHub
+
+- Open the chosen repository in GitHub 
+- Click on "Code" button
+- Copy the URL
+- Open your command line interface
+- Navigate to the directory you want to clone the repository to
+- Use 'git clone', followed by the earlier copied URL
+- Move into the newly created directory
+- Install the dependencies using 'pip install -r requirements.txt'
+- Run the application with 'python manage.py runserver'
+
+### Deployment to Heroku
+
 - Open Heroku and log in
 - Click on "New" and choose the option "Create new app"
 - Choose an app name and which region (Europe or United States) you are located in
