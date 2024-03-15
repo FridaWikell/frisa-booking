@@ -1152,7 +1152,7 @@ Link to deployed website: <https://frisa-booking-e7f1e4a00ea9.herokuapp.com/>
 | [Pixelied](https://pixelied.com/convert) | Convert images to webp |
 | [TinyPNG](https://tinypng.com/) | Compress images |
 
-All other photos are taken by the website creator, [Frida Wikell](https://github.com/FridaWikell).
+The profile photo at the about page is taken by Linus Wikell. All other photos are taken by the website creator, [Frida Wikell](https://github.com/FridaWikell).
 
 ## Acknowledgements
 
